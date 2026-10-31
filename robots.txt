@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://deposombe.github.io/sitemap.xml

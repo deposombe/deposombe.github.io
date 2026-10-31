@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not found — Deposombe</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Deposombe makes small Mac apps that take the unnecessary steps out of everyday work.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Nothing here.</h1>
+    <p class="intro">This page doesn't exist. <a href="/">Back to Deposombe</a>.</p>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p>made with 🦡 by <a href="https://deposombe.github.io">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>
