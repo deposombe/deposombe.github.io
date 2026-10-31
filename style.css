@@ -162,3 +162,21 @@ footer {
 footer p { margin: 0; }
 
 footer a { text-decoration: none; }
+
+.bat-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.bats {
+  padding: 0.2em;
+  margin: -0.2em;
+  border: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
