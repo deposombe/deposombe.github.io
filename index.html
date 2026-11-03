@@ -25,12 +25,24 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Deposombe",
-      "url": "https://deposombe.com/",
-      "logo": "https://deposombe.com/apple-touch-icon.png",
-      "description": "Deposombe makes small Mac apps that take the unnecessary steps out of everyday work.",
-      "sameAs": ["https://github.com/deposombe", "https://x.com/deposombe"]
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://deposombe.com/#org",
+          "name": "Deposombe",
+          "url": "https://deposombe.com/",
+          "logo": "https://deposombe.com/apple-touch-icon.png",
+          "description": "Deposombe makes small Mac apps that take the unnecessary steps out of everyday work.",
+          "sameAs": ["https://github.com/deposombe", "https://x.com/deposombe"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://deposombe.com/#website",
+          "name": "Deposombe",
+          "url": "https://deposombe.com/",
+          "publisher": { "@id": "https://deposombe.com/#org" }
+        }
+      ]
     }
   </script>
   <link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
