@@ -8,6 +8,7 @@
 
 :root {
   --paper: #ECEEF1;
+  --panel: #E0E4EA;
   --line: #C8CDD6;
   --muted: #4F5765;
   --ink: #121722;
@@ -20,6 +21,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --paper: #10151F;
+    --panel: #171E2B;
     --line: #283244;
     --muted: #A0A8B6;
     --ink: #E8EAEE;
@@ -30,6 +32,7 @@
 
 :root[data-theme="dark"] {
   --paper: #10151F;
+  --panel: #171E2B;
   --line: #283244;
   --muted: #A0A8B6;
   --ink: #E8EAEE;
@@ -180,3 +183,46 @@ footer a { text-decoration: none; }
   font: inherit;
   cursor: pointer;
 }
+
+.updated { margin: 1rem 0 0; color: var(--muted); font-size: 0.82rem; }
+
+.doc { max-width: 42em; margin-top: clamp(2rem, 5vw, 3rem); }
+.doc h2 {
+  margin: 2.5rem 0 0.6rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  font-weight: 500;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  scroll-margin-top: 1rem;
+}
+.doc h3 { margin: 1.5rem 0 0.4rem; font-weight: 600; font-size: 1rem; }
+.doc p { margin: 0 0 0.9rem; }
+.doc ul, .doc ol { margin: 0 0 0.9rem; padding-left: 1.25em; }
+.doc li { margin-bottom: 0.35rem; }
+.doc li::marker { color: var(--muted); }
+.doc a { color: var(--accent); }
+.doc strong { font-weight: 600; }
+.doc code {
+  padding: 0.1em 0.35em;
+  background: var(--panel);
+  font: 0.86em ui-monospace, SFMono-Regular, Menlo, monospace;
+  overflow-wrap: anywhere;
+}
+.summary { padding: 1rem 1.25rem 1rem 2.25rem !important; background: var(--panel); }
+.summary li:last-child { margin-bottom: 0; }
+.toc { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; margin: 1.5rem 0 0; font-size: 0.85rem; }
+.toc a { min-height: 32px; color: var(--muted) !important; }
+.address { padding-left: 1rem; border-left: 2px solid var(--line); }
+.table { overflow-x: auto; margin: 0 0 0.9rem; }
+.doc table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.doc th { text-align: left; font-weight: 600; padding: 0.5rem 0.75rem 0.5rem 0; }
+.doc td { padding: 0.55rem 0.75rem 0.55rem 0; border-top: 1px solid var(--line); vertical-align: top; }
+mark.todo { background: #FFE27A; color: #121722; padding: 0 0.2em; }
+
+footer .legal a { text-decoration: underline; text-decoration-color: var(--line); }
+footer a[aria-current="page"] { color: var(--ink); }
+
+nav { flex-wrap: wrap; }
+.theme { white-space: nowrap; }
+@media (max-width: 480px) { nav { gap: 0 1rem; } }
