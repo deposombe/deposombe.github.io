@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — Deposombe</title>
-  <meta name="description" content="How deposombe.com and email to Deposombe handle personal data: who is responsible, where data goes, and your rights.">
+  <meta name="description" content="How deposombe.com, email to Deposombe and the app Rapidfire handle personal data: who is responsible, where data goes, and your rights.">
   <link rel="canonical" href="https://deposombe.com/privacy/">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Deposombe">
   <meta property="og:title" content="Privacy Policy — Deposombe">
-  <meta property="og:description" content="How deposombe.com and email to Deposombe handle personal data: who is responsible, where data goes, and your rights.">
+  <meta property="og:description" content="How deposombe.com, email to Deposombe and the app Rapidfire handle personal data: who is responsible, where data goes, and your rights.">
   <meta property="og:url" content="https://deposombe.com/privacy/">
   <meta property="og:image" content="https://deposombe.com/og.png">
   <meta property="og:image:width" content="1200">
@@ -37,6 +37,7 @@
   <header class="top">
     <a class="mark" href="/">Deposombe</a>
     <nav>
+      <a href="/#apps">Apps</a>
       <a href="https://github.com/deposombe">GitHub</a>
       <a href="https://x.com/deposombe">X</a>
       <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
@@ -47,32 +48,36 @@
 
   <main>
     <h1>Privacy Policy</h1>
-    <p class="intro">What happens to personal data on deposombe.com and in email to Deposombe.</p>
-    <p class="updated">Last updated 9 November 2026</p>
+    <p class="intro">What happens to personal data on deposombe.com, in email to Deposombe and in Rapidfire.</p>
+    <p class="updated">Last updated 20 November 2026</p>
 
     <div class="doc">
       <ul class="summary">
         <li>No cookies, analytics or tracking on this site.</li>
         <li>Personal data is never sold or used for advertising.</li>
-        <li>Deposombe only sees what you send by email.</li>
+        <li>Deposombe sees only what you send by email and, after a purchase, what Polar shares about it.</li>
+        <li>Rapidfire keeps its data on the Mac. It has no account, no analytics and no crash reporting.</li>
       </ul>
 
       <nav class="toc" aria-label="On this page">
         <a href="#controller">Data controller</a>
         <a href="#website">This website</a>
         <a href="#email">Email</a>
+        <a href="#rapidfire">Rapidfire</a>
+        <a href="#purchases">Purchases</a>
         <a href="#recipients">Recipients and transfers</a>
+        <a href="#security">Security</a>
         <a href="#rights">Your rights</a>
         <a href="#changes">Changes</a>
       </nav>
 
       <h2 id="controller">Data controller</h2>
       <p>The data controller is:</p>
-      <p class="address">
+      <div class="address" data-nosnippet>
         Krzysztof Kowal<br>
         <span lang="pl">ul. Złotopolska 1 lok. 55, 03-567 Warszawa</span>, Poland<br>
         <a href="mailto:support@deposombe.com">support@deposombe.com</a>
-      </p>
+      </div>
       <p>Write to this address about anything on this page.</p>
 
       <h2 id="website">This website</h2>
@@ -82,23 +87,78 @@
       <h2 id="email">Email to Deposombe</h2>
       <p>Mail to support@deposombe.com is forwarded by Porkbun (USA, the domain's registrar) to a Gmail mailbox (Google). Your message, address and attachments are used only to reply to you. Retention: kept as long as the conversation needs them, then deleted, or sooner if you ask. Writing is voluntary; without an email address there is no way to reply. Legal basis: legitimate interests in answering you (Art. 6(1)(f) GDPR).</p>
 
+      <h2 id="rapidfire">Rapidfire</h2>
+      <p>Rapidfire is in development. <em>License</em> and <em>Updates</em> below describe what its first release does; until then Rapidfire makes no connection to the internet.</p>
+
+      <h3>What stays on the Mac</h3>
+      <ul>
+        <li>Palettes, triggers, hotkeys and settings are files on the Mac, in Rapidfire's own folder, with a daily copy of the library next to them.</li>
+        <li>Usage counts (how often each trigger was opened), backups and the record of what an AI assistant changed stay on the Mac and are deleted after 30 days. They are never synced.</li>
+        <li>Rapidfire has no account. None of this is sent to Deposombe.</li>
+        <li>No analytics, no crash reporting tool, no advertising. Rapidfire shares no data with third parties.</li>
+      </ul>
+
+      <h3>iCloud sync</h3>
+      <ul>
+        <li>Sync is off until it is turned on. With sync on, the library and the synced settings are stored in your own iCloud account, in Rapidfire's private iCloud folder. Deposombe cannot see them. <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a> applies.</li>
+        <li>Backups, usage counts and the AI activity record are not synced.</li>
+      </ul>
+
+      <h3>AI assistants (MCP)</h3>
+      <ul>
+        <li>Rapidfire's MCP server accepts connections only from programs on the same Mac, with a token kept in the Keychain. It cannot be reached from the internet.</li>
+        <li>A connected assistant can read and change triggers and palettes. What that assistant sends to its own provider is between you and that provider.</li>
+        <li>Trigger lists leave links out unless the assistant asks for them.</li>
+      </ul>
+
+      <h3>Files and folders</h3>
+      <ul>
+        <li>A trigger that opens a file needs access to its folder. You give that access, per folder or file, and it is listed in Settings › Files. It is kept per Mac and is not synced.</li>
+        <li>Rapidfire opens only what triggers point to. It does not list, read or upload files in the folders it has access to.</li>
+      </ul>
+
+      <h3>License</h3>
+      <ul>
+        <li>When a license key is entered, Rapidfire sends the key and a random ID made for that Mac to Polar (Polar Software, Inc., USA) to activate it, and checks it again from time to time. No trigger, palette or file name is sent.</li>
+        <li>The key is stored in the Mac's Keychain. Remove License deactivates that Mac's ID at Polar.</li>
+        <li>Without a license key, no such request is made.</li>
+        <li>Kept by Polar with the license: the key, each Mac's random ID and the time of activation. Legal basis: the contract (Art. 6(1)(b) GDPR).</li>
+      </ul>
+
+      <h3>Updates</h3>
+      <ul>
+        <li>Rapidfire checks deposombe.com for a new version and downloads updates from GitHub. The check can be turned off in Settings.</li>
+        <li>These requests carry the app's version and, like every web request, the IP address. Nothing about the library is sent.</li>
+        <li>Deposombe has no access to the hosts' logs and keeps no record of update checks. Legal basis: legitimate interests in delivering updates and security fixes (Art. 6(1)(f) GDPR).</li>
+      </ul>
+
+      <h2 id="purchases">Purchases</h2>
+      <p>Rapidfire is sold by Polar (Polar Software, Inc., USA), the merchant of record. Polar collects payment details, billing address and email, handles tax and invoices, and is responsible for that data under the <a href="https://polar.sh/legal/privacy-policy">Polar privacy policy</a>. Deposombe never sees card details.</p>
+      <p>Polar shares with Deposombe: name and email if given, country, what was bought, and the license key with its activations. Deposombe uses them to deliver and restore a license, answer support and handle refunds. Legal basis: the contract (Art. 6(1)(b) GDPR).</p>
+      <p>Retention: kept while the license exists, so a lost key can be restored. Polar keeps its own records for as long as tax law requires.</p>
+
       <h2 id="recipients">Recipients and transfers outside the EU</h2>
       <div class="table">
         <table>
           <thead><tr><th>Who</th><th>For what</th><th>Where</th></tr></thead>
           <tbody>
-            <tr><td>GitHub, Inc.</td><td>Website hosting</td><td>USA</td></tr>
+            <tr><td>GitHub, Inc.</td><td>Website hosting, update downloads</td><td>USA</td></tr>
             <tr><td>Porkbun, LLC</td><td>Domain and email forwarding</td><td>USA</td></tr>
             <tr><td>Google Ireland Limited / Google LLC (Gmail)</td><td>Storing support email</td><td>Ireland / USA</td></tr>
+            <tr><td>Polar Software, Inc.</td><td>Sales, payments, license keys</td><td>USA</td></tr>
+            <tr><td>Apple</td><td>iCloud sync in your own account</td><td>Ireland / USA</td></tr>
           </tbody>
         </table>
       </div>
-      <p>There are no other recipients. GitHub and Google are certified under the EU–US Data Privacy Framework. Porkbun's transfers rely on the European Commission's standard contractual clauses, part of its <a href="https://porkbun.com/legal/agreement/data_processing_addendum">data processing addendum</a>. A copy of these safeguards is available on request.</p>
+      <p>There are no other recipients. GitHub and Google are certified under the EU–US Data Privacy Framework. Porkbun's transfers rely on the European Commission's standard contractual clauses, part of its <a href="https://porkbun.com/legal/agreement/data_processing_addendum">data processing addendum</a>. A copy of these safeguards is available on request. Polar and Apple are controllers in their own right: buyers and iCloud users give their data to them directly, under their own privacy policies.</p>
+
+      <h2 id="security">Security</h2>
+      <p>Every connection Rapidfire makes is encrypted (HTTPS). The license key and the AI assistants' token are kept in the Mac's Keychain.</p>
 
       <h2 id="rights">Your rights</h2>
       <p>Under the GDPR you have the right of access to your data (Art. 15), to rectification (Art. 16), to erasure (Art. 17) and to restriction of processing (Art. 18), and the right to object to processing based on legitimate interests (Art. 21). Write to <a href="mailto:support@deposombe.com">support@deposombe.com</a>. You'll get an answer within one month.</p>
       <p>You also have the right to lodge a complaint with the supervisory authority in Poland, the President of the Personal Data Protection Office (<span lang="pl">Prezes Urzędu Ochrony Danych Osobowych</span>, UODO), <span lang="pl">ul. Stawki 2, 00-193 Warszawa</span>, <a href="https://uodo.gov.pl">uodo.gov.pl</a>.</p>
-      <p>There is no automated decision-making or profiling. This site is not directed at children.</p>
+      <p>There is no automated decision-making or profiling. Neither this site nor Rapidfire is directed at children.</p>
 
       <h2 id="changes">Changes to this policy</h2>
       <p>The date at the top changes with every update. Every earlier version of this page is public in the <a href="https://github.com/deposombe/deposombe.github.io/commits/main/privacy/index.html">site's history on GitHub</a>.</p>

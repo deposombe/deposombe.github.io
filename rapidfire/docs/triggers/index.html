@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Triggers — Rapidfire Help</title>
+  <meta name="description" content="A trigger is a name and a link. This page lists what a trigger can open, the ways of adding one, and what the marks next to a trigger mean.">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/triggers/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="Triggers — Rapidfire Help">
+  <meta property="og:description" content="A trigger is a name and a link. This page lists what a trigger can open, the ways of adding one, and what the marks next to a trigger mean.">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/triggers/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>Triggers</h1>
+    <p class="intro">A trigger is a name and a link. This page lists what a trigger can open, the ways of adding one, and what the marks next to a trigger mean.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#what-a-trigger-can-open">What a Trigger Can Open</a>
+        <a href="#add-triggers">Add Triggers</a>
+        <a href="#triggers-that-ask-for-input">Triggers That Ask for Input</a>
+        <a href="#new-and-changed-marks">New and Changed Marks</a>
+        <a href="#when-a-trigger-cannot-be-opened">When a Trigger Cannot Be Opened</a>
+      </nav>
+
+      <h2 id="what-a-trigger-can-open">What a Trigger Can Open</h2>
+      <p>Rapidfire opens a trigger’s link the way double-clicking it in Finder would: the app that owns the link does the rest. Anything with a link can be a trigger.</p>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><code>https://example.com</code></td><td>A web page, in the default browser.</td></tr>
+            <tr><td><code>/Applications/Notes.app</code></td><td>An app: it opens, or comes to the front when it is already open.</td></tr>
+            <tr><td><code>~/Documents/Plan.pdf</code></td><td>A file or a folder. See Files and iCloud Sync for giving Rapidfire access to it.</td></tr>
+            <tr><td><code>shortcuts://run-shortcut?name=…</code></td><td>A Shortcut from the Shortcuts app.</td></tr>
+            <tr><td><code>btt://trigger_named/?trigger_name=…</code></td><td>A named trigger in BetterTouchTool.</td></tr>
+            <tr><td><code>kmtrigger://macro=…</code></td><td>A macro in Keyboard Maestro.</td></tr>
+            <tr><td><code>x-apple.systempreferences:…</code></td><td>A pane of System Settings.</td></tr>
+            <tr><td><code>obsidian://, raycast://, things:// …</code></td><td>A note, a command or an item in any app that has links.</td></tr>
+            <tr><td><code>rapidfire://…</code></td><td>One of Rapidfire’s own windows or palettes.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Rapidfire does not run scripts, paste text or move windows itself. A trigger that does such a thing points to a Shortcut or a macro that does it.</p>
+
+      <h2 id="add-triggers">Add Triggers</h2>
+      <h3>By dragging</h3>
+      <ul>
+        <li>Drag a link, a file, a folder or an app onto Rapidfire’s icon in the menu bar, or onto the drop zone that appears under it. Quick Add opens.</li>
+        <li>Drag several things at once, or a piece of text that contains links. The Import window opens with them as a new palette to name and check.</li>
+        <li>Drag or paste into the editor’s table to add to the palette that is showing.</li>
+      </ul>
+      <h3>In Quick Add</h3>
+      <ol>
+        <li>Check the name. A short name with distinctive first letters is quicker to type.</li>
+        <li>Choose the palette: click the field, press the Down Arrow key for the list, or press ⌘1 to ⌘9 for the palettes listed, ⌘0 for General. Typing a new name makes a new palette.</li>
+        <li>Optionally type a forced alias.</li>
+        <li>Read Keys this would change, if it is shown: it lists the triggers whose keys the new one would move.</li>
+        <li>Press Return to add, or Escape to cancel.</li>
+      </ol>
+      <h3>In the editor</h3>
+      <ol>
+        <li>Select a palette in the sidebar.</li>
+        <li>Choose File &gt; New Trigger (⌘N), or click New Trigger in the toolbar.</li>
+        <li>Type the name and the link in the new row.</li>
+      </ol>
+      <p>File &gt; New Trigger from Shortcut lists the Shortcuts on this Mac and makes a trigger for the one chosen.</p>
+      <h3>From other apps</h3>
+      <p>A link, an action in the Shortcuts app, a bookmark in a browser and an AI assistant can all add triggers. See Automation and AI Assistants.</p>
+
+      <h2 id="triggers-that-ask-for-input">Triggers That Ask for Input</h2>
+      <p>A link can contain input fields, written as a name in braces. Picking such a trigger asks for the text first and puts it into the link.</p>
+      <p class="example"><code>https://www.youtube.com/results?search_query={Search}</code></p>
+      <p>This turns one trigger into a search of a website, or passes text to a Shortcut or a macro. The Automation page describes input fields in full.</p>
+
+      <h2 id="new-and-changed-marks">New and Changed Marks</h2>
+      <p>A trigger that did not come from the keyboard of the person using the Mac is marked until it has been opened once from the overlay.</p>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>New</strong></td><td>Added by an import, a shared palette, an action in the Shortcuts app that adds without asking, or an AI assistant.</td></tr>
+            <tr><td><strong>Changed</strong></td><td>Its link was changed by an import or an AI assistant.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul>
+        <li>The mark is a reminder to look at what the trigger opens before relying on it.</li>
+        <li>A link or an action from another app does not open a marked trigger by itself; it shows the trigger instead.</li>
+        <li>Triggers added in Quick Add or in the editor are not marked.</li>
+        <li>Settings &gt; Overlay &gt; Show New and Changed marks hides the tags in the overlay. The marks themselves stay, and so does the rule above.</li>
+      </ul>
+
+      <h2 id="when-a-trigger-cannot-be-opened">When a Trigger Cannot Be Opened</h2>
+      <p>If a link cannot be opened, a notice in the middle of the screen says which trigger and why: no app on the Mac opens that kind of link, the file is no longer at its path, Rapidfire has no access to the folder, or the drive is not connected. The notice goes away by itself and never takes the keyboard.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/automation/">Automation</a>: Rapidfire works with other tools on the Mac. Other apps can show a palette, add triggers, and read what is kept in Rapidfire, through links, through the Shortcuts app, and by dragging and copying.</li>
+        <li><a href="/rapidfire/docs/ai/">AI Assistants</a>: An AI assistant can read and edit the library through Rapidfire’s MCP server: build a palette for a new project, tidy names, or move triggers, in one request. This page covers connecting an assistant, what it can do, and how every change stays visible and reversible.</li>
+        <li><a href="/rapidfire/docs/files-and-sync/">Files and iCloud Sync</a>: Triggers that open files need access to the folders those files are in. The library itself can be kept the same on every Mac through iCloud. This page covers both.</li>
+        <li><a href="/rapidfire/docs/keys/">How Keys Work</a>: Rapidfire works out the keys for every trigger from its name. This page explains the rule, how to steer it with aliases, and how to lock the keys of a trigger so they never change.</li>
+      </ul>
+
+      <nav class="pager" aria-label="More help">
+        <a href="/rapidfire/docs/palettes/" rel="prev">← Palettes</a>
+        <a href="/rapidfire/docs/editor/" rel="next">The Editor →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

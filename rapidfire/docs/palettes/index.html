@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palettes — Rapidfire Help</title>
+  <meta name="description" content="Palettes group triggers. A palette can have its own hotkeys, a prefix, and a place inside other palettes, which is how a large library stays easy to pick from.">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/palettes/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="Palettes — Rapidfire Help">
+  <meta property="og:description" content="Palettes group triggers. A palette can have its own hotkeys, a prefix, and a place inside other palettes, which is how a large library stays easy to pick from.">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/palettes/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>Palettes</h1>
+    <p class="intro">Palettes group triggers. A palette can have its own hotkeys, a prefix, and a place inside other palettes, which is how a large library stays easy to pick from.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#the-general-palette">The General Palette</a>
+        <a href="#make-a-palette">Make a Palette</a>
+        <a href="#palette-settings">Palette Settings</a>
+        <a href="#show-a-palette-inside-another">Show a Palette Inside Another</a>
+        <a href="#hotkeys">Hotkeys</a>
+        <a href="#step-through-palettes-with-one-hotkey">Step Through Palettes with One Hotkey</a>
+        <a href="#order-renaming-and-deleting">Order, Renaming and Deleting</a>
+        <a href="#dynamic-palettes">Dynamic Palettes</a>
+      </nav>
+
+      <h2 id="the-general-palette">The General Palette</h2>
+      <p>General is always there and cannot be deleted. It is what the menu bar icon and the first hotkey open, and where a dropped link goes unless another palette is chosen. Other palettes can be shown inside it, so General can serve as the one place from which everything is reached.</p>
+
+      <h2 id="make-a-palette">Make a Palette</h2>
+      <ol>
+        <li>Open the editor: choose Open Editor from the menu bar icon’s menu, or press ⌘E in the overlay.</li>
+        <li>Click New Palette at the bottom of the sidebar, or choose File &gt; New Palette (⇧⌘N).</li>
+        <li>Type a name and press Return.</li>
+      </ol>
+      <p>Triggers are added to the palette that is selected in the sidebar. To move triggers between palettes, drag them onto a palette in the sidebar, or select them and choose File &gt; Move To.</p>
+      <p>Quick Add can make a palette as well: type a new name in its palette field and press Return.</p>
+
+      <h2 id="palette-settings">Palette Settings</h2>
+      <p>Selecting a palette shows its settings at the side of the editor. View &gt; Show Palette Settings (⌥⌘I) shows or hides them.</p>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>Icon</strong></td><td>The symbol shown beside the palette’s name in the sidebar.</td></tr>
+            <tr><td><strong>Prefix</strong></td><td>A short text, such as o or spe, that comes before each of the palette’s names wherever the palette is shown inside another: “o Instagram”. Typing the prefix narrows the list to that palette.</td></tr>
+            <tr><td><strong>Show Inside</strong></td><td>The palettes this one appears in, each as All Triggers or One Entry.</td></tr>
+            <tr><td><strong>Hotkeys</strong></td><td>Global shortcuts that open this palette, each in its own hand mode.</td></tr>
+            <tr><td><strong>Include in cycle</strong></td><td>Adds the palette to the round a General hotkey steps through when it is pressed again.</td></tr>
+            <tr><td><strong>Opens</strong></td><td>Where the overlay appears for this palette: Default (Settings), Center of the Screen, or At the Pointer.</td></tr>
+            <tr><td><strong>Show in Spotlight and Siri</strong></td><td>Whether the palette and its triggers can be found by name in Spotlight, by Siri and in the Shortcuts app.</td></tr>
+            <tr><td><strong>From Other Tools</strong></td><td>The link that opens this palette, ready to copy into another app.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="show-a-palette-inside-another">Show a Palette Inside Another</h2>
+      <p>Any palette can be shown inside any other, and inside several at once. A palette named Home Assistant can appear in Automations and in General.</p>
+      <ol>
+        <li>Select the palette in the editor.</li>
+        <li>In Palette Settings, under Show Inside, turn on the palette it should appear in.</li>
+        <li>Choose Show as: All Triggers lists its triggers there after the prefix; One Entry adds a single row that opens the palette.</li>
+      </ol>
+      <ul>
+        <li>Prefixes chain. With Home Assistant (prefix h) inside Automations (prefix a) inside General, Lights reads “a h Lights” in General.</li>
+        <li>A palette without a prefix adds nothing to the names; its triggers mix in with the others.</li>
+        <li>A trigger that can be reached in several ways is listed once in each overlay, by its shortest path.</li>
+        <li>A palette cannot be shown inside itself, directly or through others. Rapidfire refuses the change and names the loop.</li>
+      </ul>
+      <p class="note">One Entry keeps a large palette out of the way: the outer list gains one row instead of fifty. All Triggers suits a small palette that should be reachable without an extra step.</p>
+
+      <h2 id="hotkeys">Hotkeys</h2>
+      <p>Every palette, General included, can have any number of hotkeys. Each hotkey opens its palette in one hand mode: Both, Left or Right.</p>
+      <ol>
+        <li>Open Settings &gt; Hotkeys, or select the palette in the editor and find Hotkeys in Palette Settings.</li>
+        <li>In the empty row, choose the hand, click Record Shortcut, and press the shortcut.</li>
+      </ol>
+      <ul>
+        <li>Pressing a palette’s hotkey again closes the overlay.</li>
+        <li>Pressing the hotkey of another palette while the overlay is open switches to that palette.</li>
+        <li>A shortcut needs Command, Control or Option. A shortcut another app has registered is refused, and the row says so.</li>
+        <li>macOS 15.0 and 15.1 do not accept a shortcut that uses only Option, or only Option and Shift. Add Command or Control, or update to macOS 15.2 or later.</li>
+      </ul>
+
+      <h2 id="step-through-palettes-with-one-hotkey">Step Through Palettes with One Hotkey</h2>
+      <p>A General hotkey can step through chosen palettes: General first, then each palette with Include in cycle turned on, in sidebar order, then closed. One hotkey pressed two or three times then reaches the palettes used most, without a hotkey for each.</p>
+      <p>With no palette included in the cycle, a General hotkey opens General and closes it again.</p>
+
+      <h2 id="order-renaming-and-deleting">Order, Renaming and Deleting</h2>
+      <ul>
+        <li>Drag a palette in the sidebar to change its place, or use File &gt; Move Palette Up (⌥⌘↑) and Move Palette Down (⌥⌘↓). The order decides the cycle and the order in which a whole palette opens.</li>
+        <li>To rename a palette, select it and choose File &gt; Rename Palette.</li>
+        <li>To delete palettes, select them and press Delete. Rapidfire asks first, and Edit &gt; Undo (⌘Z) brings a deleted palette back with its triggers.</li>
+      </ul>
+
+      <h2 id="dynamic-palettes">Dynamic Palettes</h2>
+      <p>A dynamic palette holds no triggers of its own. It shows another palette and can be switched to show a different one, by hand, at a time of day, or when an app comes forward. It is described on the Automation page.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/automation/">Automation</a>: Rapidfire works with other tools on the Mac. Other apps can show a palette, add triggers, and read what is kept in Rapidfire, through links, through the Shortcuts app, and by dragging and copying.</li>
+        <li><a href="/rapidfire/docs/overlay/">The Overlay</a>: The overlay is the list a hotkey shows. This page describes what is on it, every way of picking from it, and the modes that change how it behaves: Show All, watching, and opening a whole palette.</li>
+        <li><a href="/rapidfire/docs/keys/">How Keys Work</a>: Rapidfire works out the keys for every trigger from its name. This page explains the rule, how to steer it with aliases, and how to lock the keys of a trigger so they never change.</li>
+      </ul>
+
+      <nav class="pager" aria-label="More help">
+        <a href="/rapidfire/docs/keys/" rel="prev">← How Keys Work</a>
+        <a href="/rapidfire/docs/triggers/" rel="next">Triggers →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

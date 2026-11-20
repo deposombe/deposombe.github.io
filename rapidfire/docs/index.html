@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rapidfire Help — Deposombe</title>
+  <meta name="description" content="Rapidfire is a keyboard launcher for the Mac. It shows the links, apps and files kept in it, and opens one after a few keys.">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="Rapidfire Help — Deposombe">
+  <meta property="og:description" content="Rapidfire is a keyboard launcher for the Mac. It shows the links, apps and files kept in it, and opens one after a few keys.">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Rapidfire Help</h1>
+    <p class="intro">Rapidfire is a keyboard launcher for the Mac. It shows the links, apps and files kept in it, and opens one after a few keys. These pages describe everything it does. The same pages are in the app, under Help.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <ul class="pages">
+        <li><a href="/rapidfire/docs/start/">Getting Started</a><br>Rapidfire keeps links, apps, files and automations in one list, shows the list with a hotkey, and opens an item after a few keys. This page covers the first five minutes.</li>
+        <li><a href="/rapidfire/docs/features/">What Rapidfire Can Do</a><br>A tour of Rapidfire’s features, from the keys it works out by itself to the AI assistant that can build a library while it is being watched. Each part points to the page that describes it in full.</li>
+        <li><a href="/rapidfire/docs/overlay/">The Overlay</a><br>The overlay is the list a hotkey shows. This page describes what is on it, every way of picking from it, and the modes that change how it behaves: Show All, watching, and opening a whole palette.</li>
+        <li><a href="/rapidfire/docs/keys/">How Keys Work</a><br>Rapidfire works out the keys for every trigger from its name. This page explains the rule, how to steer it with aliases, and how to lock the keys of a trigger so they never change.</li>
+        <li><a href="/rapidfire/docs/palettes/">Palettes</a><br>Palettes group triggers. A palette can have its own hotkeys, a prefix, and a place inside other palettes, which is how a large library stays easy to pick from.</li>
+        <li><a href="/rapidfire/docs/triggers/">Triggers</a><br>A trigger is a name and a link. This page lists what a trigger can open, the ways of adding one, and what the marks next to a trigger mean.</li>
+        <li><a href="/rapidfire/docs/editor/">The Editor</a><br>The editor is the window in which the library is arranged: palettes on the left, the triggers of the selected palette in a table, and the palette’s settings at the side.</li>
+        <li><a href="/rapidfire/docs/one-handed/">One-Handed Use</a><br>Rapidfire can be used with one hand on the keyboard, for working with the other on a mouse or trackpad, and for anyone who types with one hand. The keys of one half of the keyboard are mirrored onto the other.</li>
+        <li><a href="/rapidfire/docs/sharing/">Sharing and Backups</a><br>Palettes can be given to other people as a file or as a link, and the whole library can be saved and restored. Rapidfire also keeps its own copies before any change that removes much.</li>
+        <li><a href="/rapidfire/docs/files-and-sync/">Files and iCloud Sync</a><br>Triggers that open files need access to the folders those files are in. The library itself can be kept the same on every Mac through iCloud. This page covers both.</li>
+        <li><a href="/rapidfire/docs/ai/">AI Assistants</a><br>An AI assistant can read and edit the library through Rapidfire’s MCP server: build a palette for a new project, tidy names, or move triggers, in one request. This page covers connecting an assistant, what it can do, and how every change stays visible and reversible.</li>
+        <li><a href="/rapidfire/docs/automation/">Automation</a><br>Rapidfire works with other tools on the Mac. Other apps can show a palette, add triggers, and read what is kept in Rapidfire, through links, through the Shortcuts app, and by dragging and copying.</li>
+        <li><a href="/rapidfire/docs/spotlight-and-siri/">Spotlight and Siri</a><br>Palettes and triggers can be found by name in Spotlight and asked for through Siri, without opening Rapidfire first.</li>
+        <li><a href="/rapidfire/docs/watching/">Watching and Presenting</a><br>The overlay can be kept open, redrawn as the library changes, and unfolded to show everything at once. Together with a few links and settings, this makes it possible to follow an AI assistant at work, and to demonstrate or record Rapidfire without touching the keyboard.</li>
+        <li><a href="/rapidfire/docs/settings/">Settings</a><br>Every setting, pane by pane, with what it changes. Settings opens with ⌘, from the overlay, the editor and the menu bar icon’s menu.</li>
+        <li><a href="/rapidfire/docs/accessibility/">Accessibility</a><br>Rapidfire is built to be used with VoiceOver, Voice Control, Switch Control, a keyboard alone, one hand, low vision, and without relying on color, motion or sound. This page lists what it does for each and which settings help.</li>
+        <li><a href="/rapidfire/docs/shortcuts/">Keyboard Shortcuts</a><br>Every key Rapidfire uses, on one page. The menu bar icon’s menu opens this page directly: Control-click the icon and choose Keyboard Shortcuts.</li>
+        <li><a href="/rapidfire/docs/troubleshooting/">Troubleshooting and Privacy</a><br>What to check when something does not work as expected, where Rapidfire keeps its data, and what it does and does not do with it.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

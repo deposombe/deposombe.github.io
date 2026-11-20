@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spotlight and Siri — Rapidfire Help</title>
+  <meta name="description" content="Palettes and triggers can be found by name in Spotlight and asked for through Siri, without opening Rapidfire first.">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/spotlight-and-siri/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="Spotlight and Siri — Rapidfire Help">
+  <meta property="og:description" content="Palettes and triggers can be found by name in Spotlight and asked for through Siri, without opening Rapidfire first.">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/spotlight-and-siri/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>Spotlight and Siri</h1>
+    <p class="intro">Palettes and triggers can be found by name in Spotlight and asked for through Siri, without opening Rapidfire first.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#find-a-trigger-or-a-palette-in-spotlight">Find a Trigger or a Palette in Spotlight</a>
+        <a href="#ask-siri">Ask Siri</a>
+        <a href="#keep-something-out-of-spotlight-and-siri">Keep Something Out of Spotlight and Siri</a>
+        <a href="#actions-in-the-shortcuts-app">Actions in the Shortcuts App</a>
+      </nav>
+
+      <h2 id="find-a-trigger-or-a-palette-in-spotlight">Find a Trigger or a Palette in Spotlight</h2>
+      <ol>
+        <li>Press ⌘Space and type the name of a trigger or a palette.</li>
+        <li>Choose Rapidfire’s item in the results.</li>
+      </ol>
+      <ul>
+        <li>A trigger’s item opens the trigger. Its second line says which palette it is in.</li>
+        <li>A palette’s item shows that palette’s overlay.</li>
+        <li>The words rapidfire, palette and trigger, and a trigger’s alias, also find these items.</li>
+      </ul>
+      <p class="note">Only names are given to Spotlight, never links, and the index stays on this Mac.</p>
+
+      <h2 id="ask-siri">Ask Siri</h2>
+      <p>Say or type “Find” and a name “in Rapidfire”, for example “Find Twitch in Rapidfire”. Rapidfire shows the overlay with what matched. When exactly one thing matches, what happens is set in Settings &gt; General &gt; Siri and Spotlight.</p>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>When Find matches a trigger</strong></td><td>Show Its Palette shows the trigger highlighted in its palette. Run the Trigger opens it.</td></tr>
+            <tr><td><strong>When Find matches a palette</strong></td><td>Show Its Overlay shows the palette. Run the Whole Palette opens every trigger in it.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">The General palette is never run as a whole, and a large palette asks first, as set in Settings &gt; Keys &gt; Confirm before opening many.</p>
+
+      <h2 id="keep-something-out-of-spotlight-and-siri">Keep Something Out of Spotlight and Siri</h2>
+      <ul>
+        <li>Settings &gt; General &gt; Show palettes and triggers switches all of it off.</li>
+        <li>Palette Settings &gt; Show in Spotlight and Siri does the same for one palette and its triggers.</li>
+      </ul>
+
+      <h2 id="actions-in-the-shortcuts-app">Actions in the Shortcuts App</h2>
+      <p>Rapidfire’s actions, such as Open Palette, Run Trigger, Add Trigger and Find Triggers, are listed on the Automation page.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/automation/">Automation</a>: Rapidfire works with other tools on the Mac. Other apps can show a palette, add triggers, and read what is kept in Rapidfire, through links, through the Shortcuts app, and by dragging and copying.</li>
+        <li><a href="/rapidfire/docs/settings/">Settings</a>: Every setting, pane by pane, with what it changes. Settings opens with ⌘, from the overlay, the editor and the menu bar icon’s menu.</li>
+      </ul>
+
+      <nav class="pager" aria-label="More help">
+        <a href="/rapidfire/docs/automation/" rel="prev">← Automation</a>
+        <a href="/rapidfire/docs/watching/" rel="next">Watching and Presenting →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings — Rapidfire Help</title>
+  <meta name="description" content="Every setting, pane by pane, with what it changes.">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/settings/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="Settings — Rapidfire Help">
+  <meta property="og:description" content="Every setting, pane by pane, with what it changes.">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/settings/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>Settings</h1>
+    <p class="intro">Every setting, pane by pane, with what it changes. Settings opens with ⌘, from the overlay, the editor and the menu bar icon’s menu.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#general">General</a>
+        <a href="#hotkeys">Hotkeys</a>
+        <a href="#overlay">Overlay</a>
+        <a href="#keys">Keys</a>
+        <a href="#files">Files</a>
+        <a href="#sync">Sync</a>
+        <a href="#mcp">MCP</a>
+        <a href="#which-settings-sync">Which Settings Sync</a>
+      </nav>
+
+      <h2 id="general">General</h2>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>Open at login</strong></td><td>Starts Rapidfire when the Mac starts. Off until it is turned on. Kept per Mac.</td></tr>
+            <tr><td><strong>Count how often triggers are used</strong></td><td>Keeps a count per trigger for the last 30 days, on this Mac only. It is what Tab in the overlay and the warnings about changed keys rely on. Turning it off deletes the counts; Clear Usage deletes them and keeps counting.</td></tr>
+            <tr><td><strong>Show palettes and triggers</strong></td><td>Whether Spotlight, Siri and the Shortcuts app can find palettes and triggers by name.</td></tr>
+            <tr><td><strong>When Find matches a trigger</strong></td><td>What “Find … in Rapidfire” does when one trigger matches: Show Its Palette or Run the Trigger.</td></tr>
+            <tr><td><strong>When Find matches a palette</strong></td><td>The same for one palette: Show Its Overlay or Run the Whole Palette.</td></tr>
+            <tr><td><strong>Links that run a trigger</strong></td><td>New Key makes a new key for links that run a trigger or a palette. Links copied before then stop running anything and only show it.</td></tr>
+            <tr><td><strong>Menu bar item</strong></td><td>How Rapidfire appears in the menu bar: Icon Only, Icon and “RF”, or Icon and “Rapidfire”. A wider item is easier to hit.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="hotkeys">Hotkeys</h2>
+      <p>Every palette’s hotkeys in one list. Each row has a hand mode and a shortcut; the empty row at the end adds one. The same rows are in each palette’s Palette Settings in the editor.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/palettes/">Palettes</a>: Palettes group triggers. A palette can have its own hotkeys, a prefix, and a place inside other palettes, which is how a large library stays easy to pick from.</li>
+        <li><a href="/rapidfire/docs/one-handed/">One-Handed Use</a>: Rapidfire can be used with one hand on the keyboard, for working with the other on a mouse or trackpad, and for anyone who types with one hand. The keys of one half of the keyboard are mirrored onto the other.</li>
+      </ul>
+
+      <h2 id="overlay">Overlay</h2>
+      <h3>Layout</h3>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>Layout</strong></td><td>Expanded (columns) adds columns as the list grows. Collapsed (one list) is a single scrolling list that can be resized by dragging its edges.</td></tr>
+            <tr><td><strong>Opens</strong></td><td>Center of the Screen, on the screen the pointer is on, or At the Pointer. A palette can have its own choice.</td></tr>
+            <tr><td><strong>Maximum width, Maximum height</strong></td><td>The largest the overlay may be, as a share of the screen: Small, Medium, Large, Extra Large or Full Screen. The overlay is only as big as its contents need.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Show All</h3>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>Maximum size</strong></td><td>The largest the view with every folder opened may be. It is separate from the sizes above, so the everyday overlay can stay small.</td></tr>
+            <tr><td><strong>Shrink text to fit</strong></td><td>When the opened view is larger than its maximum size, makes its text smaller, down to the smallest text size, before it scrolls.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Items</h3>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>Text size</strong></td><td>The size of the names. ⌘+ and ⌘− in the overlay change the same setting; ⌘0 resets it.</td></tr>
+            <tr><td><strong>Item size</strong></td><td>The space around each row: Small, Medium or Large. Larger rows are easier to click or tap.</td></tr>
+            <tr><td><strong>Long names</strong></td><td>Where long names are cut: Show Full Names, Long, Medium or Short. A name is never cut before its key.</td></tr>
+            <tr><td><strong>Key style</strong></td><td>How the key letters are marked: Underline or Box. Box is used automatically when Differentiate Without Color is on.</td></tr>
+            <tr><td><strong>Show New and Changed marks</strong></td><td>Shows the New and Changed tags in the overlay. Off hides the tags there; the marks are kept, and marked triggers are still not run by links or actions.</td></tr>
+            <tr><td><strong>Pointer styles move with Reduce Motion on</strong></td><td>Lets pointer styles that move, chosen with ⌘] and ⌘[ in the overlay, move also while Reduce Motion is on in System Settings. Off, such a style is shown as Quiet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="keys">Keys</h2>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>A key that matches nothing</strong></td><td>Closes the Overlay, or Is Ignored. When ignored, the overlay shakes; with Reduce Motion on, it plays the alert sound and shows a line saying so.</td></tr>
+            <tr><td><strong>Open the last item</strong></td><td>Instantly opens a trigger as soon as it is the only one left. After Pressing Return keeps it highlighted until Return.</td></tr>
+            <tr><td><strong>Confirm before opening many</strong></td><td>When holding Control opens a whole palette: Never, Over 10 Triggers, or Always ask first.</td></tr>
+            <tr><td><strong>Bottom row</strong></td><td>For one-handed modes: whether bottom-row keys mirror by movement or by finger.</td></tr>
+            <tr><td><strong>Show the key to press</strong></td><td>For one-handed modes: Next to the Letter, or Column on the Left.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="files">Files</h2>
+      <p>The folders, files and drives that file triggers may be opened from, with Add Folder or File and Give Access to Your Home Folder. Kept per Mac.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/files-and-sync/">Files and iCloud Sync</a>: Triggers that open files need access to the folders those files are in. The library itself can be kept the same on every Mac through iCloud. This page covers both.</li>
+      </ul>
+
+      <h2 id="sync">Sync</h2>
+      <p>Sync with iCloud, the Macs that sync, what was received from them, and Copy Sync Report.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/files-and-sync/">Files and iCloud Sync</a>: Triggers that open files need access to the folders those files are in. The library itself can be kept the same on every Mac through iCloud. This page covers both.</li>
+      </ul>
+
+      <h2 id="mcp">MCP</h2>
+      <p>The MCP server’s switch, Turn off after, the port, the setup command for Claude Code, the token, and the activity of the last 30 days.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/ai/">AI Assistants</a>: An AI assistant can read and edit the library through Rapidfire’s MCP server: build a palette for a new project, tidy names, or move triggers, in one request. This page covers connecting an assistant, what it can do, and how every change stays visible and reversible.</li>
+      </ul>
+
+      <h2 id="which-settings-sync">Which Settings Sync</h2>
+      <p>With iCloud sync on, the settings of the Overlay and Keys panes, and the choices under Siri and Spotlight, are the same on every Mac. Open at login, the usage counts, Files, and everything in the MCP pane stay on each Mac.</p>
+
+      <nav class="pager" aria-label="More help">
+        <a href="/rapidfire/docs/watching/" rel="prev">← Watching and Presenting</a>
+        <a href="/rapidfire/docs/accessibility/" rel="next">Accessibility →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Watching and Presenting — Rapidfire Help</title>
+  <meta name="description" content="The overlay can be kept open, redrawn as the library changes, and unfolded to show everything at once.">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/watching/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="Watching and Presenting — Rapidfire Help">
+  <meta property="og:description" content="The overlay can be kept open, redrawn as the library changes, and unfolded to show everything at once.">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/watching/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>Watching and Presenting</h1>
+    <p class="intro">The overlay can be kept open, redrawn as the library changes, and unfolded to show everything at once. Together with a few links and settings, this makes it possible to follow an AI assistant at work, and to demonstrate or record Rapidfire without touching the keyboard.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#watching">Watching</a>
+        <a href="#links-that-open-the-overlay-in-a-mode">Links That Open the Overlay in a Mode</a>
+        <a href="#follow-an-ai-assistant">Follow an AI Assistant</a>
+        <a href="#prepare-a-demonstration-or-a-recording">Prepare a Demonstration or a Recording</a>
+      </nav>
+
+      <h2 id="watching">Watching</h2>
+      <p>Normally the overlay closes as soon as another app takes the keyboard, and it shows the library as it was when it opened. A watched overlay does neither: it stays where it is, and it is drawn again after every change to the library, whoever made the change.</p>
+      <div class="table">
+        <table>
+          <thead><tr><th>Keys</th><th>What they do</th></tr></thead>
+          <tbody>
+            <tr><td><kbd>⌘K</kbd></td><td>Switches watching on or off in the overlay that is open.</td></tr>
+            <tr><td><kbd>⌘T</kbd></td><td>Switches Show All on or off: every folder opened in place.</td></tr>
+            <tr><td><kbd>Escape</kbd></td><td>Closes the overlay, watched or not.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The eye and the Show All button in the overlay’s top row do the same for the pointer. Both modes end when the overlay closes.</p>
+
+      <h2 id="links-that-open-the-overlay-in-a-mode">Links That Open the Overlay in a Mode</h2>
+      <p>The link that opens a palette takes two extra parts, so that a script, a macro or an AI assistant can set the overlay up.</p>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><code>watch=yes</code></td><td>Keeps the overlay open and redraws it on every change. watch=no stops that.</td></tr>
+            <tr><td><code>all=yes</code></td><td>Opens every folder in place. all=no closes them again.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="example"><code>rapidfire://open?watch=yes</code></p>
+      <p class="example"><code>rapidfire://open?all=yes</code></p>
+      <p class="example"><code>rapidfire://open?watch=yes&amp;all=yes</code></p>
+      <p class="example"><code>rapidfire://open?palette=Dev&amp;watch=yes</code></p>
+      <ul>
+        <li>With either part, a palette that is already showing stays open and only changes how it shows. Without them, the link behaves like the palette’s hotkey and closes a palette that is showing.</li>
+        <li>The links only show things. They cannot add, change or open a trigger.</li>
+        <li>In Terminal, a link is opened with the open command, with the link in quotation marks.</li>
+      </ul>
+      <p class="example"><code>open &quot;rapidfire://open?watch=yes&quot;</code></p>
+
+      <h2 id="follow-an-ai-assistant">Follow an AI Assistant</h2>
+      <ol>
+        <li>Turn on the MCP server and connect the assistant, as described in AI Assistants.</li>
+        <li>Open the watched overlay: press the hotkey and then ⌘K, or open the first link above.</li>
+        <li>Give the assistant its task. Each trigger appears in the overlay as it is added, and the eye moves with each change.</li>
+        <li>Press ⌘T, or open the link with all=yes, to see the result with every folder opened.</li>
+      </ol>
+      <p>An assistant can open these links itself when it has a way to open links on the Mac. Rapidfire’s MCP server lists them for it.</p>
+
+      <h2 id="prepare-a-demonstration-or-a-recording">Prepare a Demonstration or a Recording</h2>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>Show New and Changed marks</strong></td><td>Settings &gt; Overlay. Turn it off to keep the tags off triggers an assistant has just added. The marks themselves are kept.</td></tr>
+            <tr><td><strong>Maximum size (Show All)</strong></td><td>Settings &gt; Overlay &gt; Show All. The largest the opened view may grow: Extra Large leaves a margin around it, Full Screen uses nearly all of the screen.</td></tr>
+            <tr><td><strong>Shrink text to fit</strong></td><td>Settings &gt; Overlay &gt; Show All. Makes the text of the opened view smaller, as far as needed, so that a large library fits without scrolling.</td></tr>
+            <tr><td><strong>Text size</strong></td><td>Settings &gt; Overlay, or ⌘+ and ⌘− in the overlay. Larger text reads better in a recording; a larger screen fits more at the same size.</td></tr>
+            <tr><td><strong>Opens</strong></td><td>Settings &gt; Overlay. Center of the Screen keeps the overlay in the same place from one opening to the next.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">With Reduce Motion on in System Settings &gt; Accessibility &gt; Motion (Display on macOS 15), the eye does not move when a change arrives. The overlay is still redrawn.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/ai/">AI Assistants</a>: An AI assistant can read and edit the library through Rapidfire’s MCP server: build a palette for a new project, tidy names, or move triggers, in one request. This page covers connecting an assistant, what it can do, and how every change stays visible and reversible.</li>
+        <li><a href="/rapidfire/docs/overlay/">The Overlay</a>: The overlay is the list a hotkey shows. This page describes what is on it, every way of picking from it, and the modes that change how it behaves: Show All, watching, and opening a whole palette.</li>
+        <li><a href="/rapidfire/docs/automation/">Automation</a>: Rapidfire works with other tools on the Mac. Other apps can show a palette, add triggers, and read what is kept in Rapidfire, through links, through the Shortcuts app, and by dragging and copying.</li>
+        <li><a href="/rapidfire/docs/settings/">Settings</a>: Every setting, pane by pane, with what it changes. Settings opens with ⌘, from the overlay, the editor and the menu bar icon’s menu.</li>
+      </ul>
+
+      <nav class="pager" aria-label="More help">
+        <a href="/rapidfire/docs/spotlight-and-siri/" rel="prev">← Spotlight and Siri</a>
+        <a href="/rapidfire/docs/settings/" rel="next">Settings →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automation — Rapidfire Help</title>
+  <meta name="description" content="Rapidfire works with other tools on the Mac. Other apps can show a palette, add triggers, and read what is kept in Rapidfire, through links, through the app,…">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/automation/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="Automation — Rapidfire Help">
+  <meta property="og:description" content="Rapidfire works with other tools on the Mac. Other apps can show a palette, add triggers, and read what is kept in Rapidfire, through links, through the app,…">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/automation/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>Automation</h1>
+    <p class="intro">Rapidfire works with other tools on the Mac. Other apps can show a palette, add triggers, and read what is kept in Rapidfire, through links, through the Shortcuts app, and by dragging and copying.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#overview">Overview</a>
+        <a href="#open-a-palette-from-another-app">Open a Palette from Another App</a>
+        <a href="#open-a-trigger-from-another-app">Open a Trigger from Another App</a>
+        <a href="#add-triggers">Add Triggers</a>
+        <a href="#add-shortcuts-as-triggers">Add Shortcuts as Triggers</a>
+        <a href="#ask-for-input-when-a-trigger-opens">Ask for Input When a Trigger Opens</a>
+        <a href="#rapidfire-in-the-shortcuts-app">Rapidfire in the Shortcuts App</a>
+        <a href="#dynamic-palettes">Dynamic Palettes</a>
+        <a href="#examples">Examples</a>
+        <a href="#take-triggers-out">Take Triggers Out</a>
+        <a href="#link-reference">Link Reference</a>
+        <a href="#privacy-and-safety">Privacy and Safety</a>
+      </nav>
+
+      <h2 id="overview">Overview</h2>
+      <p>Rapidfire keeps links and opens one after a few keys. It does not run scripts or move windows itself: a trigger opens a link, and the app that owns the link does the work. Automation connects the two sides.</p>
+      <ul>
+        <li>Show a palette from another app: a gesture, a key on a Stream Deck, a macro, a voice command.</li>
+        <li>Add triggers from another app: the page open in a browser, a file in Finder, a list of links.</li>
+        <li>Put Shortcuts, BetterTouchTool triggers and Keyboard Maestro macros on a palette, each with a name and visible keys.</li>
+        <li>Use triggers in the Shortcuts app: find them, run them, or run a whole palette on a schedule.</li>
+      </ul>
+
+      <h2 id="open-a-palette-from-another-app">Open a Palette from Another App</h2>
+      <p>Every palette has a link. Any app that can open a link can use it to show that palette, just as the palette's hotkey would.</p>
+      <ol>
+        <li>Open the editor and Control-click the palette in the sidebar.</li>
+        <li>Choose Copy Link to Open Palette, then With Both Hands, With the Left Hand or With the Right Hand.</li>
+        <li>Paste the link into the other app: for example, an Open URL action in BetterTouchTool or Keyboard Maestro, or a Website key on a Stream Deck.</li>
+      </ol>
+      <p class="example"><code>rapidfire://open?palette=Dev&amp;hand=left</code></p>
+      <p>The same link is in Palette Settings, under From Other Tools. The palette can also be dragged out of the sidebar and dropped into the other app.</p>
+      <p class="note">The link uses the palette's name. After renaming the palette, copy the link again.</p>
+      <h3>Open everything in a palette at once</h3>
+      <p>To open every trigger in a palette with one link, as holding Control in the overlay does, Control-click the palette and choose Copy Link to Run Palette. This link contains a key made on this Mac, like a link that runs a single trigger. The General palette cannot be run this way.</p>
+      <p class="example"><code>rapidfire://run?palette=Morning</code></p>
+
+      <h2 id="open-a-trigger-from-another-app">Open a Trigger from Another App</h2>
+      <p>A trigger has a link too. Use it when another app should open one particular trigger: a key on a Stream Deck, a keyboard shortcut in BetterTouchTool, a macro.</p>
+      <ol>
+        <li>In the editor, Control-click the trigger.</li>
+        <li>Choose Copy Link to Trigger, then That Runs It.</li>
+        <li>Paste the link into the other app.</li>
+      </ol>
+      <p>The link contains a key of its own, which only this Mac can make. With it, the trigger opens at once. A link without the key, such as one written by hand or copied with That Shows It, shows the trigger in its palette instead, where Return opens it.</p>
+      <p class="example"><code>rapidfire://trigger?name=Docs&amp;palette=Dev</code></p>
+      <p class="note">Keep links that contain a key private. A key opens only the trigger or palette its link was copied for. If one gets out, choose New Key in Settings &gt; General: links copied before then stop opening triggers.</p>
+
+      <h2 id="add-triggers">Add Triggers</h2>
+      <h3>Drag and drop</h3>
+      <ul>
+        <li>Drag a link, a file, a folder or an app onto Rapidfire's icon in the menu bar. Quick Add opens with its name and address; choose a palette and press Return.</li>
+        <li>Drag several items at once, or a piece of text that contains links, such as a list in a note or a selection on a web page. They open in the Import window as a new palette, which can be renamed there, with items to untick and the keys that would change, before anything is added.</li>
+        <li>In the editor, drop or paste items into the table to add them to the palette that's showing.</li>
+      </ul>
+      <h3>From a link</h3>
+      <p>A link that starts with rapidfire://add opens Quick Add filled in. Nothing is added until Add is pressed.</p>
+      <p class="example"><code>rapidfire://add?url=https%3A%2F%2Fexample.com%2Fdocs&amp;name=Docs&amp;palette=Dev</code></p>
+      <h3>The page open in a browser</h3>
+      <p>Make a bookmark with the address below. Choosing the bookmark opens Quick Add with the page's title and address. The browser may ask once per website whether it may open Rapidfire.</p>
+      <p class="example"><code>javascript:location.href='rapidfire://add?url='+encodeURIComponent(location.href)+'&amp;name='+encodeURIComponent(document.title)</code></p>
+      <h3>From the Shortcuts app</h3>
+      <p>The Add Trigger action adds a link or a file from a Shortcut. A Shortcut that uses it can add from the Share menu, the Services menu, or a quick action in Finder. For a file, a folder or an app, connect it to the action's File field: that gives Rapidfire access to it.</p>
+
+      <h2 id="add-shortcuts-as-triggers">Add Shortcuts as Triggers</h2>
+      <p>A Shortcut can be a trigger. Rapidfire lists the Shortcuts on this Mac, so the link need not be written by hand.</p>
+      <ol>
+        <li>Open the editor and select the palette the trigger should go in.</li>
+        <li>Choose File &gt; New Trigger from Shortcut, then the Shortcut. Shortcuts in folders are in submenus.</li>
+      </ol>
+      <p>The trigger is named after the Shortcut and runs it when picked. To give the Shortcut input, add one of these to the end of the trigger's address:</p>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><code>&amp;input=clipboard</code></td><td>The Shortcut receives what was last copied.</td></tr>
+            <tr><td><code>&amp;input=text&amp;text=Hello</code></td><td>The Shortcut receives the text after text=.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Rapidfire reads the names of the Shortcuts on this Mac to show the menu. It doesn't run them, and nothing leaves the Mac.</p>
+
+      <h2 id="ask-for-input-when-a-trigger-opens">Ask for Input When a Trigger Opens</h2>
+      <p>A trigger's link can contain input fields. When the trigger is picked, Rapidfire asks for each field, puts what is typed into the link, and opens it. Use input fields to search a website, or to pass text to a Shortcut or a macro.</p>
+      <p class="example"><code>https://www.youtube.com/results?search_query={Search}</code></p>
+      <h3>Add an input field</h3>
+      <ol>
+        <li>In the editor, click the trigger's URL.</li>
+        <li>Where the typed text should go, write a name in braces, for example {Search}. The name is the field's label.</li>
+        <li>Press Return. An icon before the URL shows that the trigger asks for input. In the overlay, the trigger's name is followed by an ellipsis (…).</li>
+      </ol>
+      <p>To find the link for a website's search, search for a word on the website, copy the address of the results page, and replace the word with the input field.</p>
+      <h3>Fill in the fields</h3>
+      <ol>
+        <li>Pick the trigger in the overlay. The input fields take the place of the list.</li>
+        <li>Type the text. Press Tab to move to the next field.</li>
+        <li>Press Return to open the trigger. Press Escape to cancel, or press Delete in the empty first field to go back to the list.</li>
+      </ol>
+      <h3>Default values and optional fields</h3>
+      <ul>
+        <li>{Search}: the field must be filled in.</li>
+        <li>{Language|pl}: the field starts with the text after the bar, which can be changed or left.</li>
+        <li>{Tag|}: the field may stay empty.</li>
+        <li>A name used twice is one field. What is typed goes to both places.</li>
+      </ul>
+      <p class="example"><code>https://translate.google.com/?sl={From|en}&amp;tl={To|pl}&amp;text={Text}</code></p>
+      <h3>Pass text to a Shortcut or a macro</h3>
+      <p>Put the input field where the Shortcut, the Keyboard Maestro macro or the BetterTouchTool trigger takes its text.</p>
+      <p class="example"><code>shortcuts://run-shortcut?name=Make%20PDF&amp;input=text&amp;text={Text}</code></p>
+      <p class="example"><code>kmtrigger://macro=Paste%20Text&amp;value={Text}</code></p>
+      <p class="example"><code>btt://trigger_named/?trigger_name=Upload&amp;file={File Name}</code></p>
+      <p class="note">Rapidfire encodes what is typed, so spaces and characters such as &amp; and ? are passed on as text and cannot change where the link goes. Rapidfire does not keep what is typed.</p>
+      <p class="note">A link can have up to 8 input fields. Input fields work in links, not in the paths of files and folders. To use a brace as part of a link, write %7B for { and %7D for }.</p>
+      <p class="note">A trigger that asks for input is left out when a whole palette is opened at once.</p>
+
+      <h2 id="rapidfire-in-the-shortcuts-app">Rapidfire in the Shortcuts App</h2>
+      <p>Rapidfire adds these actions to the Shortcuts app. They also appear when their names are typed in Spotlight.</p>
+      <div class="table">
+        <table>
+          <thead><tr><th>Action</th><th>What it does</th></tr></thead>
+          <tbody>
+            <tr><td>Open Palette</td><td>Shows a palette's overlay, with both hands or mirrored onto the left or right hand.</td></tr>
+            <tr><td>Run Trigger</td><td>Opens one trigger, and hands it on to the next action.</td></tr>
+            <tr><td>Run Palette</td><td>Opens every trigger in a palette, as holding Control in the overlay does. A large palette asks first.</td></tr>
+            <tr><td>Run Trigger or Palette</td><td>Runs the trigger or palette with the given name.</td></tr>
+            <tr><td>Add Trigger</td><td>Opens Quick Add filled in, to be confirmed. With Show Quick Add off, adds the trigger at once, marks it New, and hands it on to the next action.</td></tr>
+            <tr><td>Switch Dynamic Palette</td><td>Changes which palette a dynamic palette shows on this Mac. Nothing is opened, and Rapidfire stays in the background.</td></tr>
+            <tr><td>Find Triggers</td><td>Finds triggers by name, palette, kind, or whether they're marked New or Changed, with sorting and a limit.</td></tr>
+            <tr><td>Find Palettes</td><td>Finds palettes by name or by how many triggers they hold, with sorting and a limit.</td></tr>
+            <tr><td>Find in Rapidfire</td><td>Type or say “find Rapidfire” and a name, in Spotlight or to Siri. Rapidfire shows where it is, or runs it, as set in Settings &gt; General.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Find Triggers returns triggers with their details: name, palette, link, kind, alias, and whether they're marked New or Changed. Pass a detail to a later action, for example the link to Open URLs.</p>
+      <p class="note">Triggers marked New or Changed, and triggers that run a program or an installer, aren't run by an action until they have been opened once from Rapidfire.</p>
+
+      <h2 id="dynamic-palettes">Dynamic Palettes</h2>
+      <p>A dynamic palette holds no triggers of its own. It shows another palette, and switching it chooses which one. Use it when the same place in the launcher should show different things at different times: work websites during the day and personal ones in the evening, or the tools of the current project.</p>
+      <h3>Make a dynamic palette</h3>
+      <ol>
+        <li>Open the editor and click New Dynamic Palette at the bottom of the sidebar, or choose File &gt; New Dynamic Palette.</li>
+        <li>Type its name and press Return.</li>
+        <li>In Palette Settings, under Show Inside, choose where it appears, for example in General, and whether it appears as all its triggers or as one entry.</li>
+        <li>Under On This Mac, choose the palette it shows.</li>
+      </ol>
+      <p>In the overlay, the dynamic palette then shows the triggers of that palette, and of the palettes shown inside it. While it shows nothing, it adds nothing to the overlay.</p>
+      <h3>Choose its prefix</h3>
+      <p>In Palette Settings, under Prefix, a dynamic palette uses either its own prefix or the prefix of the palette it shows. With its own prefix, the first keys stay the same whatever it shows. With the shown palette's prefix, the prefix changes with a switch. With no prefix, the shown triggers are listed among the others, and the keys of other triggers can change with a switch.</p>
+      <h3>Switch a dynamic palette</h3>
+      <ul>
+        <li>In the editor: in Palette Settings, under On This Mac, or by Control-clicking the dynamic palette in the sidebar and choosing a palette from Shows.</li>
+        <li>From the menu bar: Control-click Rapidfire's icon, choose Dynamic Palettes, then the dynamic palette, then the palette to show.</li>
+        <li>From the Shortcuts app: use the Switch Dynamic Palette action. In an automation it can switch at a time of day, on joining a Wi-Fi network, when an app opens, or when a Focus turns on.</li>
+        <li>From another app: use a link. Control-click the dynamic palette in the sidebar, choose Copy Link to Switch Palette, then the palette to show.</li>
+      </ul>
+      <p class="example"><code>rapidfire://switch?palette=Socials&amp;to=Work</code></p>
+      <p>The copied link contains a key made on this Mac for that dynamic palette. To switch to a different palette, change the name after to= and keep the key. A link without the key switches nothing.</p>
+      <p>A switch never opens anything. If the overlay is open when a switch happens, it shows the change the next time it opens.</p>
+      <p class="note">What a dynamic palette shows is kept on each Mac and isn't synced. The dynamic palette itself, with its name, prefix, hotkeys and where it's shown, syncs like any other palette. On another Mac it shows nothing until it is switched there.</p>
+      <p class="note">For a switch that happens often, such as every time an app comes to the front, use the Switch Dynamic Palette action, or have the other app open the link in the background. Rapidfire then stays in the background.</p>
+      <h3>What a dynamic palette can show</h3>
+      <p>A dynamic palette can show any palette except General, another dynamic palette, or a palette that shows the dynamic palette inside itself. Triggers can't be added to a dynamic palette: add them to the palette it shows.</p>
+
+      <h2 id="examples">Examples</h2>
+      <h3>Open a palette on joining a Wi-Fi network</h3>
+      <ol>
+        <li>In the Shortcuts app, choose Automation and add a new automation.</li>
+        <li>Choose Wi-Fi and the network, for example the one at the office.</li>
+        <li>Add the Open Palette action and choose the palette. To open everything in it at once, use Run Palette.</li>
+      </ol>
+      <p>The same works for a time of day, connecting a display, or opening an app.</p>
+      <h3>Keep a note, a task or a document on a palette</h3>
+      <p>Many apps have a link for each item: Notes, Reminders, Obsidian, Things, Bear, Craft and others. Copy the item's link in that app, then drag it onto Rapidfire's icon or paste it into the editor. Picking the trigger opens that exact item.</p>
+      <p class="example"><code>obsidian://open?vault=Notes&amp;file=Projects%2FPlan</code></p>
+      <h3>Run a Shortcut on what was just copied</h3>
+      <p>Add the Shortcut with File &gt; New Trigger from Shortcut, then add &amp;input=clipboard to the end of the trigger's address.</p>
+      <h3>Open the morning’s websites together</h3>
+      <p>Put them in a palette. Hold Control while picking any trigger in it to open the whole palette, or use the Run Palette action in an automation that runs at a time of day.</p>
+      <h3>One key for a System Settings pane</h3>
+      <p>System Settings panes have links too. Add one as a trigger:</p>
+      <p class="example"><code>x-apple.systempreferences:com.apple.BluetoothSettings</code></p>
+      <h3>Keep pieces of text ready to paste</h3>
+      <p>Rapidfire opens links and does not store text to paste. A Shortcut does that, and a trigger hands it the text.</p>
+      <ol>
+        <li>In the Shortcuts app, make a Shortcut named Copy Text with one action: Copy to Clipboard, set to copy the Shortcut Input.</li>
+        <li>In Rapidfire, add a trigger for each piece of text, with a link like the one below. The text comes after text=, with spaces written as %20.</li>
+        <li>Pick the trigger, then paste with Command-V.</li>
+      </ol>
+      <p class="example"><code>shortcuts://run-shortcut?name=Copy%20Text&amp;input=text&amp;text=Kind%20regards</code></p>
+      <p>With an input field in place of the text, the same trigger asks for it first.</p>
+      <h3>One key on a Stream Deck, one gesture, one spoken word</h3>
+      <p>Anything that can open a link can open a palette: a Website action on a Stream Deck key, a trackpad gesture in BetterTouchTool, a macro in Keyboard Maestro, a voice command. Copy the palette’s link from Palette Settings, under From Other Tools, and give it to the other tool.</p>
+
+      <h2 id="take-triggers-out">Take Triggers Out</h2>
+      <ul>
+        <li>Copy a trigger in the editor with Command-C. It pastes as a link with its name into notes and messages, and as its address into a browser.</li>
+        <li>To share whole palettes with someone who has Rapidfire, Control-click a palette and choose Copy Sharing Link or Export Palette.</li>
+      </ul>
+      <h3>Drag a link out</h3>
+      <p>Dragging a trigger or a palette out of Rapidfire gives its link without opening a menu. Drop it into a note, a message, or another app's link field.</p>
+      <ul>
+        <li>Drag a trigger out of the editor's table, or out of the overlay. The link shows the trigger in its palette.</li>
+        <li>Drag a palette out of the editor's sidebar, or drag a palette's row out of the overlay. The link opens the palette.</li>
+        <li>Hold Option at the start of the drag to get the link that runs it instead: the trigger opens at once, or every trigger in the palette opens. The General palette cannot be run this way, so its link always opens it.</li>
+      </ul>
+      <p class="note">A link dragged with Option contains a key that opens that trigger or palette. Keep it private.</p>
+      <p>Dragging inside the editor works as before: a trigger dropped on a palette in the sidebar moves there, and a palette dragged within the sidebar changes its place in the list.</p>
+
+      <h2 id="link-reference">Link Reference</h2>
+      <p>Every Rapidfire link starts with rapidfire:// followed by one of these words. Parts are added after a question mark and separated by &amp;. Spaces and special characters in a part must be percent-encoded; links copied from Rapidfire already are.</p>
+      <h3><code>rapidfire://open</code></h3>
+      <p>Shows a palette's overlay, as its hotkey would. With nothing after it: General.</p>
+      <div class="table">
+        <table>
+          <thead><tr><th>Part</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><code>palette</code></td><td>The palette's name, or its ID.</td></tr>
+            <tr><td><code>hand</code></td><td>left, right or both. Left out: both.</td></tr>
+            <tr><td><code>all</code></td><td>yes shows every folder opened in place (Show All), no closes them again. With it, a palette that is already showing stays open.</td></tr>
+            <tr><td><code>watch</code></td><td>yes keeps the overlay open and draws it again whenever the library changes, no stops that. With it, a palette that is already showing stays open.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="example"><code>rapidfire://open?palette=Dev&amp;hand=left</code></p>
+      <h3><code>rapidfire://run</code></h3>
+      <p>Opens every trigger in a palette at once, as holding Control in the overlay does. Only with the key this Mac made for it; without it, the palette is shown. General is never run this way.</p>
+      <div class="table">
+        <table>
+          <thead><tr><th>Part</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><code>palette</code></td><td>The palette's name, or its ID.</td></tr>
+            <tr><td><code>key</code></td><td>The key this Mac made for this palette's link. Rapidfire adds it when the link is copied with Copy Link to Run Palette.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="example"><code>rapidfire://run?palette=Morning</code></p>
+      <h3><code>rapidfire://trigger</code></h3>
+      <p>Shows a trigger in its palette, highlighted, so Return opens it. With the key this Mac made for it, opens the trigger at once.</p>
+      <div class="table">
+        <table>
+          <thead><tr><th>Part</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><code>name</code></td><td>The trigger's name, or its ID.</td></tr>
+            <tr><td><code>palette</code></td><td>The trigger's palette, when two triggers share the name.</td></tr>
+            <tr><td><code>key</code></td><td>The key this Mac made for this trigger's link. Rapidfire adds it when the link is copied with Copy Link to Trigger, then That Runs It.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="example"><code>rapidfire://trigger?name=Docs&amp;palette=Dev</code></p>
+      <h3><code>rapidfire://switch</code></h3>
+      <p>Switches a dynamic palette to show another palette, on this Mac. Only with the key this Mac made for that dynamic palette; without it, nothing is switched and the dynamic palette is shown. A switch never opens anything.</p>
+      <div class="table">
+        <table>
+          <thead><tr><th>Part</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><code>palette</code></td><td>The dynamic palette's name, or its ID.</td></tr>
+            <tr><td><code>to</code></td><td>The palette to show: its name, or its ID. Left out: nothing.</td></tr>
+            <tr><td><code>key</code></td><td>The key this Mac made for this dynamic palette's links. Rapidfire adds it when the link is copied with Copy Link to Switch Palette; the same key works with any palette after to=.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="example"><code>rapidfire://switch?palette=Socials&amp;to=Work</code></p>
+      <h3><code>rapidfire://add</code></h3>
+      <p>Opens Quick Add filled in. Nothing is added until Add is pressed. With nothing after it: an empty Quick Add.</p>
+      <div class="table">
+        <table>
+          <thead><tr><th>Part</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><code>url</code></td><td>The link, or a file's path, the new trigger opens.</td></tr>
+            <tr><td><code>name</code></td><td>The trigger's name. Left out: the website's name.</td></tr>
+            <tr><td><code>palette</code></td><td>The palette to suggest. A name that doesn't exist yet makes a new palette.</td></tr>
+            <tr><td><code>alias</code></td><td>A forced alias.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="example"><code>rapidfire://add?url=https%3A%2F%2Fexample.com%2Fdocs&amp;name=Docs&amp;palette=Dev</code></p>
+      <h3><code>rapidfire://import</code></h3>
+      <p>Opens the Import window with the palettes the link carries. Made by Copy Sharing Link.</p>
+      <h3><code>rapidfire://editor</code></h3>
+      <p>Opens the editor, on a palette if one is named.</p>
+      <div class="table">
+        <table>
+          <thead><tr><th>Part</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><code>palette</code></td><td>The palette's name, or its ID.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="example"><code>rapidfire://editor?palette=Dev</code></p>
+      <h3><code>rapidfire://settings</code></h3>
+      <p>Opens Settings, on a pane if one is named.</p>
+      <div class="table">
+        <table>
+          <thead><tr><th>Part</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><code>pane</code></td><td>general, hotkeys, overlay, keys, files, sync or mcp.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="example"><code>rapidfire://settings?pane=files</code></p>
+      <h3><code>rapidfire://help</code></h3>
+      <p>Opens Rapidfire Help.</p>
+      <div class="table">
+        <table>
+          <thead><tr><th>Part</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><code>page</code></td><td>The page to open, by the name in its address on the website: for example shortcuts or automation. Left out: the first page.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="example"><code>rapidfire://help?page=shortcuts</code></p>
+
+      <h2 id="privacy-and-safety">Privacy and Safety</h2>
+      <ul>
+        <li>A link can show a palette, a trigger or a window, or open Quick Add or the Import window for confirmation. A link cannot add a trigger without asking, or change or delete anything, because any web page can ask a browser to open a link.</li>
+        <li>A link opens a trigger, or a whole palette, by itself only when it contains the key this Mac made for it, which Rapidfire adds when the link is copied with That Runs It or Copy Link to Run Palette. A web page cannot know the key.</li>
+        <li>Even with the key, a link does not open a trigger marked New or Changed, or one that runs a program or an installer. It shows the trigger instead.</li>
+        <li>A link switches a dynamic palette only when it contains the key this Mac made for that dynamic palette. A switch changes which palette of the library is shown. It never opens, adds or deletes anything.</li>
+        <li>Actions in the Shortcuts app can find, run and add triggers, and switch a dynamic palette. They cannot edit or delete anything.</li>
+        <li>A trigger added without Quick Add is marked New until it has been opened once from Rapidfire.</li>
+        <li>A trigger's input fields are filled in only by the person at the Mac. A link, an action in the Shortcuts app or an AI assistant can open such a trigger, and Rapidfire then shows the fields to be filled in.</li>
+        <li>Everything described on this page happens on this Mac. Rapidfire sends nothing over the network for it.</li>
+      </ul>
+
+      <nav class="pager" aria-label="More help">
+        <a href="/rapidfire/docs/ai/" rel="prev">← AI Assistants</a>
+        <a href="/rapidfire/docs/spotlight-and-siri/" rel="next">Spotlight and Siri →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

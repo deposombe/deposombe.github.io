@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Assistants — Rapidfire Help</title>
+  <meta name="description" content="An AI assistant can read and edit the library through Rapidfire’s MCP server: build a palette for a new project, tidy names, or move triggers, in one request.">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/ai/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="AI Assistants — Rapidfire Help">
+  <meta property="og:description" content="An AI assistant can read and edit the library through Rapidfire’s MCP server: build a palette for a new project, tidy names, or move triggers, in one request.">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/ai/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>AI Assistants</h1>
+    <p class="intro">An AI assistant can read and edit the library through Rapidfire’s MCP server: build a palette for a new project, tidy names, or move triggers, in one request. This page covers connecting an assistant, what it can do, and how every change stays visible and reversible.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#what-mcp-is-for">What MCP Is For</a>
+        <a href="#turn-the-server-on-and-connect">Turn the Server On and Connect</a>
+        <a href="#what-an-assistant-can-do">What an Assistant Can Do</a>
+        <a href="#the-tools">The Tools</a>
+        <a href="#what-an-assistant-cannot-do">What an Assistant Cannot Do</a>
+        <a href="#keep-track-of-changes">Keep Track of Changes</a>
+        <a href="#watch-an-assistant-work">Watch an Assistant Work</a>
+      </nav>
+
+      <h2 id="what-mcp-is-for">What MCP Is For</h2>
+      <p>MCP (Model Context Protocol) is a way for an AI assistant to use the tools of an app. Rapidfire offers its editing commands as such tools. An assistant connected to it can be asked, in plain words, to do what would otherwise be many steps in the editor.</p>
+      <ul>
+        <li>“Make a palette for the Flutter project with the documentation, the issue tracker and the package site, and show it inside Dev.”</li>
+        <li>“Add the macros from BetterTouchTool as triggers.”</li>
+        <li>“These names are long. Suggest shorter ones that keep the keys of the triggers used most.”</li>
+        <li>“Find duplicate links and empty palettes.”</li>
+      </ul>
+      <p class="note">The server runs inside Rapidfire, on this Mac only. It accepts connections from programs on the same Mac that present its token. Nothing is sent to Deposombe, and Rapidfire contains no AI of its own.</p>
+
+      <h2 id="turn-the-server-on-and-connect">Turn the Server On and Connect</h2>
+      <ol>
+        <li>Open Settings &gt; MCP and turn on MCP Server. The same switch is in the menu bar icon’s menu and behind the MCP button in the editor’s toolbar.</li>
+        <li>For Claude Code, click Copy Setup Command and run the copied line in Terminal. The menu bar icon’s menu has Copy Claude Code Setup for the same line.</li>
+        <li>For another assistant, add a server with the address and the token from that line, following the assistant’s own instructions for MCP servers.</li>
+        <li>Start a new conversation in the assistant, so that it reads the list of tools.</li>
+      </ol>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>Turn off after</strong></td><td>How long the server stays on with no request from an assistant before it switches itself off. The countdown restarts with every request.</td></tr>
+            <tr><td><strong>Port</strong></td><td>The local port the server listens on. Change it only when another program needs the same port.</td></tr>
+            <tr><td><strong>Token</strong></td><td>The secret an assistant presents. Regenerate replaces it; every assistant then needs the new setup command.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">The server is off by default and switches itself off when idle. While it is on, a dot shows at the top right of the menu bar icon. Leave it on only for as long as an assistant is being used.</p>
+
+      <h2 id="what-an-assistant-can-do">What an Assistant Can Do</h2>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>Read</strong></td><td>List palettes and triggers, search by name, and see every trigger’s keys in each hand mode.</td></tr>
+            <tr><td><strong>Add and edit</strong></td><td>Add triggers, rename them, change links and aliases, move triggers between palettes, and delete them.</td></tr>
+            <tr><td><strong>Arrange palettes</strong></td><td>Create, rename, reorder and delete palettes; set a prefix and an icon; show a palette inside another; switch a dynamic palette.</td></tr>
+            <tr><td><strong>Hotkeys and settings</strong></td><td>Add, change and remove hotkeys; read and change settings.</td></tr>
+            <tr><td><strong>Import and export</strong></td><td>Prepare palettes for the Import window to confirm, and export palettes.</td></tr>
+            <tr><td><strong>Check</strong></td><td>Report what could be tidied: empty palettes, palettes that cannot be reached, duplicate links, long keys, and keys that need Shift.</td></tr>
+            <tr><td><strong>Review and revert</strong></td><td>List its own recent changes and take one back.</td></tr>
+            <tr><td><strong>Open</strong></td><td>Open a trigger, as picking it would.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul>
+        <li>Before a change, an assistant can ask what it would do, a dry run, and receives the result without anything being saved.</li>
+        <li>After every change, the reply lists the triggers whose keys moved and whether each is used often, so an assistant can choose names that disturb little.</li>
+        <li>Links are left out of what an assistant reads unless it asks for them, since a link can be private.</li>
+      </ul>
+
+      <h2 id="the-tools">The Tools</h2>
+      <p>The server offers these tools. An assistant chooses among them by itself; the names matter only when reading MCP Activity or an assistant’s own account of what it did.</p>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><code>list_palettes</code></td><td>Lists every palette with its prefix, icon, hotkeys, where it is shown, and how many triggers it holds.</td></tr>
+            <tr><td><code>list_triggers</code></td><td>Lists triggers with their keys in each hand mode, and which are used often.</td></tr>
+            <tr><td><code>search_triggers</code></td><td>Finds triggers by name or alias, in every palette.</td></tr>
+            <tr><td><code>add_triggers</code></td><td>Adds triggers to a palette. They are marked New.</td></tr>
+            <tr><td><code>update_triggers</code></td><td>Renames triggers and changes their links or aliases, several at once, all or none.</td></tr>
+            <tr><td><code>move_triggers</code></td><td>Moves triggers to another palette.</td></tr>
+            <tr><td><code>delete_triggers</code></td><td>Deletes triggers.</td></tr>
+            <tr><td><code>create_palette</code></td><td>Makes a palette, optionally with a prefix and shown inside another.</td></tr>
+            <tr><td><code>update_palette</code></td><td>Changes a palette’s name, prefix, icon and other settings.</td></tr>
+            <tr><td><code>move_palette</code></td><td>Changes a palette’s place in the sidebar.</td></tr>
+            <tr><td><code>show_palette_inside</code></td><td>Shows a palette inside another, as All Triggers or One Entry, or stops showing it there.</td></tr>
+            <tr><td><code>delete_palettes</code></td><td>Deletes palettes with their triggers.</td></tr>
+            <tr><td><code>add_hotkey, update_hotkey, remove_hotkey</code></td><td>Add, change and remove a palette’s hotkeys.</td></tr>
+            <tr><td><code>switch_palette</code></td><td>Changes which palette a dynamic palette shows.</td></tr>
+            <tr><td><code>open_trigger</code></td><td>Opens a trigger, as picking it would.</td></tr>
+            <tr><td><code>audit_library</code></td><td>Reports what could be tidied.</td></tr>
+            <tr><td><code>import_palettes</code></td><td>Prepares palettes for import: as a preview, or in Rapidfire’s Import window to be confirmed there.</td></tr>
+            <tr><td><code>export_palettes</code></td><td>Returns palettes in the format Rapidfire imports.</td></tr>
+            <tr><td><code>list_links</code></td><td>Lists Rapidfire’s links, with the ready link for each palette.</td></tr>
+            <tr><td><code>get_settings, update_settings</code></td><td>Read and change settings.</td></tr>
+            <tr><td><code>list_activity</code></td><td>Lists recent changes made through MCP, with whether each can still be reverted.</td></tr>
+            <tr><td><code>revert_change</code></td><td>Takes one of those changes back.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Every tool that changes something accepts a dry run, and replies with the keys that moved.</p>
+
+      <h2 id="what-an-assistant-cannot-do">What an Assistant Cannot Do</h2>
+      <ul>
+        <li>Set or remove locked keys. They are a deliberate choice made in the editor.</li>
+        <li>Fill in a trigger’s input fields. Rapidfire shows the fields, and only the person at the Mac types into them.</li>
+        <li>Reach anything outside Rapidfire: it has no access to files, to other apps or to the network through this server.</li>
+        <li>Read usage counts. It learns only whether a trigger is used often.</li>
+      </ul>
+
+      <h2 id="keep-track-of-changes">Keep Track of Changes</h2>
+      <p>Every change made through MCP is recorded with its time, the assistant that made it, and the old and the new value.</p>
+      <ul>
+        <li>The MCP button in the editor’s toolbar shows the latest changes.</li>
+        <li>MCP Activity, in the menu bar icon’s menu and in Settings &gt; MCP, lists all of them for the last 30 days. Select a change and click Revert to take it back.</li>
+        <li>Edit &gt; Undo (⌘Z) undoes a change made by an assistant like any other.</li>
+        <li>A trigger added by an assistant is marked New, and one whose link it changed is marked Changed, until it has been opened once from the overlay.</li>
+      </ul>
+      <p class="note">An assistant acts on what it reads. A web page or a document it is given could contain instructions that make it change a trigger’s link. The marks and the activity list exist so that such a change is seen. Check what a marked trigger opens before relying on it.</p>
+
+      <h2 id="watch-an-assistant-work">Watch an Assistant Work</h2>
+      <p>With watching on, the overlay stays open while the assistant works and shows each trigger as it is added.</p>
+      <ol>
+        <li>Open the overlay and press ⌘K, or click the eye in its top row.</li>
+        <li>Give the assistant its task.</li>
+        <li>Press ⌘T at any time to see every folder opened.</li>
+      </ol>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/watching/">Watching and Presenting</a>: The overlay can be kept open, redrawn as the library changes, and unfolded to show everything at once. Together with a few links and settings, this makes it possible to follow an AI assistant at work, and to demonstrate or record Rapidfire without touching the keyboard.</li>
+        <li><a href="/rapidfire/docs/automation/">Automation</a>: Rapidfire works with other tools on the Mac. Other apps can show a palette, add triggers, and read what is kept in Rapidfire, through links, through the Shortcuts app, and by dragging and copying.</li>
+        <li><a href="/rapidfire/docs/sharing/">Sharing and Backups</a>: Palettes can be given to other people as a file or as a link, and the whole library can be saved and restored. Rapidfire also keeps its own copies before any change that removes much.</li>
+      </ul>
+
+      <nav class="pager" aria-label="More help">
+        <a href="/rapidfire/docs/files-and-sync/" rel="prev">← Files and iCloud Sync</a>
+        <a href="/rapidfire/docs/automation/" rel="next">Automation →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One-Handed Use — Rapidfire Help</title>
+  <meta name="description" content="Rapidfire can be used with one hand on the keyboard, for working with the other on a mouse or trackpad, and for anyone who types with one hand.">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/one-handed/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="One-Handed Use — Rapidfire Help">
+  <meta property="og:description" content="Rapidfire can be used with one hand on the keyboard, for working with the other on a mouse or trackpad, and for anyone who types with one hand.">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/one-handed/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>One-Handed Use</h1>
+    <p class="intro">Rapidfire can be used with one hand on the keyboard, for working with the other on a mouse or trackpad, and for anyone who types with one hand. The keys of one half of the keyboard are mirrored onto the other.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#how-mirroring-works">How Mirroring Works</a>
+        <a href="#open-the-overlay-in-a-hand-mode">Open the Overlay in a Hand Mode</a>
+        <a href="#switch-hands-in-the-overlay">Switch Hands in the Overlay</a>
+        <a href="#settings-for-one-handed-keys">Settings for One-Handed Keys</a>
+      </nav>
+
+      <h2 id="how-mirroring-works">How Mirroring Works</h2>
+      <p>In Left Hand mode, every key of the right half of the keyboard is typed with its mirror key on the left: the same finger, the same row, the opposite hand. J becomes F, K becomes D, I becomes E. Right Hand mode is the reverse.</p>
+      <ul>
+        <li>Names and their highlighted letters stay the same. Where the letter to type is on the other half, the key to press is shown raised beside it.</li>
+        <li>Typing the original letter still works.</li>
+        <li>Where a letter and its mirror would both be possible at the same place, Rapidfire uses one more letter, so keys never become ambiguous.</li>
+        <li>Mirroring follows the physical positions of keys, so it works with any keyboard layout.</li>
+      </ul>
+
+      <h2 id="open-the-overlay-in-a-hand-mode">Open the Overlay in a Hand Mode</h2>
+      <ol>
+        <li>Open Settings &gt; Hotkeys.</li>
+        <li>In the empty row, choose the palette, then Left Hand or Right Hand.</li>
+        <li>Click Record Shortcut and press a shortcut that the same hand can reach.</li>
+      </ol>
+      <p>A palette can have a hotkey for each mode. Each hotkey always opens the same palette in the same mode.</p>
+
+      <h2 id="switch-hands-in-the-overlay">Switch Hands in the Overlay</h2>
+      <div class="table">
+        <table>
+          <thead><tr><th>Keys</th><th>What they do</th></tr></thead>
+          <tbody>
+            <tr><td><kbd>⌘1</kbd></td><td>Left hand.</td></tr>
+            <tr><td><kbd>⌘2</kbd></td><td>Both hands.</td></tr>
+            <tr><td><kbd>⌘3</kbd></td><td>Right hand.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The hand switcher at the top right of the overlay shows the mode and can be clicked. A switch lasts until the overlay closes; the next opening uses the hotkey’s own mode.</p>
+
+      <h2 id="settings-for-one-handed-keys">Settings for One-Handed Keys</h2>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>Bottom row</strong></td><td>How the keys of the bottom row are mirrored. The rows of a keyboard are staggered, so on the bottom row the mirror by movement and the mirror by finger are different keys.</td></tr>
+            <tr><td><strong>Show the key to press</strong></td><td>Next to the Letter shows the mirror key raised after the highlighted letter. Column on the Left shows it in a column before the names.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Both are in Settings &gt; Keys. The editor’s Left Hand and Right Hand columns show every trigger’s keys in each mode.</p>
+      <p class="note">Locked keys are typed as their mirror keys in a one-handed mode, and the original letters still work.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/keys/">How Keys Work</a>: Rapidfire works out the keys for every trigger from its name. This page explains the rule, how to steer it with aliases, and how to lock the keys of a trigger so they never change.</li>
+        <li><a href="/rapidfire/docs/accessibility/">Accessibility</a>: Rapidfire is built to be used with VoiceOver, Voice Control, Switch Control, a keyboard alone, one hand, low vision, and without relying on color, motion or sound. This page lists what it does for each and which settings help.</li>
+        <li><a href="/rapidfire/docs/palettes/">Palettes</a>: Palettes group triggers. A palette can have its own hotkeys, a prefix, and a place inside other palettes, which is how a large library stays easy to pick from.</li>
+      </ul>
+
+      <nav class="pager" aria-label="More help">
+        <a href="/rapidfire/docs/editor/" rel="prev">← The Editor</a>
+        <a href="/rapidfire/docs/sharing/" rel="next">Sharing and Backups →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

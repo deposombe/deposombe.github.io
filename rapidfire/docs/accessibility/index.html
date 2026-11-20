@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessibility — Rapidfire Help</title>
+  <meta name="description" content="Rapidfire is built to be used with VoiceOver, Voice Control, Switch Control, a keyboard alone, one hand, low vision, and without relying on color, motion or…">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/accessibility/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="Accessibility — Rapidfire Help">
+  <meta property="og:description" content="Rapidfire is built to be used with VoiceOver, Voice Control, Switch Control, a keyboard alone, one hand, low vision, and without relying on color, motion or…">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/accessibility/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>Accessibility</h1>
+    <p class="intro">Rapidfire is built to be used with VoiceOver, Voice Control, Switch Control, a keyboard alone, one hand, low vision, and without relying on color, motion or sound. This page lists what it does for each and which settings help.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#voiceover">VoiceOver</a>
+        <a href="#keyboard-only">Keyboard Only</a>
+        <a href="#voice-control-and-switch-control">Voice Control and Switch Control</a>
+        <a href="#one-hand">One Hand</a>
+        <a href="#vision">Vision</a>
+        <a href="#motion">Motion</a>
+        <a href="#hearing">Hearing</a>
+        <a href="#language">Language</a>
+      </nav>
+
+      <h2 id="voiceover">VoiceOver</h2>
+      <ul>
+        <li>Every row of the overlay is read with its name and the key to type next: “Instagram, key N”. A folder says that it opens a palette, a trigger that asks for input says so, and a marked trigger says New or Changed.</li>
+        <li>After each key, VoiceOver says how many items are left.</li>
+        <li>With Show All on, a row inside an opened folder says which folder it is in.</li>
+        <li>Messages that appear in the overlay are spoken: why Tab did nothing, that no key tells the remaining rows apart, that a trigger could not be opened and why.</li>
+        <li>The overlay is announced by its palette’s name. The mark in its corner is decoration and is skipped.</li>
+        <li>In the editor, Settings and Help, headings are marked as headings, tables and switches have names, and buttons that show only an icon have a spoken name.</li>
+        <li>The menu bar icon has a Show Menu action, since VoiceOver has no gesture for a right-click there.</li>
+      </ul>
+
+      <h2 id="keyboard-only">Keyboard Only</h2>
+      <ul>
+        <li>Everything in the overlay is done from the keyboard. The pointer is never needed.</li>
+        <li>The arrow keys move a highlight through the rows and Return opens it, for rows that keys cannot reach.</li>
+        <li>The editor, Settings and Help follow the Mac’s conventions: Tab and Shift-Tab between controls, Return for the default button, Escape to cancel, ⌘W to close, and a menu command for every action.</li>
+        <li>Keyboard navigation and Full Keyboard Access, set in System Settings, work in every window.</li>
+      </ul>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/shortcuts/">Keyboard Shortcuts</a>: Every key Rapidfire uses, on one page. The menu bar icon’s menu opens this page directly: Control-click the icon and choose Keyboard Shortcuts.</li>
+      </ul>
+
+      <h2 id="voice-control-and-switch-control">Voice Control and Switch Control</h2>
+      <p>Controls have the names they show, so “Click Add”, “Click Show All” and “Click Left Hand” work as spoken. Rows of the overlay are buttons named after their triggers. Switch Control reaches the same controls.</p>
+
+      <h2 id="one-hand">One Hand</h2>
+      <p>Left Hand and Right Hand modes mirror the keys of one half of the keyboard onto the other, so every trigger can be typed with one hand.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/one-handed/">One-Handed Use</a>: Rapidfire can be used with one hand on the keyboard, for working with the other on a mouse or trackpad, and for anyone who types with one hand. The keys of one half of the keyboard are mirrored onto the other.</li>
+      </ul>
+
+      <h2 id="vision">Vision</h2>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>Text size</strong></td><td>Settings &gt; Overlay, or ⌘+ and ⌘− in the overlay, from 11 to 32 points.</td></tr>
+            <tr><td><strong>Item size</strong></td><td>Larger rows, for clicking or tapping.</td></tr>
+            <tr><td><strong>Key style</strong></td><td>Box puts the key letter in a filled box in place of an underline.</td></tr>
+            <tr><td><strong>Maximum width and height</strong></td><td>A larger overlay fits more columns at a large text size.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul>
+        <li>Text in every window meets the contrast of WCAG AA (4.5 to 1), in light and in dark appearance, and is stronger with Increase Contrast on.</li>
+        <li>The overlay’s background is solid, so its contrast does not depend on what is behind it.</li>
+        <li>Rapidfire follows the Mac’s appearance, accent color, Increase Contrast, Reduce Transparency and Differentiate Without Color. With Differentiate Without Color on, key letters are boxed, not only colored.</li>
+        <li>Zoom, Hover Text, Invert Colors and Color Filters work as in any app.</li>
+      </ul>
+
+      <h2 id="motion">Motion</h2>
+      <p>With Reduce Motion on in System Settings &gt; Accessibility &gt; Motion (Display on macOS 15), the overlay does not shake when a key is ignored, and the eye does not move when a watched overlay changes.</p>
+      <p>Pointer styles, chosen with ⌘] and ⌘[ in the overlay, follow Reduce Motion: a style that moves is shown as Quiet, the style a new installation uses, and the line that names the style says so. Settings &gt; Overlay &gt; Pointer styles move with Reduce Motion on lets them move.</p>
+
+      <h2 id="hearing">Hearing</h2>
+      <p>Rapidfire speaks nothing itself and uses only the Mac’s alert sound. Whatever the sound stands for is also shown.</p>
+      <ul>
+        <li>A trigger that cannot be opened: a notice in the middle of the screen names the trigger and the reason.</li>
+        <li>Tab with no usage recorded: a line in the overlay says so.</li>
+        <li>A key that is ignored: the overlay shakes. With Reduce Motion on, a line in the overlay says that no trigger has that key.</li>
+        <li>Control held on a trigger in General, which cannot be opened as a whole palette: a line in the overlay says so.</li>
+      </ul>
+      <p class="note">To see the Mac’s alert sound itself, turn on Flash the screen when an alert sound occurs in System Settings &gt; Accessibility &gt; Audio.</p>
+
+      <h2 id="language">Language</h2>
+      <p>Rapidfire is in English. Names of triggers and palettes can be in any language and script; a key typed with an accent matches the plain letter in a name.</p>
+
+      <nav class="pager" aria-label="More help">
+        <a href="/rapidfire/docs/settings/" rel="prev">← Settings</a>
+        <a href="/rapidfire/docs/shortcuts/" rel="next">Keyboard Shortcuts →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

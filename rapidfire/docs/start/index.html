@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Getting Started — Rapidfire Help</title>
+  <meta name="description" content="Rapidfire keeps links, apps, files and automations in one list, shows the list with a hotkey, and opens an item after a few keys.">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/start/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="Getting Started — Rapidfire Help">
+  <meta property="og:description" content="Rapidfire keeps links, apps, files and automations in one list, shows the list with a hotkey, and opens an item after a few keys.">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/start/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>Getting Started</h1>
+    <p class="intro">Rapidfire keeps links, apps, files and automations in one list, shows the list with a hotkey, and opens an item after a few keys. This page covers the first five minutes.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#what-rapidfire-does">What Rapidfire Does</a>
+        <a href="#open-the-overlay">Open the Overlay</a>
+        <a href="#the-starter-triggers">The Starter Triggers</a>
+        <a href="#add-a-trigger">Add a Trigger</a>
+        <a href="#the-menu-bar-icon">The Menu Bar Icon</a>
+        <a href="#where-to-go-next">Where to Go Next</a>
+      </nav>
+
+      <h2 id="what-rapidfire-does">What Rapidfire Does</h2>
+      <p>Rapidfire is a launcher for the things that are too many for hotkeys and too easily forgotten for search: dashboards, documents, settings panes, macros, Shortcuts. Everything kept in it is called a trigger. A trigger has a name and a link, and opening the trigger opens the link.</p>
+      <p>Pressing a hotkey shows the triggers in an overlay. Each name has highlighted letters. Typing those letters narrows the list, and as soon as one trigger is left, it opens. The keys come from the names, so they are read from the screen at first and typed from memory later.</p>
+      <ul>
+        <li>Triggers are grouped in palettes. The General palette is always there; more can be added and shown inside each other.</li>
+        <li>A trigger can be a web page, an app, a file or folder, a Shortcut, a BetterTouchTool or Keyboard Maestro action, a System Settings pane, or any other link an app on the Mac understands.</li>
+        <li>Rapidfire opens links. The work is done by the app the link belongs to.</li>
+      </ul>
+
+      <h2 id="open-the-overlay">Open the Overlay</h2>
+      <p>A new installation starts with a small set of triggers and one hotkey, so it can be tried at once.</p>
+      <ol>
+        <li>Press Control-Option-Space. The overlay opens with the General palette. Clicking Rapidfire’s icon in the menu bar does the same.</li>
+        <li>Type the highlighted letter of a trigger. The list narrows to the names that share it.</li>
+        <li>Keep typing the highlighted letters until one trigger is left. It opens, and the overlay closes.</li>
+      </ol>
+      <p>To close the overlay without opening anything, press Escape or press the hotkey again.</p>
+      <p class="note">The hotkey is shown and changed in the Welcome window (Help &gt; Welcome to Rapidfire) and in Settings &gt; Hotkeys. If another app already uses Control-Option-Space, the hotkey’s row says so; record a different one there.</p>
+
+      <h2 id="the-starter-triggers">The Starter Triggers</h2>
+      <p>A new installation is not empty. Its triggers work on every Mac and show what a library can hold.</p>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>Searches</strong></td><td>Google Search, YouTube Search, Wikipedia Search and others ask for text and open the results. Translate and Define Word work the same way.</td></tr>
+            <tr><td><strong>Apps</strong></td><td>A folder with a few of the Mac’s own apps.</td></tr>
+            <tr><td><strong>Mac Settings</strong></td><td>A folder with panes of System Settings: Wi-Fi, Bluetooth, Sound, Displays and more.</td></tr>
+            <tr><td><strong>Start the Day</strong></td><td>A folder to try opening a whole palette with: hold Control while picking it.</td></tr>
+            <tr><td><strong>Rapidfire Help, Add Trigger</strong></td><td>Links back into Rapidfire itself.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>All of it can be renamed, moved or deleted. Press ⌘T in the overlay to see inside the folders.</p>
+
+      <h2 id="add-a-trigger">Add a Trigger</h2>
+      <ol>
+        <li>Drag a link from a browser, a file or folder from Finder, or an app onto Rapidfire’s icon in the menu bar. While something is being dragged, a drop zone labeled Rapidfire appears under the icon; dropping there works too.</li>
+        <li>Quick Add opens with the name and the address filled in. Change the name if a shorter one is easier to type.</li>
+        <li>Choose a palette, or leave General, and press Return.</li>
+      </ol>
+      <p>Quick Add lists the triggers whose keys the new name would change, most used first, so a habit is never broken without notice.</p>
+
+      <h2 id="the-menu-bar-icon">The Menu Bar Icon</h2>
+      <ul>
+        <li>Click the icon to open the General palette.</li>
+        <li>Control-click (or right-click) the icon for the menu: Open Editor, Settings, exporting and backups, the MCP server, Keyboard Shortcuts, Rapidfire Help, and Quit Rapidfire.</li>
+        <li>A small dot at the top right of the icon means the MCP server is on. A dot at the bottom left means iCloud sync needs attention; the first menu item then says why.</li>
+      </ul>
+      <p class="note">Rapidfire is a menu bar app: it has no Dock icon while only the overlay is in use. The Dock icon and the app’s own menus appear while the editor, Settings or Help is open.</p>
+
+      <h2 id="where-to-go-next">Where to Go Next</h2>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/features/">What Rapidfire Can Do</a>: A tour of Rapidfire’s features, from the keys it works out by itself to the AI assistant that can build a library while it is being watched. Each part points to the page that describes it in full.</li>
+        <li><a href="/rapidfire/docs/overlay/">The Overlay</a>: The overlay is the list a hotkey shows. This page describes what is on it, every way of picking from it, and the modes that change how it behaves: Show All, watching, and opening a whole palette.</li>
+        <li><a href="/rapidfire/docs/keys/">How Keys Work</a>: Rapidfire works out the keys for every trigger from its name. This page explains the rule, how to steer it with aliases, and how to lock the keys of a trigger so they never change.</li>
+        <li><a href="/rapidfire/docs/palettes/">Palettes</a>: Palettes group triggers. A palette can have its own hotkeys, a prefix, and a place inside other palettes, which is how a large library stays easy to pick from.</li>
+        <li><a href="/rapidfire/docs/triggers/">Triggers</a>: A trigger is a name and a link. This page lists what a trigger can open, the ways of adding one, and what the marks next to a trigger mean.</li>
+        <li><a href="/rapidfire/docs/shortcuts/">Keyboard Shortcuts</a>: Every key Rapidfire uses, on one page. The menu bar icon’s menu opens this page directly: Control-click the icon and choose Keyboard Shortcuts.</li>
+      </ul>
+
+      <nav class="pager" aria-label="More help">
+        <span></span>
+        <a href="/rapidfire/docs/features/" rel="next">What Rapidfire Can Do →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

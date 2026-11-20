@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Files and iCloud Sync — Rapidfire Help</title>
+  <meta name="description" content="Triggers that open files need access to the folders those files are in.">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/files-and-sync/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="Files and iCloud Sync — Rapidfire Help">
+  <meta property="og:description" content="Triggers that open files need access to the folders those files are in.">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/files-and-sync/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>Files and iCloud Sync</h1>
+    <p class="intro">Triggers that open files need access to the folders those files are in. The library itself can be kept the same on every Mac through iCloud. This page covers both.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#triggers-that-open-files">Triggers That Open Files</a>
+        <a href="#when-a-file-trigger-needs-attention">When a File Trigger Needs Attention</a>
+        <a href="#icloud-sync">iCloud Sync</a>
+        <a href="#what-stays-on-each-mac">What Stays on Each Mac</a>
+        <a href="#when-sync-asks-a-question">When Sync Asks a Question</a>
+        <a href="#remove-a-mac">Remove a Mac</a>
+      </nav>
+
+      <h2 id="triggers-that-open-files">Triggers That Open Files</h2>
+      <p>A trigger for a file or a folder stores its path. The trigger opens whatever is at that path, when the path is inside a location listed in Settings &gt; Files. Apps need no access: a trigger for an app always opens it.</p>
+      <h3>Give access</h3>
+      <ol>
+        <li>Open Settings &gt; Files.</li>
+        <li>Click Add Folder or File and choose a folder that holds the files, such as Documents or a project folder. To cover everything at once, click Give Access to Your Home Folder.</li>
+      </ol>
+      <p>A file dropped onto Rapidfire is given access by the drop itself and appears in the list on its own.</p>
+      <p class="note">Rapidfire opens only what triggers point to. It does not list, read or upload files in the folders it has access to. Access is kept per Mac and is not synced.</p>
+
+      <h2 id="when-a-file-trigger-needs-attention">When a File Trigger Needs Attention</h2>
+      <p>The editor shows an icon before the path of a file trigger that cannot be opened.</p>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>Needs access</strong></td><td>The path is outside the locations in Settings &gt; Files. Control-click the trigger and choose Give Access.</td></tr>
+            <tr><td><strong>Missing</strong></td><td>Nothing is at the path any more: the file was moved, renamed or deleted. Control-click the trigger and choose Locate to point it at the file’s new place.</td></tr>
+            <tr><td><strong>Drive not connected</strong></td><td>The path is on a drive that is not attached. The trigger works again when the drive is.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Rapidfire does not follow a file that is moved. This keeps the editor, a shared palette and another Mac all agreeing on what a trigger opens.</p>
+      <p class="note">A file trigger works on every Mac on which the file is at the same path. Folders in iCloud Drive, Dropbox and similar services usually are.</p>
+
+      <h2 id="icloud-sync">iCloud Sync</h2>
+      <p>With sync on, palettes, triggers, hotkeys and settings are the same on every Mac signed in to the same iCloud account.</p>
+      <ol>
+        <li>Open Settings &gt; Sync.</li>
+        <li>Turn on Sync with iCloud.</li>
+        <li>Do the same on each other Mac.</li>
+      </ol>
+      <ul>
+        <li>Changes made on different Macs are combined: a trigger renamed on one Mac and given a new link on another keeps both changes.</li>
+        <li>A deleted trigger stays deleted, also on a Mac that was switched off for months.</li>
+        <li>Each Mac works on its own while iCloud is unavailable, and catches up afterwards.</li>
+        <li>The Macs list shows every Mac that syncs, when it last did, and its version of Rapidfire.</li>
+      </ul>
+
+      <h2 id="what-stays-on-each-mac">What Stays on Each Mac</h2>
+      <ul>
+        <li>Access to files and folders (Settings &gt; Files).</li>
+        <li>Usage counts.</li>
+        <li>The MCP server’s switch, port, token and activity.</li>
+        <li>Open at login.</li>
+        <li>What each dynamic palette shows.</li>
+        <li>Backups and the sync log.</li>
+      </ul>
+
+      <h2 id="when-sync-asks-a-question">When Sync Asks a Question</h2>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>Two different libraries</strong></td><td>A Mac that already has a library of its own is asked which one to keep: Use the iCloud Library or Use This Mac’s Library. The other is kept as a backup.</td></tr>
+            <tr><td><strong>Many deletions at once</strong></td><td>A change from another Mac that would remove many triggers is held back. Keep Mine keeps them and takes that Mac’s other changes; Apply lets the deletions happen.</td></tr>
+            <tr><td><strong>A newer version of Rapidfire</strong></td><td>A Mac running an older version stops syncing rather than write over what it does not understand. Updating Rapidfire on that Mac resumes sync.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>A dot at the bottom left of the menu bar icon means sync is waiting for an answer; the first item of the icon’s menu opens Settings &gt; Sync.</p>
+
+      <h2 id="remove-a-mac">Remove a Mac</h2>
+      <p>For a Mac that is no longer in use, click Forget next to it in Settings &gt; Sync. A Mac that is still in use reappears the next time it syncs.</p>
+      <p class="note">Copy Sync Report, in Settings &gt; Sync, copies a description of the sync state without names or links, for reporting a problem.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/sharing/">Sharing and Backups</a>: Palettes can be given to other people as a file or as a link, and the whole library can be saved and restored. Rapidfire also keeps its own copies before any change that removes much.</li>
+        <li><a href="/rapidfire/docs/troubleshooting/">Troubleshooting and Privacy</a>: What to check when something does not work as expected, where Rapidfire keeps its data, and what it does and does not do with it.</li>
+      </ul>
+
+      <nav class="pager" aria-label="More help">
+        <a href="/rapidfire/docs/sharing/" rel="prev">← Sharing and Backups</a>
+        <a href="/rapidfire/docs/ai/" rel="next">AI Assistants →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

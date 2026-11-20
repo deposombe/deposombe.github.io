@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Editor — Rapidfire Help</title>
+  <meta name="description" content="The editor is the window in which the library is arranged: palettes on the left, the triggers of the selected palette in a table, and the palette’s settings…">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/editor/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="The Editor — Rapidfire Help">
+  <meta property="og:description" content="The editor is the window in which the library is arranged: palettes on the left, the triggers of the selected palette in a table, and the palette’s settings…">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/editor/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>The Editor</h1>
+    <p class="intro">The editor is the window in which the library is arranged: palettes on the left, the triggers of the selected palette in a table, and the palette’s settings at the side.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#open-the-editor">Open the Editor</a>
+        <a href="#the-sidebar">The Sidebar</a>
+        <a href="#the-table">The Table</a>
+        <a href="#find">Find</a>
+        <a href="#copy-paste-and-drag">Copy, Paste and Drag</a>
+        <a href="#delete-and-undo">Delete and Undo</a>
+        <a href="#the-mcp-button">The MCP Button</a>
+      </nav>
+
+      <h2 id="open-the-editor">Open the Editor</h2>
+      <ul>
+        <li>Control-click Rapidfire’s icon in the menu bar and choose Open Editor.</li>
+        <li>Press ⌘E in the overlay, in Settings or in Help.</li>
+      </ul>
+      <p>While the editor is open, Rapidfire has a Dock icon and its own menus, and appears in the app switcher. Closing the window returns the keyboard to the app that was in front before.</p>
+
+      <h2 id="the-sidebar">The Sidebar</h2>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>All Triggers</strong></td><td>Every trigger in the library, with a Palette column that says where each one is. Searching here finds a trigger wherever it is kept.</td></tr>
+            <tr><td><strong>Locked Triggers</strong></td><td>Every trigger with locked keys.</td></tr>
+            <tr><td><strong>General and the palettes</strong></td><td>One row for each palette. A palette shown inside another is listed as usual; the Inside row above the table shows what the selected palette contains.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>New Palette and New Dynamic Palette are at the bottom of the sidebar. Control-clicking a palette offers its commands, among them Rename, Copy Sharing Link, Export Palette, and the links that open or run the palette.</p>
+
+      <h2 id="the-table">The Table</h2>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr><td><strong>Name</strong></td><td>What the overlay shows and what the keys are made from.</td></tr>
+            <tr><td><strong>Alias</strong></td><td>An optional forced alias: a second name for keys.</td></tr>
+            <tr><td><strong>URL</strong></td><td>The link, or the path of a file. An icon before it shows a trigger that asks for input, or a file that needs attention.</td></tr>
+            <tr><td><strong>Typed As</strong></td><td>The text the keys are worked out from: the name without emoji and accents, and the alias.</td></tr>
+            <tr><td><strong>Keys</strong></td><td>The keys that open the trigger now, with both hands.</td></tr>
+            <tr><td><strong>Locked Keys</strong></td><td>Keys reserved for the trigger. Typing here asks before locking.</td></tr>
+            <tr><td><strong>Left Hand, Right Hand</strong></td><td>The keys in each one-handed mode.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul>
+        <li>Click a cell to edit it. Return saves, Escape leaves it unchanged.</li>
+        <li>Click a column’s heading to sort by it.</li>
+        <li>Select several rows with Command-click or Shift-click.</li>
+        <li>Control-click a row for its commands, among them Copy, Copy Link to Trigger, and locking or unlocking its keys.</li>
+      </ul>
+
+      <h2 id="find">Find</h2>
+      <p>Edit &gt; Find &gt; Find (⌘F) puts the cursor in the search field. Searching narrows the table to names, aliases and links that contain the text; in All Triggers it also matches a palette’s name.</p>
+
+      <h2 id="copy-paste-and-drag">Copy, Paste and Drag</h2>
+      <ul>
+        <li>⌘C copies the selected triggers. They paste as named links into notes and messages, and as addresses into a browser.</li>
+        <li>⌘V pastes links, files or copied triggers into the palette that is showing.</li>
+        <li>Drag triggers onto a palette in the sidebar to move them there.</li>
+        <li>Drag a trigger or a palette out of the window to put its link into another app.</li>
+      </ul>
+
+      <h2 id="delete-and-undo">Delete and Undo</h2>
+      <p>Delete, ⌘Delete and Edit &gt; Delete remove what was selected last, triggers or palettes, after asking. Inside a text field these keys only delete text.</p>
+      <p>Every change to the library can be undone with Edit &gt; Undo (⌘Z) and redone with Edit &gt; Redo (⇧⌘Z): edits in the editor, triggers added by Quick Add, imports, and changes made by an AI assistant. The menu item names the change it would undo.</p>
+      <p class="note">Undo is refused, with the reason, when taking a change back would break a rule that has come into force since: for example, when the keys it would lock again now belong to another trigger.</p>
+
+      <h2 id="the-mcp-button">The MCP Button</h2>
+      <p>The toolbar’s MCP button shows whether the MCP server is on, switches it, and lists the latest changes made through it. See AI Assistants.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/palettes/">Palettes</a>: Palettes group triggers. A palette can have its own hotkeys, a prefix, and a place inside other palettes, which is how a large library stays easy to pick from.</li>
+        <li><a href="/rapidfire/docs/keys/">How Keys Work</a>: Rapidfire works out the keys for every trigger from its name. This page explains the rule, how to steer it with aliases, and how to lock the keys of a trigger so they never change.</li>
+        <li><a href="/rapidfire/docs/sharing/">Sharing and Backups</a>: Palettes can be given to other people as a file or as a link, and the whole library can be saved and restored. Rapidfire also keeps its own copies before any change that removes much.</li>
+        <li><a href="/rapidfire/docs/ai/">AI Assistants</a>: An AI assistant can read and edit the library through Rapidfire’s MCP server: build a palette for a new project, tidy names, or move triggers, in one request. This page covers connecting an assistant, what it can do, and how every change stays visible and reversible.</li>
+      </ul>
+
+      <nav class="pager" aria-label="More help">
+        <a href="/rapidfire/docs/triggers/" rel="prev">← Triggers</a>
+        <a href="/rapidfire/docs/one-handed/" rel="next">One-Handed Use →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

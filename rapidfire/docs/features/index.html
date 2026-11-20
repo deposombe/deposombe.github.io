@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What Rapidfire Can Do — Rapidfire Help</title>
+  <meta name="description" content="A tour of Rapidfire’s features, from the keys it works out by itself to the AI assistant that can build a library while it is being watched.">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/features/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="What Rapidfire Can Do — Rapidfire Help">
+  <meta property="og:description" content="A tour of Rapidfire’s features, from the keys it works out by itself to the AI assistant that can build a library while it is being watched.">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/features/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>What Rapidfire Can Do</h1>
+    <p class="intro">A tour of Rapidfire’s features, from the keys it works out by itself to the AI assistant that can build a library while it is being watched. Each part points to the page that describes it in full.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#keys-without-setup">Keys Without Setup</a>
+        <a href="#a-library-that-stays-manageable">A Library That Stays Manageable</a>
+        <a href="#habits-are-protected">Habits Are Protected</a>
+        <a href="#one-hand-is-enough">One Hand Is Enough</a>
+        <a href="#anything-with-a-link">Anything with a Link</a>
+        <a href="#built-to-be-run-by-an-ai-assistant">Built to Be Run by an AI Assistant</a>
+        <a href="#part-of-the-mac">Part of the Mac</a>
+        <a href="#shared-synced-and-backed-up">Shared, Synced and Backed Up</a>
+        <a href="#usable-by-everyone">Usable by Everyone</a>
+        <a href="#private-by-design">Private by Design</a>
+      </nav>
+
+      <h2 id="keys-without-setup">Keys Without Setup</h2>
+      <p>Most launchers ask for a name to be remembered and typed. Rapidfire shows everything and marks, in each name, the letters that tell it apart. No key is assigned by hand, and nothing has to be recalled: the keys are read off the screen until the fingers know them.</p>
+      <ul>
+        <li>Two or three keys reach a trigger among hundreds.</li>
+        <li>The same names always give the same keys, on every Mac.</li>
+        <li>A trigger opens the moment it is the only one left. There is no Return to press.</li>
+      </ul>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/keys/">How Keys Work</a>: Rapidfire works out the keys for every trigger from its name. This page explains the rule, how to steer it with aliases, and how to lock the keys of a trigger so they never change.</li>
+        <li><a href="/rapidfire/docs/overlay/">The Overlay</a>: The overlay is the list a hotkey shows. This page describes what is on it, every way of picking from it, and the modes that change how it behaves: Show All, watching, and opening a whole palette.</li>
+      </ul>
+
+      <h2 id="a-library-that-stays-manageable">A Library That Stays Manageable</h2>
+      <ul>
+        <li>Palettes group triggers, and any palette can be shown inside any other, as its triggers after a prefix or as a single folder row.</li>
+        <li>Prefixes chain, so “a h Lights” is Lights in Home Assistant in Automations, reached with three letters.</li>
+        <li>Every palette can have its own hotkeys, and one hotkey can step through several palettes.</li>
+        <li>Show All opens every folder in place, so the whole library is on screen at once.</li>
+        <li>A dynamic palette shows a different palette depending on the time, the network or the app in front.</li>
+      </ul>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/palettes/">Palettes</a>: Palettes group triggers. A palette can have its own hotkeys, a prefix, and a place inside other palettes, which is how a large library stays easy to pick from.</li>
+        <li><a href="/rapidfire/docs/automation/">Automation</a>: Rapidfire works with other tools on the Mac. Other apps can show a palette, add triggers, and read what is kept in Rapidfire, through links, through the Shortcuts app, and by dragging and copying.</li>
+      </ul>
+
+      <h2 id="habits-are-protected">Habits Are Protected</h2>
+      <p>A launcher that is used by habit must not move things. Rapidfire treats the keys of a trigger as something to keep.</p>
+      <ul>
+        <li>Before a trigger is added, Quick Add lists the triggers whose keys it would change, most used first.</li>
+        <li>Locked keys reserve exact keys for one trigger. Nothing added later can take or move them.</li>
+        <li>A forced alias gives a trigger a second, shorter name for keys.</li>
+        <li>Tab opens the most used trigger in the list.</li>
+        <li>Every change can be undone, including those made by an AI assistant or an import.</li>
+      </ul>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/keys/">How Keys Work</a>: Rapidfire works out the keys for every trigger from its name. This page explains the rule, how to steer it with aliases, and how to lock the keys of a trigger so they never change.</li>
+        <li><a href="/rapidfire/docs/editor/">The Editor</a>: The editor is the window in which the library is arranged: palettes on the left, the triggers of the selected palette in a table, and the palette’s settings at the side.</li>
+      </ul>
+
+      <h2 id="one-hand-is-enough">One Hand Is Enough</h2>
+      <p>With one hand on the mouse, half the keyboard is out of reach. In Left Hand or Right Hand mode, every key of the far half is typed with its mirror key: the same finger and the same movement on the other hand. Names and highlighted letters stay as they are.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/one-handed/">One-Handed Use</a>: Rapidfire can be used with one hand on the keyboard, for working with the other on a mouse or trackpad, and for anyone who types with one hand. The keys of one half of the keyboard are mirrored onto the other.</li>
+      </ul>
+
+      <h2 id="anything-with-a-link">Anything with a Link</h2>
+      <ul>
+        <li>Web pages, apps, files and folders, Shortcuts, BetterTouchTool and Keyboard Maestro actions, System Settings panes, and items in any app that has links.</li>
+        <li>A link can ask for text first: one trigger searches a website, or hands text to a Shortcut or a macro.</li>
+        <li>Holding Control opens a whole palette at once: every dashboard of a morning check, every tool of a project.</li>
+        <li>Adding is a drag onto the menu bar icon.</li>
+      </ul>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/triggers/">Triggers</a>: A trigger is a name and a link. This page lists what a trigger can open, the ways of adding one, and what the marks next to a trigger mean.</li>
+        <li><a href="/rapidfire/docs/automation/">Automation</a>: Rapidfire works with other tools on the Mac. Other apps can show a palette, add triggers, and read what is kept in Rapidfire, through links, through the Shortcuts app, and by dragging and copying.</li>
+      </ul>
+
+      <h2 id="built-to-be-run-by-an-ai-assistant">Built to Be Run by an AI Assistant</h2>
+      <p>Rapidfire has an MCP server, so an AI assistant can read and rearrange the library on request: build a palette for a new project, shorten names without disturbing the keys used most, find duplicates.</p>
+      <ul>
+        <li>An assistant can try a change first and see which keys it would move.</li>
+        <li>Every change is recorded with its old and new value and can be reverted.</li>
+        <li>What an assistant adds or changes is marked until it has been opened once.</li>
+        <li>The overlay can be watched while the assistant works: triggers appear as they are added.</li>
+        <li>The server runs on this Mac only, is off until switched on, and switches itself off when idle.</li>
+      </ul>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/ai/">AI Assistants</a>: An AI assistant can read and edit the library through Rapidfire’s MCP server: build a palette for a new project, tidy names, or move triggers, in one request. This page covers connecting an assistant, what it can do, and how every change stays visible and reversible.</li>
+        <li><a href="/rapidfire/docs/watching/">Watching and Presenting</a>: The overlay can be kept open, redrawn as the library changes, and unfolded to show everything at once. Together with a few links and settings, this makes it possible to follow an AI assistant at work, and to demonstrate or record Rapidfire without touching the keyboard.</li>
+      </ul>
+
+      <h2 id="part-of-the-mac">Part of the Mac</h2>
+      <ul>
+        <li>Palettes and triggers are found by name in Spotlight, and asked for through Siri.</li>
+        <li>Actions in the Shortcuts app open, run, find and add triggers, also on a schedule or when a network is joined.</li>
+        <li>Every palette and trigger has a link, so a gesture, a Stream Deck key, a macro or a voice command can open it.</li>
+        <li>The overlay never takes over: it does not become the active app, and the app in front keeps its place.</li>
+        <li>Rapidfire follows the Mac’s appearance, accent color and accessibility settings in every window.</li>
+      </ul>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/spotlight-and-siri/">Spotlight and Siri</a>: Palettes and triggers can be found by name in Spotlight and asked for through Siri, without opening Rapidfire first.</li>
+        <li><a href="/rapidfire/docs/automation/">Automation</a>: Rapidfire works with other tools on the Mac. Other apps can show a palette, add triggers, and read what is kept in Rapidfire, through links, through the Shortcuts app, and by dragging and copying.</li>
+      </ul>
+
+      <h2 id="shared-synced-and-backed-up">Shared, Synced and Backed Up</h2>
+      <ul>
+        <li>A palette is shared as a file or as a link that can be read before it is opened.</li>
+        <li>Nothing is imported unseen: the Import window lists what every trigger does.</li>
+        <li>A team can post new versions of a palette; Rapidfire says whether an incoming one is newer or older, and updates without touching what was added locally.</li>
+        <li>iCloud keeps the library the same on every Mac, combining changes made on different Macs.</li>
+        <li>Copies of the library are kept before every change that removes much, and one command restores any of them.</li>
+      </ul>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/sharing/">Sharing and Backups</a>: Palettes can be given to other people as a file or as a link, and the whole library can be saved and restored. Rapidfire also keeps its own copies before any change that removes much.</li>
+        <li><a href="/rapidfire/docs/files-and-sync/">Files and iCloud Sync</a>: Triggers that open files need access to the folders those files are in. The library itself can be kept the same on every Mac through iCloud. This page covers both.</li>
+      </ul>
+
+      <h2 id="usable-by-everyone">Usable by Everyone</h2>
+      <p>Every row is named for VoiceOver with its key. Everything works from the keyboard alone, with Voice Control and with Switch Control. Text size, row size and key style are adjustable, contrast meets WCAG AA, and nothing depends on color, motion or sound alone.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/accessibility/">Accessibility</a>: Rapidfire is built to be used with VoiceOver, Voice Control, Switch Control, a keyboard alone, one hand, low vision, and without relying on color, motion or sound. This page lists what it does for each and which settings help.</li>
+        <li><a href="/rapidfire/docs/shortcuts/">Keyboard Shortcuts</a>: Every key Rapidfire uses, on one page. The menu bar icon’s menu opens this page directly: Control-click the icon and choose Keyboard Shortcuts.</li>
+      </ul>
+
+      <h2 id="private-by-design">Private by Design</h2>
+      <p>Rapidfire has no account and no analytics, and it does not connect to the internet. The library is two plain files on the Mac, synced only through the iCloud account of the person using it.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/troubleshooting/">Troubleshooting and Privacy</a>: What to check when something does not work as expected, where Rapidfire keeps its data, and what it does and does not do with it.</li>
+      </ul>
+
+      <nav class="pager" aria-label="More help">
+        <a href="/rapidfire/docs/start/" rel="prev">← Getting Started</a>
+        <a href="/rapidfire/docs/overlay/" rel="next">The Overlay →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

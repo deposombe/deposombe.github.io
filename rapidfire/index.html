@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rapidfire — a keyboard launcher for the Mac</title>
+  <meta name="description" content="Rapidfire shows every link, app, file and Shortcut with the keys that open it. Two or three keys reach one among hundreds. For macOS 15 or later.">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="Rapidfire — a keyboard launcher for the Mac">
+  <meta property="og:description" content="Rapidfire shows every link, app, file and Shortcut with the keys that open it. Two or three keys reach one among hundreds. For macOS 15 or later.">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Rapidfire",
+      "description": "A keyboard launcher that shows its keys.",
+      "operatingSystem": "macOS 15 or later",
+      "applicationCategory": "UtilitiesApplication",
+      "url": "https://deposombe.com/rapidfire/",
+      "publisher": { "@type": "Organization", "name": "Deposombe", "url": "https://deposombe.com/" }
+    }
+  </script>
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/#apps">Apps</a> › Rapidfire · In development</p>
+    <img class="app-icon" src="/rapidfire/icon.png" alt="Rapidfire's icon: a yellow bolt with a dot on black" width="96" height="96">
+    <h1>Rapidfire</h1>
+    <p class="intro">A keyboard launcher that shows its keys.</p>
+    <p class="facts">$20, one-time, for 3 Macs. Release: November 2026.</p>
+
+    <div class="doc">
+      <p>Press a hotkey. Rapidfire shows the links, apps, files and Shortcuts kept in it and marks, in each name, the letters that tell it apart. Type them, and it opens. There is no Return to press and no name to recall.</p>
+      <p class="links"><a href="/rapidfire/docs/">Read the documentation</a></p>
+
+      <h2 id="keys">Keys without setup</h2>
+      <ul>
+        <li>Two or three keys reach a trigger among hundreds.</li>
+        <li>The same names give the same keys, on every Mac.</li>
+        <li>A trigger opens the moment it is the only one left.</li>
+      </ul>
+
+      <h2 id="links">Anything with a link</h2>
+      <ul>
+        <li>Web pages, apps, files and folders, Shortcuts, BetterTouchTool and Keyboard Maestro actions, System Settings panes.</li>
+        <li>A link can ask for text first: one trigger searches a website or hands text to a Shortcut.</li>
+        <li>Holding Control opens a whole palette at once.</li>
+        <li>Adding a trigger is a drag onto the menu bar icon.</li>
+      </ul>
+
+      <h2 id="habits">Habits are protected</h2>
+      <ul>
+        <li>Before a trigger is added, Rapidfire lists the triggers whose keys it would change, most used first.</li>
+        <li>Locked keys reserve exact keys for one trigger.</li>
+        <li>Every change can be undone.</li>
+      </ul>
+
+      <h2 id="library">A library that stays manageable</h2>
+      <ul>
+        <li>Palettes group triggers, each with its own hotkeys, and any palette can be shown inside another.</li>
+        <li>Show All unfolds every folder, so the whole library is on screen at once.</li>
+        <li>A dynamic palette shows a different palette by time, network or the app in front.</li>
+      </ul>
+
+      <h2 id="one-hand">One hand is enough</h2>
+      <p>With one hand on the mouse, every key of the far half of the keyboard is typed with its mirror key on the near half.</p>
+
+      <h2 id="mac">Works with the rest of the Mac</h2>
+      <ul>
+        <li>iCloud sync keeps the library the same on every Mac.</li>
+        <li>Spotlight, Siri and the Shortcuts app can find and open triggers.</li>
+        <li>An AI assistant can read and edit the library through Rapidfire's MCP server; every change it makes is listed and can be reverted.</li>
+        <li>VoiceOver, Voice Control, Switch Control and keyboard-only use are supported.</li>
+      </ul>
+
+      <h2 id="price">Price</h2>
+      <p><strong>$20, one-time.</strong> One license works on 3 Macs. All 1.x updates are included.</p>
+      <p>Without a license Rapidfire is a complete launcher with one palette, General, and no time limit. A license adds more palettes, their own hotkeys, and palettes inside palettes.</p>
+      <p>Sold by <a href="https://polar.sh">Polar</a>, the merchant of record, which handles payment, tax and invoices. Refunds within 14 days: write to <a href="mailto:support@deposombe.com">support@deposombe.com</a>.</p>
+
+      <h2 id="requirements">Requirements</h2>
+      <p>macOS 15 Sequoia or later.</p>
+
+      <h2 id="more">More</h2>
+      <p class="links"><a href="/rapidfire/docs/">Documentation</a> <a href="/rapidfire/docs/shortcuts/">Keyboard shortcuts</a> <a href="/privacy/#rapidfire">Privacy</a> <a href="/support/#rapidfire">Support</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

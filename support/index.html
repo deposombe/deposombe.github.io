@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Support — Deposombe</title>
-  <meta name="description" content="How to reach Deposombe for help or questions: one email address, support@deposombe.com.">
+  <meta name="description" content="How to reach Deposombe, and answers for Rapidfire: where its data is, removing it, licenses, refunds and invoices.">
   <link rel="canonical" href="https://deposombe.com/support/">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Deposombe">
   <meta property="og:title" content="Support — Deposombe">
-  <meta property="og:description" content="How to reach Deposombe for help or questions: one email address, support@deposombe.com.">
+  <meta property="og:description" content="How to reach Deposombe, and answers for Rapidfire: where its data is, removing it, licenses, refunds and invoices.">
   <meta property="og:url" content="https://deposombe.com/support/">
   <meta property="og:image" content="https://deposombe.com/og.png">
   <meta property="og:image:width" content="1200">
@@ -37,6 +37,7 @@
   <header class="top">
     <a class="mark" href="/">Deposombe</a>
     <nav>
+      <a href="/#apps">Apps</a>
       <a href="https://github.com/deposombe">GitHub</a>
       <a href="https://x.com/deposombe">X</a>
       <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
@@ -48,6 +49,64 @@
   <main>
     <h1>Support</h1>
     <p class="intro">Write to <a href="mailto:support@deposombe.com">support@deposombe.com</a>.</p>
+
+    <div class="doc">
+      <p>Helpful to include:</p>
+      <ul>
+        <li>the app and its version (About Rapidfire) and the macOS version,</li>
+        <li>what was done, what was expected, and what happened instead,</li>
+        <li>a screenshot or a short screen recording, if it shows the problem,</li>
+        <li>for sync problems: Settings › Sync › Copy Sync Report, pasted into the mail.</li>
+      </ul>
+      <p>Replies come within 48 hours.</p>
+
+      <nav class="toc" aria-label="On this page">
+        <a href="#rapidfire">Rapidfire</a>
+        <a href="#licenses">Licenses and refunds</a>
+        <a href="#press">Press and reviews</a>
+      </nav>
+
+      <h2 id="rapidfire">Rapidfire</h2>
+      <p>Rapidfire is in development; its first release is planned for November 2026. Requires macOS 15 Sequoia or later.</p>
+      <p class="links"><a href="/rapidfire/docs/">Rapidfire Help</a> <a href="/rapidfire/docs/shortcuts/">Keyboard shortcuts</a> <a href="/rapidfire/docs/troubleshooting/">Troubleshooting</a></p>
+
+      <h3>Known issues</h3>
+      <ul>
+        <li>macOS 15.0 and 15.1 refuse hotkeys that use only Option, or only Option and Shift. macOS 15.2 and later accept them.</li>
+        <li>A trigger for a file opens only when the file's folder is listed in Settings › Files.</li>
+      </ul>
+
+      <h3>Where are the triggers stored?</h3>
+      <p>In one file, <code>library.json</code>, with a daily copy in the <code>Backups</code> folder next to it. <strong>Show Backups in Finder</strong>, in the menu bar icon's menu, opens that folder. <strong>File › Export Library…</strong> saves a copy anywhere.</p>
+
+      <h3>How to go back to a backup?</h3>
+      <p><strong>File › Restore Library…</strong> and choose a file from <code>Backups</code> or an exported copy.</p>
+
+      <h3>What works without a license?</h3>
+      <p>The General palette, complete and without limits. A license adds more palettes, their hotkeys and palettes inside palettes.</p>
+
+      <h3>A hotkey does nothing.</h3>
+      <p>See <a href="/rapidfire/docs/troubleshooting/">Troubleshooting</a> in Rapidfire Help. On macOS 15.0 and 15.1 the system refuses hotkeys that use only Option, or only Option and Shift.</p>
+
+      <h3>How to remove Rapidfire and all its data?</h3>
+      <ol>
+        <li>Quit Rapidfire and move it from Applications to the Trash.</li>
+        <li>In Finder choose Go › Go to Folder…, enter <code>~/Library/Containers/</code>, and move the <code>com.deposombe.RapidfireLauncher</code> folder to the Trash. This removes triggers, settings and backups.</li>
+        <li>If iCloud sync was on, Rapidfire's data in iCloud is removed in System Settings, under the Apple Account's iCloud storage, in the list of apps.</li>
+      </ol>
+      <p>A license stays valid after removal. Use <strong>Remove License</strong> first to free it for another Mac.</p>
+
+      <h2 id="licenses">Licenses and refunds</h2>
+      <ul>
+        <li><strong>Lost license key:</strong> it is in the email from Polar and in the <a href="https://polar.sh/deposombe/portal">Polar customer portal</a>, under the email used to pay. Or write to support@deposombe.com from that email.</li>
+        <li><strong>New Mac:</strong> one license works on 3 Macs. Remove License on a Mac no longer in use frees it; so does the customer portal. Write to support@deposombe.com if that Mac is gone.</li>
+        <li><strong>Refunds:</strong> write to support@deposombe.com from the email used to pay, within 14 days of the purchase. No reason needed. Refunds are paid by Polar to the original payment method.</li>
+        <li><strong>Invoices:</strong> Polar sends the receipt and issues an invoice with company details from the customer portal.</li>
+      </ul>
+
+      <h2 id="press">Press and reviews</h2>
+      <p>Free licenses are available for reviewers and press. Write to support@deposombe.com with a link to where the review will appear.</p>
+    </div>
   </main>
 
   <footer>

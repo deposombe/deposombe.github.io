@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sharing and Backups — Rapidfire Help</title>
+  <meta name="description" content="Palettes can be given to other people as a file or as a link, and the whole library can be saved and restored.">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/sharing/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="Sharing and Backups — Rapidfire Help">
+  <meta property="og:description" content="Palettes can be given to other people as a file or as a link, and the whole library can be saved and restored.">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/sharing/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>Sharing and Backups</h1>
+    <p class="intro">Palettes can be given to other people as a file or as a link, and the whole library can be saved and restored. Rapidfire also keeps its own copies before any change that removes much.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#share-a-palette">Share a Palette</a>
+        <a href="#import-a-palette">Import a Palette</a>
+        <a href="#save-and-restore-the-whole-library">Save and Restore the Whole Library</a>
+        <a href="#backups-rapidfire-keeps">Backups Rapidfire Keeps</a>
+      </nav>
+
+      <h2 id="share-a-palette">Share a Palette</h2>
+      <p>A shared palette travels with the palettes shown inside it and with how they are nested.</p>
+      <h3>As a file</h3>
+      <ol>
+        <li>In the editor, select the palette and choose File &gt; Export Palette, or Control-click it and choose Export Palette.</li>
+        <li>Save the file and send it: AirDrop, a message, a shared folder.</li>
+      </ol>
+      <p>Double-clicking the file on a Mac with Rapidfire opens the Import window.</p>
+      <h3>As a link</h3>
+      <ol>
+        <li>Control-click the palette and choose Copy Sharing Link.</li>
+        <li>Paste the link into a message or a page.</li>
+      </ol>
+      <p>The link contains the palette in readable form, one line per trigger, so it can be checked before it is opened. Where a link of this kind is not clickable, paste it into a browser’s address bar, or choose File &gt; Import from Link in Rapidfire.</p>
+      <h3>Only some triggers</h3>
+      <p>File &gt; Export Chosen Triggers shows the library as a list to tick: whole palettes or single triggers. What is ticked is saved as a file or copied as a link.</p>
+      <p class="note">Hotkeys, locked keys and usage counts are never included in a shared palette. File triggers are shared as paths, which work for the receiver only if the file is at the same path.</p>
+
+      <h2 id="import-a-palette">Import a Palette</h2>
+      <p>Nothing is ever imported or opened without being shown first. The Import window lists every trigger with what it does: opens a web page, runs a Shortcut, runs a macro, opens a file.</p>
+      <ol>
+        <li>Open the file or the link, or choose File &gt; Import Palettes.</li>
+        <li>Read the list. Untick anything unwanted.</li>
+        <li>Choose where the palettes go: as new palettes, or inside an existing one.</li>
+        <li>Click Import.</li>
+      </ol>
+      <ul>
+        <li>Imported triggers are marked New until each has been opened once.</li>
+        <li>An import adds palettes. It never merges into, replaces or deletes palettes already in the library, unless Update is chosen for a palette that was imported before.</li>
+        <li>The whole import is one step for Edit &gt; Undo.</li>
+      </ul>
+      <h3>A newer version of a palette already imported</h3>
+      <p>Rapidfire recognizes a palette it has imported before and says whether the incoming version is the same, newer or older. Update applies the sender’s changes: new triggers are added, renames and changed links are applied, and triggers added locally are left alone. Add as New keeps both.</p>
+      <p class="note">An older version is pointed out in red, since importing it would undo newer changes.</p>
+
+      <h2 id="save-and-restore-the-whole-library">Save and Restore the Whole Library</h2>
+      <ol>
+        <li>Choose File &gt; Export Library and save the file. It holds every palette, trigger and hotkey, and the settings.</li>
+        <li>To bring it back, on this Mac or another, choose File &gt; Restore Library and choose the file.</li>
+      </ol>
+      <p>Restore replaces the whole library with the one in the file. Also restore settings, on by default, brings the settings back as well. Restore asks before it replaces anything, and Edit &gt; Undo takes it back.</p>
+
+      <h2 id="backups-rapidfire-keeps">Backups Rapidfire Keeps</h2>
+      <p>Rapidfire saves a copy of the library before a restore, before an import, when iCloud sync is switched on, and before sync changes or removes many items at once. The copies are kept on this Mac for 30 days.</p>
+      <ul>
+        <li>File &gt; Restore Library lists these copies with their dates.</li>
+        <li>File &gt; Show Backups in Finder opens the folder they are in.</li>
+        <li>Backups are not synced and never leave the Mac.</li>
+      </ul>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/files-and-sync/">Files and iCloud Sync</a>: Triggers that open files need access to the folders those files are in. The library itself can be kept the same on every Mac through iCloud. This page covers both.</li>
+        <li><a href="/rapidfire/docs/triggers/">Triggers</a>: A trigger is a name and a link. This page lists what a trigger can open, the ways of adding one, and what the marks next to a trigger mean.</li>
+        <li><a href="/rapidfire/docs/ai/">AI Assistants</a>: An AI assistant can read and edit the library through Rapidfire’s MCP server: build a palette for a new project, tidy names, or move triggers, in one request. This page covers connecting an assistant, what it can do, and how every change stays visible and reversible.</li>
+      </ul>
+
+      <nav class="pager" aria-label="More help">
+        <a href="/rapidfire/docs/one-handed/" rel="prev">← One-Handed Use</a>
+        <a href="/rapidfire/docs/files-and-sync/" rel="next">Files and iCloud Sync →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

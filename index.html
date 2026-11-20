@@ -41,6 +41,15 @@
           "name": "Deposombe",
           "url": "https://deposombe.com/",
           "publisher": { "@id": "https://deposombe.com/#org" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Rapidfire",
+          "description": "A keyboard launcher that shows its keys.",
+          "operatingSystem": "macOS 15 or later",
+          "applicationCategory": "UtilitiesApplication",
+          "url": "https://deposombe.com/rapidfire/",
+          "publisher": { "@id": "https://deposombe.com/#org" }
         }
       ]
     }
@@ -60,6 +69,7 @@
   <header class="top">
     <a class="mark" href="/">Deposombe</a>
     <nav>
+      <a href="#apps">Apps</a>
       <a href="https://github.com/deposombe">GitHub</a>
       <a href="https://x.com/deposombe">X</a>
       <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
@@ -71,7 +81,19 @@
   <main>
     <h1>Less in your way.</h1>
     <p class="intro">Deposombe makes small Mac apps that take the unnecessary steps out of everyday work.</p>
-    <p class="soon">The first apps are on their way.</p>
+    <ol class="apps" id="apps">
+      <li class="app">
+        <a class="app-art" href="/rapidfire/"><img src="rapidfire/icon.png" alt="Rapidfire's icon: a yellow bolt with a dot on black" width="160" height="160"></a>
+        <div>
+          <p class="app-status">Nº 01 · In development</p>
+          <h2><a href="/rapidfire/">Rapidfire</a></h2>
+          <p class="app-line">A keyboard launcher that shows its keys.</p>
+          <p class="app-text">One hotkey shows every link, app, file and Shortcut kept in it, with the letters to type marked in each name. Two or three keys open one. Nothing is assigned by hand and nothing has to be remembered.</p>
+          <p class="app-meta">macOS 15 or later · Swift, SwiftUI · 1.0 · 2026</p>
+          <p class="app-links"><a href="/rapidfire/">About Rapidfire</a> <a href="/rapidfire/docs/">Documentation</a></p>
+        </div>
+      </li>
+    </ol>
   </main>
 
   <footer>

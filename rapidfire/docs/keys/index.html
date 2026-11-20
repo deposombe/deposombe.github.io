@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How Keys Work — Rapidfire Help</title>
+  <meta name="description" content="Rapidfire works out the keys for every trigger from its name.">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/keys/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="How Keys Work — Rapidfire Help">
+  <meta property="og:description" content="Rapidfire works out the keys for every trigger from its name.">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/keys/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>How Keys Work</h1>
+    <p class="intro">Rapidfire works out the keys for every trigger from its name. This page explains the rule, how to steer it with aliases, and how to lock the keys of a trigger so they never change.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#the-rule">The Rule</a>
+        <a href="#when-keys-change">When Keys Change</a>
+        <a href="#aliases">Aliases</a>
+        <a href="#locked-keys">Locked Keys</a>
+        <a href="#names-no-key-can-tell-apart">Names No Key Can Tell Apart</a>
+        <a href="#see-also">See Also</a>
+      </nav>
+
+      <h2 id="the-rule">The Rule</h2>
+      <p>Keys are never assigned by hand. Rapidfire compares the names that are still in the list, letter by letter, and highlights the first letter in which they differ. Typing that letter narrows the list, and the comparison repeats on what is left.</p>
+      <ul>
+        <li>Instagram and Itch both start with i, so that letter says nothing. The next letters differ: n opens Instagram, t opens Itch.</li>
+        <li>Upper and lower case, and accents, are the same key: Ż, ż and z are all typed as z.</li>
+        <li>The end of a name counts as a Space. With “ab Notes” and “abc Blur” in the list, Space picks the first.</li>
+        <li>Letters, digits, punctuation and Space can all be keys. Emoji are shown but are never keys.</li>
+        <li>Symbols typed with Option are keys as well, and an accented letter typed with Option matches the plain letter in a name.</li>
+      </ul>
+      <p>The rule is the same in every palette, and it always gives the same keys for the same set of names.</p>
+
+      <h2 id="when-keys-change">When Keys Change</h2>
+      <p>Keys follow names. Adding, renaming, moving or deleting a trigger can change the keys of others in the same list, because the first differing letter may no longer be the same.</p>
+      <ul>
+        <li>Quick Add shows the keys a new trigger would change before it is added, with how often each of those triggers is used.</li>
+        <li>The editor shows every trigger’s current keys in the Keys column, and its keys in each one-handed mode in the Left Hand and Right Hand columns.</li>
+        <li>An AI assistant that changes the library through MCP is told which keys moved after every change.</li>
+      </ul>
+
+      <h2 id="aliases">Aliases</h2>
+      <p>A forced alias is a second, shorter name used for keys. The trigger can then be reached by its name or by its alias, and the alias is shown as a tag before the name.</p>
+      <ol>
+        <li>In the editor, click the trigger’s cell in the Alias column.</li>
+        <li>Type the alias, for example dc for Discord, and press Return.</li>
+      </ol>
+      <p>An alias suits a family of triggers that share a start: “dc” for Discord itself, and “dc gaming”, “dc work” for its servers. Typing d and c, then Space, opens Discord; another letter narrows to a server.</p>
+      <p class="note">An alias is another name, not a reservation. Its keys are worked out by the same rule and can change when names change. For keys that never change, lock them.</p>
+
+      <h2 id="locked-keys">Locked Keys</h2>
+      <p>Locked keys are exact keys kept for one trigger. Typing them opens that trigger at once, in every list it appears in, whatever is added or renamed later. No other trigger can use them or keys that begin with them.</p>
+      <h3>Lock the keys of a trigger</h3>
+      <ol>
+        <li>In the editor, find the trigger and click its cell in the Locked Keys column. To lock the keys it has now, Control-click the row and choose Lock Current Keys instead.</li>
+        <li>Type the keys and press Return.</li>
+        <li>A window shows the keys in each hand mode and every other trigger whose keys would move. Confirm to lock.</li>
+      </ol>
+      <ul>
+        <li>A trigger with locked keys keeps the keys its name gives as well; both open it.</li>
+        <li>Locked keys must be unique in the whole library, in every hand mode. Keys that would clash are refused, with the reason.</li>
+        <li>Locked keys stay with the trigger when it moves to another palette and when a palette is shown somewhere else.</li>
+        <li>The editor’s sidebar has a Locked Triggers list with every trigger that has locked keys.</li>
+        <li>Locked keys follow iCloud sync and backups. They are not included when a palette is shared, since they could clash with the receiver’s.</li>
+        <li>Locked keys are set only in the editor. An AI assistant can see them but cannot set or remove them.</li>
+      </ul>
+
+      <h2 id="names-no-key-can-tell-apart">Names No Key Can Tell Apart</h2>
+      <p>Two triggers with the same name have no letter in which they differ. When only such rows are left, the overlay says so and shows which palette each is in. Pick one with the arrow keys and Return, or click it. Renaming one of them, or giving it an alias, gives each its own keys.</p>
+      <p class="note">Names written with an input method (Chinese, Japanese, Korean) cannot be typed in the overlay. Such triggers are picked with the arrow keys or the pointer, or given an alias in Latin letters.</p>
+
+      <h2 id="see-also">See Also</h2>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/one-handed/">One-Handed Use</a>: Rapidfire can be used with one hand on the keyboard, for working with the other on a mouse or trackpad, and for anyone who types with one hand. The keys of one half of the keyboard are mirrored onto the other.</li>
+        <li><a href="/rapidfire/docs/editor/">The Editor</a>: The editor is the window in which the library is arranged: palettes on the left, the triggers of the selected palette in a table, and the palette’s settings at the side.</li>
+        <li><a href="/rapidfire/docs/overlay/">The Overlay</a>: The overlay is the list a hotkey shows. This page describes what is on it, every way of picking from it, and the modes that change how it behaves: Show All, watching, and opening a whole palette.</li>
+      </ul>
+
+      <nav class="pager" aria-label="More help">
+        <a href="/rapidfire/docs/overlay/" rel="prev">← The Overlay</a>
+        <a href="/rapidfire/docs/palettes/" rel="next">Palettes →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

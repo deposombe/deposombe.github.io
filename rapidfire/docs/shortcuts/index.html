@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keyboard Shortcuts — Rapidfire Help</title>
+  <meta name="description" content="Every key Rapidfire uses, on one page. The menu bar icon’s menu opens this page directly: Control-click the icon and choose Keyboard Shortcuts.">
+  <link rel="canonical" href="https://deposombe.com/rapidfire/docs/shortcuts/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deposombe">
+  <meta property="og:title" content="Keyboard Shortcuts — Rapidfire Help">
+  <meta property="og:description" content="Every key Rapidfire uses, on one page. The menu bar icon’s menu opens this page directly: Control-click the icon and choose Keyboard Shortcuts.">
+  <meta property="og:url" content="https://deposombe.com/rapidfire/docs/shortcuts/">
+  <meta property="og:image" content="https://deposombe.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Deposombe. Less in your way.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deposombe">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
+  <script src="/bats.js" defer></script>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="/">Deposombe</a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="https://github.com/deposombe">GitHub</a>
+      <a href="https://x.com/deposombe">X</a>
+      <a href="https://bsky.app/profile/deposombe.bsky.social">Bluesky</a>
+      <a rel="me" href="https://mastodon.social/@deposombe">Mastodon</a>
+      <button class="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
+    <h1>Keyboard Shortcuts</h1>
+    <p class="intro">Every key Rapidfire uses, on one page. The menu bar icon’s menu opens this page directly: Control-click the icon and choose Keyboard Shortcuts.</p>
+    <p class="updated">Last updated 20 November 2026</p>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <a href="#from-anywhere">From Anywhere</a>
+        <a href="#in-the-overlay-picking">In the Overlay: Picking</a>
+        <a href="#in-the-overlay-views">In the Overlay: Views</a>
+        <a href="#in-the-overlay-input-fields">In the Overlay: Input Fields</a>
+        <a href="#with-the-pointer-in-the-overlay">With the Pointer in the Overlay</a>
+        <a href="#quick-add">Quick Add</a>
+        <a href="#the-editor">The Editor</a>
+        <a href="#every-window">Every Window</a>
+      </nav>
+
+      <h2 id="from-anywhere">From Anywhere</h2>
+      <div class="table">
+        <table>
+          <thead><tr><th>Keys</th><th>What they do</th></tr></thead>
+          <tbody>
+            <tr><td><kbd>A palette’s hotkey</kbd></td><td>Opens that palette’s overlay. Pressed again, closes it. Hotkeys are recorded in Settings &gt; Hotkeys; a new installation has Control-Option-Space for General.</td></tr>
+            <tr><td><kbd>Click the menu bar icon</kbd></td><td>Opens the General palette.</td></tr>
+            <tr><td><kbd>Control-click the menu bar icon</kbd></td><td>Shows Rapidfire’s menu.</td></tr>
+            <tr><td><kbd>Drag onto the menu bar icon</kbd></td><td>Opens Quick Add for a link, a file, a folder or an app.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="in-the-overlay-picking">In the Overlay: Picking</h2>
+      <div class="table">
+        <table>
+          <thead><tr><th>Keys</th><th>What they do</th></tr></thead>
+          <tbody>
+            <tr><td><kbd>Letters, digits, Space</kbd></td><td>Narrow the list. The trigger opens when it is the only one left.</td></tr>
+            <tr><td><kbd>Delete</kbd></td><td>Takes back the last key. With nothing typed, goes back out of a folder.</td></tr>
+            <tr><td><kbd>↑ ↓ ← →</kbd></td><td>Move the highlight.</td></tr>
+            <tr><td><kbd>Return</kbd></td><td>Opens the highlighted row.</td></tr>
+            <tr><td><kbd>Tab</kbd></td><td>Opens the most used trigger in the list.</td></tr>
+            <tr><td><kbd>⌃ (held)</kbd></td><td>The trigger picked opens its whole palette.</td></tr>
+            <tr><td><kbd>⌃Tab</kbd></td><td>Opens the whole palette of the most used trigger.</td></tr>
+            <tr><td><kbd>Escape</kbd></td><td>Closes the overlay.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="in-the-overlay-views">In the Overlay: Views</h2>
+      <div class="table">
+        <table>
+          <thead><tr><th>Keys</th><th>What they do</th></tr></thead>
+          <tbody>
+            <tr><td><kbd>⌘T</kbd></td><td>Show All: opens every folder in place, until pressed again.</td></tr>
+            <tr><td><kbd>⌥ (held)</kbd></td><td>Shows every folder opened while held.</td></tr>
+            <tr><td><kbd>⌘K</kbd></td><td>Watching: keeps the overlay open and redraws it when the library changes.</td></tr>
+            <tr><td><kbd>⌘]</kbd></td><td>The next pointer style.</td></tr>
+            <tr><td><kbd>⌘[</kbd></td><td>The previous pointer style.</td></tr>
+            <tr><td><kbd>⌘1</kbd></td><td>Left hand.</td></tr>
+            <tr><td><kbd>⌘2</kbd></td><td>Both hands.</td></tr>
+            <tr><td><kbd>⌘3</kbd></td><td>Right hand.</td></tr>
+            <tr><td><kbd>⌘+</kbd></td><td>Larger text.</td></tr>
+            <tr><td><kbd>⌘−</kbd></td><td>Smaller text.</td></tr>
+            <tr><td><kbd>⌘0</kbd></td><td>Default text size.</td></tr>
+            <tr><td><kbd>⌘E</kbd></td><td>Opens the editor.</td></tr>
+            <tr><td><kbd>⌘,</kbd></td><td>Opens Settings.</td></tr>
+            <tr><td><kbd>⌘W</kbd></td><td>Closes the overlay.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="in-the-overlay-input-fields">In the Overlay: Input Fields</h2>
+      <div class="table">
+        <table>
+          <thead><tr><th>Keys</th><th>What they do</th></tr></thead>
+          <tbody>
+            <tr><td><kbd>Tab</kbd></td><td>Moves to the next field.</td></tr>
+            <tr><td><kbd>Return</kbd></td><td>Opens the trigger with what was typed.</td></tr>
+            <tr><td><kbd>Delete</kbd></td><td>In the empty first field, goes back to the list.</td></tr>
+            <tr><td><kbd>Escape</kbd></td><td>Cancels.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="with-the-pointer-in-the-overlay">With the Pointer in the Overlay</h2>
+      <div class="table">
+        <table>
+          <thead><tr><th>Keys</th><th>What they do</th></tr></thead>
+          <tbody>
+            <tr><td><kbd>Click a row</kbd></td><td>Opens it.</td></tr>
+            <tr><td><kbd>⌃-click a row</kbd></td><td>Opens its whole palette.</td></tr>
+            <tr><td><kbd>Drag a row out</kbd></td><td>Gives the link that shows the trigger or opens the palette.</td></tr>
+            <tr><td><kbd>⌥-drag a row out</kbd></td><td>Gives the link that runs it.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="quick-add">Quick Add</h2>
+      <div class="table">
+        <table>
+          <thead><tr><th>Keys</th><th>What they do</th></tr></thead>
+          <tbody>
+            <tr><td><kbd>Return</kbd></td><td>Adds the trigger.</td></tr>
+            <tr><td><kbd>Escape</kbd></td><td>Cancels.</td></tr>
+            <tr><td><kbd>⌘.</kbd></td><td>Cancels.</td></tr>
+            <tr><td><kbd>⌘1 to ⌘9</kbd></td><td>Choose one of the palettes listed.</td></tr>
+            <tr><td><kbd>⌘0</kbd></td><td>Chooses General.</td></tr>
+            <tr><td><kbd>↓</kbd></td><td>In the palette field, opens the list of palettes.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="the-editor">The Editor</h2>
+      <div class="table">
+        <table>
+          <thead><tr><th>Keys</th><th>What they do</th></tr></thead>
+          <tbody>
+            <tr><td><kbd>⌘N</kbd></td><td>New Trigger.</td></tr>
+            <tr><td><kbd>⇧⌘N</kbd></td><td>New Palette.</td></tr>
+            <tr><td><kbd>⌥⇧⌘N</kbd></td><td>New Dynamic Palette.</td></tr>
+            <tr><td><kbd>⌘O</kbd></td><td>Opens the selected triggers.</td></tr>
+            <tr><td><kbd>⌘F</kbd></td><td>Find.</td></tr>
+            <tr><td><kbd>⌘C</kbd></td><td>Copies the selected triggers as links.</td></tr>
+            <tr><td><kbd>⌘V</kbd></td><td>Pastes links, files or triggers into the palette.</td></tr>
+            <tr><td><kbd>Delete or ⌘Delete</kbd></td><td>Deletes the selection, after asking.</td></tr>
+            <tr><td><kbd>⌘Z</kbd></td><td>Undo.</td></tr>
+            <tr><td><kbd>⇧⌘Z</kbd></td><td>Redo.</td></tr>
+            <tr><td><kbd>⌥⌘↑</kbd></td><td>Move Palette Up.</td></tr>
+            <tr><td><kbd>⌥⌘↓</kbd></td><td>Move Palette Down.</td></tr>
+            <tr><td><kbd>⌃⌘S</kbd></td><td>Shows or hides the sidebar.</td></tr>
+            <tr><td><kbd>⌥⌘I</kbd></td><td>Shows or hides Palette Settings.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="every-window">Every Window</h2>
+      <div class="table">
+        <table>
+          <thead><tr><th>Keys</th><th>What they do</th></tr></thead>
+          <tbody>
+            <tr><td><kbd>⌘E</kbd></td><td>Opens the editor.</td></tr>
+            <tr><td><kbd>⌘,</kbd></td><td>Opens Settings.</td></tr>
+            <tr><td><kbd>⌘?</kbd></td><td>Opens Rapidfire Help.</td></tr>
+            <tr><td><kbd>⌘W</kbd></td><td>Closes the window.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Rapidfire has no ⌘Q. Quitting would stop every hotkey, so it is done on purpose: choose Quit Rapidfire from the Rapidfire menu or from the menu bar icon’s menu.</p>
+
+      <nav class="pager" aria-label="More help">
+        <a href="/rapidfire/docs/accessibility/" rel="prev">← Accessibility</a>
+        <a href="/rapidfire/docs/troubleshooting/" rel="next">Troubleshooting and Privacy →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Deposombe</p>
+    <p class="legal"><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
+    <p>made with <button class="bats" type="button" aria-label="Release the bats">🦡</button> by <a href="https://deposombe.com">🦡</a></p>
+  </footer>
+
+  <script>
+    document.querySelector(".theme").addEventListener("click", () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>
