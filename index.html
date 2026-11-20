@@ -57,6 +57,7 @@
   <link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
   <script src="vendor/canvas-confetti/confetti.browser.js" defer></script>
   <script src="bats.js" defer></script>
+  <script src="shots.js" defer></script>
   <link rel="stylesheet" href="style.css">
   <script>
     try {
@@ -83,7 +84,19 @@
     <p class="intro">Deposombe makes small Mac apps that take the unnecessary steps out of everyday work.</p>
     <ol class="apps" id="apps">
       <li class="app">
-        <a class="app-art" href="/rapidfire/"><img src="rapidfire/icon.png" alt="Rapidfire's icon: a yellow bolt with a dot on black" width="160" height="160"></a>
+        <div class="shots">
+          <div class="shots-strip" tabindex="0" role="group" aria-label="Rapidfire screenshots">
+            <figure>
+              <img src="rapidfire/overlay.jpg" alt="Rapidfire's overlay over the desktop: three columns of triggers with the key to type marked in each name, and the folders Apps, Mac Settings and Start the Day opened" width="1330" height="976">
+              <figcaption>The overlay, the launcher itself. A hotkey shows every trigger with the key that opens it marked in its name; here Show All has opened the folders.</figcaption>
+            </figure>
+            <figure>
+              <img src="rapidfire/drop-zone.jpg" alt="A file dragged toward the menu bar, where a panel under Rapidfire's icon reads Drop to add" width="1330" height="976" loading="lazy">
+              <figcaption>The drop zone. Dragging a URL from a browser, or a file, a folder or an app, to Rapidfire’s icon in the menu bar opens Quick Add, filled in and waiting to be confirmed.</figcaption>
+            </figure>
+          </div>
+          <p class="shots-dots"><button type="button" aria-pressed="true" aria-label="Screenshot 1: the overlay"></button><button type="button" aria-pressed="false" aria-label="Screenshot 2: the drop zone"></button></p>
+        </div>
         <div>
           <p class="app-status">Nº 01 · In development</p>
           <h2><a href="/rapidfire/">Rapidfire</a></h2>

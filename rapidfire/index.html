@@ -37,6 +37,7 @@
   <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
   <script src="/vendor/canvas-confetti/confetti.browser.js" defer></script>
   <script src="/bats.js" defer></script>
+  <script src="/shots.js" defer></script>
   <link rel="stylesheet" href="/style.css">
   <script>
     try {
@@ -60,12 +61,24 @@
 
   <main>
     <p class="crumb"><a href="/#apps">Apps</a> › Rapidfire · In development</p>
-    <img class="app-icon" src="/rapidfire/icon.png" alt="Rapidfire's icon: a yellow bolt with a dot on black" width="96" height="96">
     <h1>Rapidfire</h1>
     <p class="intro">A keyboard launcher that shows its keys.</p>
     <p class="facts">$20, one-time, for 3 Macs. Release: November 2026.</p>
 
     <div class="doc">
+      <div class="shots">
+        <div class="shots-strip" tabindex="0" role="group" aria-label="Rapidfire screenshots">
+        <figure>
+          <img src="/rapidfire/overlay.jpg" alt="Rapidfire's overlay over the desktop: three columns of triggers with the key to type marked in each name, and the folders Apps, Mac Settings and Start the Day opened" width="1330" height="976">
+          <figcaption>The overlay, the launcher itself. A hotkey shows every trigger with the key that opens it marked in its name; here Show All has opened the folders.</figcaption>
+        </figure>
+        <figure>
+          <img src="/rapidfire/drop-zone.jpg" alt="A file dragged toward the menu bar, where a panel under Rapidfire's icon reads Drop to add" width="1330" height="976" loading="lazy">
+          <figcaption>The drop zone. Dragging a URL from a browser, or a file, a folder or an app, to Rapidfire’s icon in the menu bar opens Quick Add, filled in and waiting to be confirmed.</figcaption>
+        </figure>
+        </div>
+        <p class="shots-dots"><button type="button" aria-pressed="true" aria-label="Screenshot 1: the overlay"></button><button type="button" aria-pressed="false" aria-label="Screenshot 2: the drop zone"></button></p>
+      </div>
       <p>Press a hotkey. Rapidfire shows the links, apps, files and Shortcuts kept in it and marks, in each name, the letters that tell it apart. Type them, and it opens. There is no Return to press and no name to recall.</p>
       <p class="links"><a href="/rapidfire/docs/">Read the documentation</a></p>
 
@@ -81,7 +94,7 @@
         <li>Web pages, apps, files and folders, Shortcuts, BetterTouchTool and Keyboard Maestro actions, System Settings panes.</li>
         <li>A link can ask for text first: one trigger searches a website or hands text to a Shortcut.</li>
         <li>Holding Control opens a whole palette at once.</li>
-        <li>Adding a trigger is a drag onto the menu bar icon.</li>
+        <li>Dragging a URL from a browser, or a file, a folder or an app, onto the menu bar icon opens Quick Add.</li>
       </ul>
 
       <h2 id="habits">Habits are protected</h2>
