@@ -6,6 +6,21 @@
     <description>Updates of Rapidfire.</description>
     <language>en</language>
     <item>
+        <title>Rapidfire 1.0.1</title>
+        <sparkle:version>2</sparkle:version>
+        <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+        <sparkle:minimumSystemVersion>15.0.0</sparkle:minimumSystemVersion>
+        <pubDate>Sat, 21 Nov 2026 18:10:05 +0000</pubDate>
+        <description><![CDATA[<h3>The pinned overlay can be moved</h3>
+<ul>
+<li>Watching now has a pin in place of the eye. Press ⌘K or click the pin to keep the overlay open.</li>
+<li>A pinned overlay can be dragged by its top row or by the margin around the list, for example beside the window of an AI assistant. It grows from its top left corner as triggers are added. Closing it unpins it, and the next overlay opens in its usual place.</li>
+<li>A small light beside the pin is on while an AI assistant uses Rapidfire through MCP.</li>
+<li>With VoiceOver, the pin's actions move the overlay to a corner of the screen.</li>
+</ul>]]></description>
+        <enclosure url="https://github.com/deposombe/Rapidfire-releases/releases/download/v1.0.1/Rapidfire-1.0.1.dmg" sparkle:edSignature="FO02CK+YJ2jW/GT+eBtvKxWwPIQrWCTBTQYEy9k+l1hddXdvSmxIv6YPLzdgbXZSDRvoWYM/jrQVLktpRBCCBg==" length="7665536" type="application/octet-stream" />
+    </item>
+    <item>
         <title>Rapidfire 1.0</title>
         <sparkle:version>1</sparkle:version>
         <sparkle:shortVersionString>1.0</sparkle:shortVersionString>

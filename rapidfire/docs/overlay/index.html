@@ -75,7 +75,7 @@
         <li>A padlock tag on a trigger with locked keys, showing those keys.</li>
         <li>A New or Changed tag on a trigger that an import or an AI assistant added or changed and that has not been opened since.</li>
       </ul>
-      <p>The row above the list shows Rapidfire’s mark, the path when a palette other than General is showing, and three controls on the right: the eye (watching), the Show All button, and the hand switcher (Left, Both, Right).</p>
+      <p>The row above the list shows Rapidfire’s mark, the path when a palette other than General is showing, and three controls on the right: the pin (watching), the Show All button, and the hand switcher (Left, Both, Right).</p>
       <p>When a palette holds more than fits the largest size allowed in Settings &gt; Overlay, the list scrolls, and a line at the bottom says how many more there are. Typing is how a long list is narrowed; scrolling is for looking.</p>
 
       <h2 id="pick-a-trigger">Pick a Trigger</h2>
@@ -140,8 +140,10 @@
           </tbody>
         </table>
       </div>
-      <p>The eye button in the overlay’s top row does the same, and is filled while watching is on. It moves once for each change shown, unless Reduce Motion is on.</p>
+      <p>The pin button in the overlay’s top row does the same, and is filled while watching is on. The small light to its left comes on while an AI assistant is using Rapidfire through MCP, whether it is reading the library or changing it.</p>
+      <p>A watched overlay can be moved: drag it by its top row, or by the margin around the list. It stays where it is put, and grows and shrinks from its top left corner as the list changes. An overlay that is not watched cannot be moved, and a row never moves it: dragging a row carries its link out. The place is not remembered. The next overlay opens where Settings &gt; Overlay &gt; Opens says.</p>
       <p class="note">What was typed starts over when a watched overlay is redrawn, because a change can move keys. Escape, the hotkey, or picking a trigger closes a watched overlay as usual.</p>
+      <p class="note">Closing the overlay ends watching. The next overlay opens unpinned, in its usual place, and closes again when another app takes the keyboard. Press ⌘K or click the pin to watch again.</p>
       <ul class="see">
         <li><a href="/rapidfire/docs/watching/">Watching and Presenting</a>: The overlay can be kept open, redrawn as the library changes, and unfolded to show everything at once. Together with a few links and settings, this makes it possible to follow an AI assistant at work, and to demonstrate or record Rapidfire without touching the keyboard.</li>
       </ul>
