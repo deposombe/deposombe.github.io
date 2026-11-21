@@ -276,3 +276,42 @@ nav { flex-wrap: wrap; }
 .pages li { margin-bottom: 1.1rem; }
 .pages a { font-weight: 600; }
 .pager { justify-content: space-between; margin-top: 2.5rem; padding-top: 0.75rem; border-top: 1px solid var(--line); }
+
+.get { margin: 1.25rem 0 1.5rem; max-width: 34em; }
+.get-buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 0.75rem; }
+.btn, .doc a.btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 1.1rem;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.btn-fill, .doc a.btn-fill { background: var(--ink); color: var(--paper); }
+.btn:hover, .doc a.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn-fill:hover, .doc a.btn-fill:hover { background: var(--accent); color: var(--paper); }
+.brew { display: flex; align-items: stretch; border: 1px solid var(--line); background: var(--panel); }
+.brew code {
+  flex: 1;
+  min-width: 0;
+  padding: 0.6rem 0.8rem;
+  background: none;
+  font: 0.78rem/1.7 ui-monospace, SFMono-Regular, Menlo, monospace;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.copy {
+  flex: none;
+  padding: 0 0.9rem;
+  border: 0;
+  border-left: 1px solid var(--line);
+  background: none;
+  color: var(--accent);
+  font: 500 0.8rem var(--font);
+  cursor: pointer;
+}
+.copy:hover { background: var(--paper); }
+.get-note { margin: 0.6rem 0 0; color: var(--muted); font-size: 0.8rem; }
