@@ -50,7 +50,7 @@
     <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
     <h1>AI Assistants</h1>
     <p class="intro">An AI assistant can read and edit the library through Rapidfire’s MCP server: build a palette for a new project, tidy names, or move triggers, in one request. This page covers connecting an assistant, what it can do, and how every change stays visible and reversible.</p>
-    <p class="updated">Last updated 20 November 2026</p>
+    <p class="updated">Last updated 21 November 2026</p>
 
     <div class="doc">
       <nav class="toc" aria-label="On this page">
@@ -75,9 +75,9 @@
 
       <h2 id="turn-the-server-on-and-connect">Turn the Server On and Connect</h2>
       <ol>
-        <li>Open Settings &gt; MCP and turn on MCP Server. The same switch is in the menu bar icon’s menu and behind the MCP button in the editor’s toolbar.</li>
-        <li>For Claude Code, click Copy Setup Command and run the copied line in Terminal. The menu bar icon’s menu has Copy Claude Code Setup for the same line.</li>
-        <li>For another assistant, add a server with the address and the token from that line, following the assistant’s own instructions for MCP servers.</li>
+        <li>Open Settings &gt; MCP and turn on MCP Server. The menu bar icon’s menu has Turn MCP Server On for the same switch, and so has the MCP button in the editor’s toolbar.</li>
+        <li>Give the assistant the server’s address and token, following the assistant’s own instructions for adding an MCP server over HTTP. Settings &gt; MCP shows the address and copies both; the menu bar icon’s menu has Copy MCP Address and Copy MCP Token. The token is sent as the header Authorization: Bearer, followed by the token.</li>
+        <li>For Claude Code, Copy Setup Command in Settings &gt; MCP copies one line that does this; run it in Terminal.</li>
         <li>Start a new conversation in the assistant, so that it reads the list of tools.</li>
       </ol>
       <div class="table">
@@ -85,7 +85,8 @@
           <tbody>
             <tr><td><strong>Turn off after</strong></td><td>How long the server stays on with no request from an assistant before it switches itself off. The countdown restarts with every request.</td></tr>
             <tr><td><strong>Port</strong></td><td>The local port the server listens on. Change it only when another program needs the same port.</td></tr>
-            <tr><td><strong>Token</strong></td><td>The secret an assistant presents. Regenerate replaces it; every assistant then needs the new setup command.</td></tr>
+            <tr><td><strong>Address</strong></td><td>Where an assistant connects: this Mac only (127.0.0.1), the port, and /mcp.</td></tr>
+            <tr><td><strong>Token</strong></td><td>The secret an assistant presents. Copy puts it on the clipboard; Regenerate replaces it, and every assistant then needs the new one.</td></tr>
           </tbody>
         </table>
       </div>

@@ -50,7 +50,7 @@
     <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
     <h1>Troubleshooting and Privacy</h1>
     <p class="intro">What to check when something does not work as expected, where Rapidfire keeps its data, and what it does and does not do with it.</p>
-    <p class="updated">Last updated 20 November 2026</p>
+    <p class="updated">Last updated 21 November 2026</p>
 
     <div class="doc">
       <nav class="toc" aria-label="On this page">
@@ -59,6 +59,7 @@
         <a href="#the-keys-of-a-trigger-changed">The Keys of a Trigger Changed</a>
         <a href="#a-link-from-another-app-shows-a-trigger-but-does-not-open-it">A Link from Another App Shows a Trigger but Does Not Open It</a>
         <a href="#an-ai-assistant-cannot-connect">An AI Assistant Cannot Connect</a>
+        <a href="#the-menu-says-to-move-rapidfire-to-the-applications-folder">The Menu Says to Move Rapidfire to the Applications Folder</a>
         <a href="#sync-is-not-catching-up">Sync Is Not Catching Up</a>
         <a href="#something-was-lost">Something Was Lost</a>
         <a href="#where-rapidfire-keeps-its-data">Where Rapidfire Keeps Its Data</a>
@@ -69,6 +70,7 @@
       <ul>
         <li>Open Settings &gt; Hotkeys. A row whose shortcut could not be registered says why, usually that another app uses it. Record a different shortcut.</li>
         <li>On macOS 15.0 and 15.1, shortcuts that use only Option, or only Option and Shift, are not accepted. Add Command or Control.</li>
+        <li>A hotkey of a palette besides General that opens Settings &gt; License: the license on this Mac does not count at the moment, and the pane says why. See License.</li>
         <li>Check that Rapidfire is running: its icon is in the menu bar. If the menu bar is full, macOS hides icons; opening Rapidfire again from Applications or Spotlight shows the General palette.</li>
       </ul>
 
@@ -104,9 +106,17 @@
       <h2 id="an-ai-assistant-cannot-connect">An AI Assistant Cannot Connect</h2>
       <ul>
         <li>The server switches itself off when idle. Turn MCP Server on again in Settings &gt; MCP or the menu bar icon’s menu.</li>
-        <li>After Regenerate, the assistant needs the new setup command.</li>
+        <li>After Regenerate, the assistant needs the new token.</li>
         <li>After turning the server on, start a new conversation, so that the assistant reads the tools again.</li>
       </ul>
+
+      <h2 id="the-menu-says-to-move-rapidfire-to-the-applications-folder">The Menu Says to Move Rapidfire to the Applications Folder</h2>
+      <p>Rapidfire was opened from its disk image, or from the Downloads folder without having been moved. From there it cannot install updates, and Open at Login stops working after a restart. The menu bar icon shows a dot, and its menu starts with Move Rapidfire to the Applications Folder.</p>
+      <ol>
+        <li>Quit Rapidfire: Quit Rapidfire in the menu bar icon’s menu.</li>
+        <li>Drag Rapidfire to the Applications folder. The disk image has a shortcut to it.</li>
+        <li>Open Rapidfire from the Applications folder. Triggers and settings are kept. If Open at Login was on, switch it off and on again in Settings &gt; General.</li>
+      </ol>
 
       <h2 id="sync-is-not-catching-up">Sync Is Not Catching Up</h2>
       <ul>
@@ -126,13 +136,14 @@
       <ul>
         <li>The library and the settings are two plain files in Rapidfire’s own folder on this Mac. File &gt; Show Backups in Finder opens the folder with the saved copies next to them.</li>
         <li>With iCloud sync on, each Mac also keeps one file in Rapidfire’s private iCloud folder.</li>
-        <li>The MCP token and the key for links that run triggers are in the Keychain.</li>
+        <li>The MCP token, the key for links that run triggers, and the license key are in the Keychain.</li>
       </ul>
 
       <h2 id="privacy">Privacy</h2>
       <ul>
         <li>Rapidfire collects nothing and sends nothing to its developer. It has no analytics and no account.</li>
-        <li>It does not connect to the internet. The MCP server accepts connections only from programs on this Mac.</li>
+        <li>It connects to the internet for two things only. Once a day it asks deposombe.com whether a newer version exists, and downloads an update from GitHub when one is confirmed; this can be turned off in Settings &gt; General. And a license key, when one is entered, is confirmed with Polar, the company that sells Rapidfire: the key and a random name for the Mac are sent. Neither sends anything about the library.</li>
+        <li>The MCP server accepts connections only from programs on this Mac.</li>
         <li>iCloud sync, when on, stores the library in the iCloud account signed in on the Mac. Usage counts, backups and MCP activity never leave the Mac and are deleted after 30 days.</li>
         <li>Rapidfire opens files only through the access given in Settings &gt; Files, and only when a trigger is picked.</li>
         <li>Links can hold private information, such as a document’s address. Rapidfire is not a place for passwords: anything in a link is stored as plain text.</li>
@@ -142,6 +153,7 @@
         <li><a href="/rapidfire/docs/ai/">AI Assistants</a>: An AI assistant can read and edit the library through Rapidfire’s MCP server: build a palette for a new project, tidy names, or move triggers, in one request. This page covers connecting an assistant, what it can do, and how every change stays visible and reversible.</li>
         <li><a href="/rapidfire/docs/sharing/">Sharing and Backups</a>: Palettes can be given to other people as a file or as a link, and the whole library can be saved and restored. Rapidfire also keeps its own copies before any change that removes much.</li>
         <li><a href="/rapidfire/docs/accessibility/">Accessibility</a>: Rapidfire is built to be used with VoiceOver, Voice Control, Switch Control, a keyboard alone, one hand, low vision, and without relying on color, motion or sound. This page lists what it does for each and which settings help.</li>
+        <li><a href="/rapidfire/docs/license/">License</a>: Rapidfire works without a license with the General palette. A license, bought once, adds more palettes and everything built on them, on 3 Macs.</li>
       </ul>
 
       <nav class="pager" aria-label="More help">

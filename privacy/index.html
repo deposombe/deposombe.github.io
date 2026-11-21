@@ -88,7 +88,7 @@
       <p>Mail to support@deposombe.com is forwarded by Porkbun (USA, the domain's registrar) to a Gmail mailbox (Google). Your message, address and attachments are used only to reply to you. Retention: kept as long as the conversation needs them, then deleted, or sooner if you ask. Writing is voluntary; without an email address there is no way to reply. Legal basis: legitimate interests in answering you (Art. 6(1)(f) GDPR).</p>
 
       <h2 id="rapidfire">Rapidfire</h2>
-      <p>Rapidfire is in development. <em>License</em> and <em>Updates</em> below describe what its first release does; until then Rapidfire makes no connection to the internet.</p>
+      <p>What Rapidfire 1.0 and later do.</p>
 
       <h3>What stays on the Mac</h3>
       <ul>
@@ -119,16 +119,20 @@
 
       <h3>License</h3>
       <ul>
-        <li>When a license key is entered, Rapidfire sends the key and a random ID made for that Mac to Polar (Polar Software, Inc., USA) to activate it, and checks it again from time to time. No trigger, palette or file name is sent.</li>
-        <li>The key is stored in the Mac's Keychain. Remove License deactivates that Mac's ID at Polar.</li>
-        <li>Without a license key, no such request is made.</li>
-        <li>Kept by Polar with the license: the key, each Mac's random ID and the time of activation. Legal basis: the contract (Art. 6(1)(b) GDPR).</li>
+        <li>Without a license key, nothing is sent to Polar.</li>
+        <li>When a license key is entered, Rapidfire sends it to Polar (Polar Software, Inc., USA) to activate it, together with a name for that Mac made of the word “Mac” and a random number (never the Mac's own name), and Rapidfire's identifiers at Polar. About once a day while it runs, it asks Polar whether the key still holds, sending the key, the ID Polar gave that Mac's activation, and the same identifiers. No trigger, palette or file name is sent.</li>
+        <li>Like every web request, these carry the IP address and the app's name and version.</li>
+        <li>The key, the activation's ID, the Mac's random name and the date of the last confirmation are stored in the Mac's Keychain. A confirmation counts for 30 days without a connection.</li>
+        <li>The stored license is tied to the Mac it was activated on: Rapidfire keeps a check value with it, computed on the Mac from the stored license and the Mac's hardware identifier. The identifier itself is not stored and is never sent anywhere.</li>
+        <li>Remove License deactivates that Mac at Polar and deletes the key from the Keychain.</li>
+        <li>Kept by Polar with the license: the key, each Mac's random name and the time of activation. Legal basis: the contract (Art. 6(1)(b) GDPR).</li>
       </ul>
 
       <h3>Updates</h3>
       <ul>
-        <li>Rapidfire checks deposombe.com for a new version and downloads updates from GitHub. The check can be turned off in Settings.</li>
-        <li>These requests carry the app's version and, like every web request, the IP address. Nothing about the library is sent.</li>
+        <li>Once a day Rapidfire asks deposombe.com whether a newer version exists, and downloads an update from GitHub when you confirm it. The daily check is on by default and can be turned off in Settings › General; Check for Updates… asks at once.</li>
+        <li>These requests carry the app's name and version and the updater's own version and, like every web request, the IP address. Nothing about the Mac or the library is sent.</li>
+        <li>Updates are signed; a download that does not carry Deposombe's signature is not installed.</li>
         <li>Deposombe has no access to the hosts' logs and keeps no record of update checks. Legal basis: legitimate interests in delivering updates and security fixes (Art. 6(1)(f) GDPR).</li>
       </ul>
 

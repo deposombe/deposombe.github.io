@@ -50,7 +50,7 @@
     <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
     <h1>Settings</h1>
     <p class="intro">Every setting, pane by pane, with what it changes. Settings opens with ⌘, from the overlay, the editor and the menu bar icon’s menu.</p>
-    <p class="updated">Last updated 20 November 2026</p>
+    <p class="updated">Last updated 21 November 2026</p>
 
     <div class="doc">
       <nav class="toc" aria-label="On this page">
@@ -61,6 +61,7 @@
         <a href="#files">Files</a>
         <a href="#sync">Sync</a>
         <a href="#mcp">MCP</a>
+        <a href="#license">License</a>
         <a href="#which-settings-sync">Which Settings Sync</a>
       </nav>
 
@@ -69,6 +70,8 @@
         <table>
           <tbody>
             <tr><td><strong>Open at login</strong></td><td>Starts Rapidfire when the Mac starts. Off until it is turned on. Kept per Mac.</td></tr>
+            <tr><td><strong>Check for updates automatically</strong></td><td>Once a day Rapidfire asks deposombe.com whether a newer version exists. On until it is turned off. A version that is found is offered as the first item of the menu bar icon’s menu, with a dot on the icon; it is downloaded and installed only after it is confirmed. Check for Updates asks at once, here and in the menu bar icon’s menu.</td></tr>
+            <tr><td><strong>Download and install updates automatically</strong></td><td>Updates are downloaded in the background and installed when Rapidfire is next quit, without asking. Off until it is turned on.</td></tr>
             <tr><td><strong>Count how often triggers are used</strong></td><td>Keeps a count per trigger for the last 30 days, on this Mac only. It is what Tab in the overlay and the warnings about changed keys rely on. Turning it off deletes the counts; Clear Usage deletes them and keeps counting.</td></tr>
             <tr><td><strong>Show palettes and triggers</strong></td><td>Whether Spotlight, Siri and the Shortcuts app can find palettes and triggers by name.</td></tr>
             <tr><td><strong>When Find matches a trigger</strong></td><td>What “Find … in Rapidfire” does when one trigger matches: Show Its Palette or Run the Trigger.</td></tr>
@@ -146,9 +149,15 @@
       </ul>
 
       <h2 id="mcp">MCP</h2>
-      <p>The MCP server’s switch, Turn off after, the port, the setup command for Claude Code, the token, and the activity of the last 30 days.</p>
+      <p>The MCP server’s switch, Turn off after, the address and the port, the token, the setup command for Claude Code, and the activity of the last 30 days.</p>
       <ul class="see">
         <li><a href="/rapidfire/docs/ai/">AI Assistants</a>: An AI assistant can read and edit the library through Rapidfire’s MCP server: build a palette for a new project, tidy names, or move triggers, in one request. This page covers connecting an assistant, what it can do, and how every change stays visible and reversible.</li>
+      </ul>
+
+      <h2 id="license">License</h2>
+      <p>Whether this Mac has a license, the field for a license key with Activate, Buy Rapidfire, and, with a license, the key, this Mac’s name at the license server, when the license was last confirmed, and Remove License. Choosing anything with a padlock opens this pane.</p>
+      <ul class="see">
+        <li><a href="/rapidfire/docs/license/">License</a>: Rapidfire works without a license with the General palette. A license, bought once, adds more palettes and everything built on them, on 3 Macs.</li>
       </ul>
 
       <h2 id="which-settings-sync">Which Settings Sync</h2>
@@ -156,7 +165,7 @@
 
       <nav class="pager" aria-label="More help">
         <a href="/rapidfire/docs/watching/" rel="prev">← Watching and Presenting</a>
-        <a href="/rapidfire/docs/accessibility/" rel="next">Accessibility →</a>
+        <a href="/rapidfire/docs/license/" rel="next">License →</a>
       </nav>
     </div>
   </main>
