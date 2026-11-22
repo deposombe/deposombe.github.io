@@ -128,7 +128,9 @@
         <li>The opened view moves to the middle of the screen and may grow up to the size chosen in Settings &gt; Overlay &gt; Show All, independent of the overlay’s everyday maximum size.</li>
         <li>When even that size is not enough, the view scrolls. With Shrink text to fit on, the text is made smaller first, down to the smallest text size.</li>
         <li>Rows inside opened folders are picked with the pointer. Keys keep working for the rows of the palette that is showing.</li>
+        <li>While the view scrolls, “N more” at the bottom right counts the triggers and folders out of view.</li>
       </ul>
+      <p>For a large library, Settings &gt; Overlay &gt; Show All &gt; Show can be set to Folders Only. The opened folders then show only the folders inside them, each with the number of triggers it holds at any depth, for example “Lights · 8”. The palette that is showing keeps its own triggers. Clicking a folder opens it in place, as usual.</p>
 
       <h2 id="watching">Watching</h2>
       <p>A watched overlay stays open when another app takes the keyboard, and is drawn again whenever the library changes. It is meant for seeing changes as they arrive: an AI assistant adding triggers, an import, or an edit made on another Mac.</p>
@@ -154,8 +156,20 @@
         <li>The palette’s own triggers open first, in the order they are listed, then the palettes inside it in the order of the editor’s sidebar.</li>
         <li>Triggers in General cannot be opened this way, since that would open the whole library.</li>
         <li>A trigger that asks for input is left out.</li>
-        <li>Settings &gt; Keys &gt; Confirm before opening many decides when Rapidfire asks first: Never, Over 10 Triggers, or Always. The question appears inside the overlay; Return opens, Escape cancels.</li>
+        <li>Settings &gt; Keys &gt; Confirm before opening many decides when Rapidfire asks first: Never, Over 10 Triggers, or Always.</li>
       </ul>
+      <p>When Rapidfire asks first, the question takes the place of the list in the overlay, for example “Open 11 from Morning?”. The overlay widens to fit it, however narrow the list was.</p>
+      <div class="table">
+        <table>
+          <thead><tr><th>Keys</th><th>What they do</th></tr></thead>
+          <tbody>
+            <tr><td><kbd>Return</kbd></td><td>Opens every trigger in the palette. Control may still be held.</td></tr>
+            <tr><td><kbd>Delete</kbd></td><td>Goes back to the list.</td></tr>
+            <tr><td><kbd>Escape</kbd></td><td>Closes the overlay. Nothing is opened.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">The question stays in the overlay. The app in front keeps the keyboard and no other window appears. Clicking another app closes the overlay without opening anything; a watched overlay goes back to its list instead.</p>
 
       <h2 id="other-keys-in-the-overlay">Other Keys in the Overlay</h2>
       <div class="table">
