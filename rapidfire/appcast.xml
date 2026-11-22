@@ -6,6 +6,23 @@
     <description>Updates of Rapidfire.</description>
     <language>en</language>
     <item>
+        <title>Rapidfire 1.0.4</title>
+        <sparkle:version>5</sparkle:version>
+        <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
+        <sparkle:minimumSystemVersion>15.0.0</sparkle:minimumSystemVersion>
+        <pubDate>Sun, 22 Nov 2026 22:18:47 +0000</pubDate>
+        <description><![CDATA[<ul>
+<li>Before opening a large palette at once, Rapidfire now asks in place of the list: “Open 11 from Morning?”, with Open All, Cancel and Back. The overlay widens to fit the question. Before, the question was a line in the header that a narrow overlay cut off, and the overlay waited for Return without showing why.</li>
+<li>A link that runs a palette asks the same question when the palette is large, instead of only showing the palette.</li>
+<li>With Control held, the header no longer cuts off “Opens the whole palette” or squeezes the hand switcher in a narrow overlay.</li>
+<li>Large libraries are much faster. Show All on 2,240 triggers in 320 palettes took over a minute and now opens in about half a second; with Shrink text to fit, from minutes to about a second. A palette of 300 triggers opens about three times faster.</li>
+<li>Show All can show just the shape of a library: Settings › Overlay › Show All › Show › Folders Only shows only the folders inside opened folders, each with how many triggers it holds.</li>
+<li>The light beside the pin is easier to see in light mode.</li>
+<li>“Delete” is used for the key that steps back, as on the Mac’s keyboard.</li>
+</ul>]]></description>
+        <enclosure url="https://github.com/deposombe/Rapidfire-releases/releases/download/v1.0.4/Rapidfire-1.0.4.dmg" sparkle:edSignature="Ir13dn/3QAgTyujWMnCGuLg+4+VuiriMz9lILHBaZJuW9ukWbGuznWU3xcYhZvlj6vDsHO73MIBaGKFmBzIcDQ==" length="7754839" type="application/octet-stream" />
+    </item>
+    <item>
         <title>Rapidfire 1.0.3</title>
         <sparkle:version>4</sparkle:version>
         <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
