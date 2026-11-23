@@ -50,7 +50,7 @@
     <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
     <h1>Troubleshooting and Privacy</h1>
     <p class="intro">What to check when something does not work as expected, where Rapidfire keeps its data, and what it does and does not do with it.</p>
-    <p class="updated">Last updated 22 November 2026</p>
+    <p class="updated">Last updated 23 November 2026</p>
 
     <div class="doc">
       <nav class="toc" aria-label="On this page">
@@ -60,6 +60,8 @@
         <a href="#a-link-from-another-app-shows-a-trigger-but-does-not-open-it">A Link from Another App Shows a Trigger but Does Not Open It</a>
         <a href="#an-ai-assistant-cannot-connect">An AI Assistant Cannot Connect</a>
         <a href="#the-menu-says-to-move-rapidfire-to-the-applications-folder">The Menu Says to Move Rapidfire to the Applications Folder</a>
+        <a href="#rapidfire-quit-unexpectedly">Rapidfire Quit Unexpectedly</a>
+        <a href="#reporting-a-problem">Reporting a Problem</a>
         <a href="#sync-is-not-catching-up">Sync Is Not Catching Up</a>
         <a href="#something-was-lost">Something Was Lost</a>
         <a href="#where-rapidfire-keeps-its-data">Where Rapidfire Keeps Its Data</a>
@@ -118,6 +120,22 @@
         <li>Open Rapidfire from the Applications folder. Triggers and settings are kept. If Open at Login was on, switch it off and on again in Settings &gt; General.</li>
       </ol>
 
+      <h2 id="rapidfire-quit-unexpectedly">Rapidfire Quit Unexpectedly</h2>
+      <p>If Rapidfire quits unexpectedly, macOS shows its own message. Report there sends the details to Apple, not to Rapidfire’s developer. To send them to the developer:</p>
+      <ol>
+        <li>Open Rapidfire again: Reopen in macOS’s message, or Rapidfire in the Applications folder.</li>
+        <li>In the window Rapidfire Quit Unexpectedly, optionally describe what was happening.</li>
+        <li>Click Send Report. The mail app opens a new email to support@deposombe.com with the report attached.</li>
+        <li>Send the email from the mail app, then click Done in Rapidfire’s window. A reply comes within 48 hours.</li>
+      </ol>
+      <p>If the mail app opens without a new email, it has no account set up. Rapidfire’s window is still open: use its steps for email in a web browser.</p>
+      <p>Using mail in a web browser, click Copy Report instead, write a new email to support@deposombe.com, paste, and send it. Show Report displays everything the report contains. Don’t Send closes the window; the report stays on this Mac for 30 days and can still be sent with Report a Problem.</p>
+      <p class="note">If Rapidfire quits every time it opens, before its window can appear, open the Console app, choose Crash Reports, select the latest report named Rapidfire, and send it to support@deposombe.com.</p>
+      <p>Crash reports can never keep Rapidfire from opening. If Rapidfire stops while it is reading a crash record or showing this window, or twice in a row in its first minute, it no longer offers crash reports on that Mac until Rapidfire or macOS is updated. Help &gt; Report a Problem still works.</p>
+
+      <h2 id="reporting-a-problem">Reporting a Problem</h2>
+      <p>For anything else that does not work as expected, choose Help &gt; Report a Problem, or Report a Problem in the menu bar icon’s menu. Describe what happened and click Send Report. Crash records from the last 30 days can be included.</p>
+
       <h2 id="sync-is-not-catching-up">Sync Is Not Catching Up</h2>
       <ul>
         <li>Settings &gt; Sync says why sync is paused: iCloud signed out or full, a question waiting for an answer, or a Mac on an older version of Rapidfire.</li>
@@ -142,6 +160,7 @@
       <h2 id="privacy">Privacy</h2>
       <ul>
         <li>Rapidfire collects nothing and sends nothing to its developer. It has no analytics and no account.</li>
+        <li>If it quits unexpectedly, it keeps a short technical record of the crash on this Mac for 30 days and offers to send it. A report leaves the Mac only as an email, sent by hand from the mail app. It contains the versions of Rapidfire and macOS, the type of Mac, the technical details of the crash and anything written in it; never triggers, palettes, links, file names or the license key.</li>
         <li>It connects to the internet for two things only. Once a day it asks deposombe.com whether a newer version exists, and downloads an update from GitHub when one is confirmed; this can be turned off in Settings &gt; General. And a license key, when one is entered, is confirmed with Polar, the company that sells Rapidfire: the key and a random name for the Mac are sent. Neither sends anything about the library.</li>
         <li>The MCP server accepts connections only from programs on this Mac.</li>
         <li>iCloud sync, when on, stores the library in the iCloud account signed in on the Mac. Usage counts, backups and MCP activity never leave the Mac and are deleted after 30 days.</li>

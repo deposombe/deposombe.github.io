@@ -6,6 +6,20 @@
     <description>Updates of Rapidfire.</description>
     <language>en</language>
     <item>
+        <title>Rapidfire 1.0.5</title>
+        <sparkle:version>6</sparkle:version>
+        <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
+        <sparkle:minimumSystemVersion>15.0.0</sparkle:minimumSystemVersion>
+        <pubDate>Mon, 23 Nov 2026 17:25:46 +0000</pubDate>
+        <description><![CDATA[<ul>
+<li>If Rapidfire quits unexpectedly, it offers to send a crash report the next time it opens. Send Report opens the mail app with the report attached; with email in a web browser, Copy Report and Copy Address do the same in three steps. Show Report displays everything the report contains.</li>
+<li>Nothing is sent by Rapidfire itself: a report leaves the Mac only as an email sent by hand. It holds the versions of Rapidfire and macOS, the type of Mac and the technical details of the crash; never triggers, palettes, links, file names or the license key.</li>
+<li>Help › Report a Problem… opens the same window for any other problem. It is also in the menu bar icon’s menu and in Settings › General.</li>
+<li>Settings › General › Offer to send a report after a crash turns the offer off; then no crash records are kept.</li>
+</ul>]]></description>
+        <enclosure url="https://github.com/deposombe/Rapidfire-releases/releases/download/v1.0.5/Rapidfire-1.0.5.dmg" sparkle:edSignature="RXO605FTpIgl2wQy7eM00UjqQ59rgaYeQSvF892M8DJs8LwrKWCtjqK7dqU9ku9ZX4zYw9uzovRUkTIlLADUAg==" length="7944836" type="application/octet-stream" />
+    </item>
+    <item>
         <title>Rapidfire 1.0.4</title>
         <sparkle:version>5</sparkle:version>
         <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
