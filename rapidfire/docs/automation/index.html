@@ -50,7 +50,7 @@
     <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
     <h1>Automation</h1>
     <p class="intro">Rapidfire works with other tools on the Mac. Other apps can show a palette, add triggers, and read what is kept in Rapidfire, through links, through the Shortcuts app, and by dragging and copying.</p>
-    <p class="updated">Last updated 23 November 2026</p>
+    <p class="updated">Last updated 24 November 2026</p>
 
     <div class="doc">
       <nav class="toc" aria-label="On this page">
@@ -91,6 +91,14 @@
       <p>To open every trigger in a palette with one link, as holding Control in the overlay does, Control-click the palette and choose Copy Link to Run Palette. This link contains a key made on this Mac, like a link that runs a single trigger. The General palette cannot be run this way.</p>
       <p class="note">A palette large enough for Settings &gt; Keys &gt; Confirm before opening many is asked about first: the overlay opens with the question, and Return opens the palette.</p>
       <p class="example"><code>rapidfire://run?palette=Morning</code></p>
+      <h3>Open a whole palette with a trigger</h3>
+      <p>A trigger can open a whole palette too. Give the trigger the link below as its URL, with the palette's name after palette=. Picking the trigger opens every trigger in that palette, as holding Control does. The link needs no key here, because it is opened inside Rapidfire and never leaves it.</p>
+      <p class="example"><code>rapidfire://run?palette=Morning</code></p>
+      <p>The trigger can be in the palette it opens. It then opens everything else in that palette: with the palette on the keys ee and the trigger on e, typing eee opens the whole palette.</p>
+      <p class="note">A whole palette opened at once leaves out the triggers whose link starts with rapidfire://, so opening one palette never starts another. When some were left out, Rapidfire says how many. To open several palettes together, show them inside one palette.</p>
+      <p class="note">When a trigger or a link opens a whole palette, triggers marked New or Changed and triggers that run a program or an installer are left out, and Rapidfire says how many.</p>
+      <p class="note">When another app asks for the same palette more than three times within ten seconds, Rapidfire stops opening it and says so. Opening the palette in Rapidfire lifts that.</p>
+      <p class="note">After renaming the palette, change the name in the trigger's URL. The palette's ID in place of its name keeps working.</p>
 
       <h2 id="open-a-trigger-from-another-app">Open a Trigger from Another App</h2>
       <p>A trigger has a link too. Use it when another app should open one particular trigger: a key on a Stream Deck, a keyboard shortcut in BetterTouchTool, a macro.</p>
@@ -279,7 +287,7 @@
       </div>
       <p class="example"><code>rapidfire://open?palette=Dev&amp;hand=left</code></p>
       <h3><code>rapidfire://run</code></h3>
-      <p>Opens every trigger in a palette at once, as holding Control in the overlay does. Only with the key this Mac made for it; without it, the palette is shown. General is never run this way.</p>
+      <p>Opens every trigger in a palette at once, as holding Control in the overlay does. Only with the key this Mac made for it; without it, the palette is shown. As the URL of a trigger in Rapidfire it needs no key. General is never run this way.</p>
       <div class="table">
         <table>
           <thead><tr><th>Part</th><th>Meaning</th></tr></thead>

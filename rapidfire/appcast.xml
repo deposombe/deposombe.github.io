@@ -6,6 +6,24 @@
     <description>Updates of Rapidfire.</description>
     <language>en</language>
     <item>
+        <title>Rapidfire 1.0.6</title>
+        <sparkle:version>7</sparkle:version>
+        <sparkle:shortVersionString>1.0.6</sparkle:shortVersionString>
+        <sparkle:minimumSystemVersion>15.0.0</sparkle:minimumSystemVersion>
+        <pubDate>Tue, 24 Nov 2026 11:36:34 +0000</pubDate>
+        <description><![CDATA[<ul>
+<li>Fixed: a trigger whose link runs the palette it is in opened that palette again and again without stopping. The same happened with such a trigger in a palette shown inside it, and with two palettes whose triggers run each other. A whole palette opened at once now leaves out triggers whose link starts with rapidfire://, so opening one palette never starts another.</li>
+<li>A trigger can now open a whole palette: give it the link rapidfire://run?palette= followed by the palette’s name. Picked in Rapidfire, it needs no key. It can be in the palette it opens: with the palette on ee and the trigger on e, typing eee opens everything in it.</li>
+<li>When a whole palette is opened and some of its triggers are Rapidfire links, the notice says how many were left out.</li>
+<li>When another app asks for the same palette more than three times within ten seconds, Rapidfire stops opening it and says so. Opening the palette in Rapidfire lifts that.</li>
+<li>A link to a trigger no longer opens a trigger that itself runs a palette or opens another trigger; it shows it instead.</li>
+<li>A Rapidfire link saved as a trigger no longer keeps this Mac’s key in the library.</li>
+<li>Rapidfire’s own links kept as triggers, such as Rapidfire Help, open without Rapidfire coming to the front for a moment.</li>
+<li>Holding Control no longer makes a narrow overlay grow and shrink back, which could show as a small jump when the overlay opened or, on macOS 15, cut off the bolt in its header. Narrow overlays are a little wider.</li>
+</ul>]]></description>
+        <enclosure url="https://github.com/deposombe/Rapidfire-releases/releases/download/v1.0.6/Rapidfire-1.0.6.dmg" sparkle:edSignature="PwRWmiMLWoBzjwiZfQS6HFqGulsJYN5QRmfS7u0tVKGyOR9oaNfKAWNlO84KMBbWj4JQdtSSTYXZUte2zPONDw==" length="7979627" type="application/octet-stream" />
+    </item>
+    <item>
         <title>Rapidfire 1.0.5</title>
         <sparkle:version>6</sparkle:version>
         <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>

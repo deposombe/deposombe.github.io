@@ -31,9 +31,9 @@
       "operatingSystem": "macOS 15 or later",
       "applicationCategory": "UtilitiesApplication",
       "url": "https://deposombe.com/rapidfire/",
-      "softwareVersion": "1.0.5",
+      "softwareVersion": "1.0.6",
       "datePublished": "2026-11-21",
-      "downloadUrl": "https://github.com/deposombe/Rapidfire-releases/releases/download/v1.0.5/Rapidfire-1.0.5.dmg",
+      "downloadUrl": "https://github.com/deposombe/Rapidfire-releases/releases/download/v1.0.6/Rapidfire-1.0.6.dmg",
       "offers": { "@type": "Offer", "price": "20.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://buy.polar.sh/polar_cl_T0tx3ocgry3MnPBrWOjg9Mb2wFvdgLCWuRchk3XVyEW" },
       "publisher": { "@type": "Organization", "name": "Deposombe", "url": "https://deposombe.com/" }
     }
@@ -68,9 +68,9 @@
     <p class="crumb"><a href="/#apps">Apps</a> › Rapidfire · Released</p>
     <h1>Rapidfire</h1>
     <p class="intro">A keyboard launcher made for you.</p>
-    <p class="facts">Version 1.0.5, released 23 November 2026. Free to download; a license is $20, one-time, for 3 Macs.</p>
+    <p class="facts">Version 1.0.6, released 24 November 2026. Free to download; a license is $20, one-time, for 3 Macs.</p>
     <div class="get">
-      <p class="get-buttons"><a class="btn btn-fill" href="https://github.com/deposombe/Rapidfire-releases/releases/download/v1.0.5/Rapidfire-1.0.5.dmg">Download for Mac</a> <a class="btn" href="https://buy.polar.sh/polar_cl_T0tx3ocgry3MnPBrWOjg9Mb2wFvdgLCWuRchk3XVyEW">Buy a license · $20</a></p>
+      <p class="get-buttons"><a class="btn btn-fill" href="https://github.com/deposombe/Rapidfire-releases/releases/download/v1.0.6/Rapidfire-1.0.6.dmg">Download for Mac</a> <a class="btn" href="https://buy.polar.sh/polar_cl_T0tx3ocgry3MnPBrWOjg9Mb2wFvdgLCWuRchk3XVyEW">Buy a license · $20</a></p>
       <div class="brew">
         <code>brew trust --cask deposombe/tap/rapidfire<br>brew install --cask deposombe/tap/rapidfire</code>
         <button class="copy" type="button" aria-label="Copy the Homebrew commands" data-copy="brew trust --cask deposombe/tap/rapidfire&#10;brew install --cask deposombe/tap/rapidfire">Copy</button>
@@ -138,7 +138,7 @@
       </ul>
 
       <h2 id="download">Download</h2>
-      <p><a href="https://github.com/deposombe/Rapidfire-releases/releases/download/v1.0.5/Rapidfire-1.0.5.dmg">Rapidfire 1.0.5</a> is a disk image of 7.9 MB. Open it and drag Rapidfire to the Applications folder. Rapidfire updates itself from then on.</p>
+      <p><a href="https://github.com/deposombe/Rapidfire-releases/releases/download/v1.0.6/Rapidfire-1.0.6.dmg">Rapidfire 1.0.6</a> is a disk image of 8.0 MB. Open it and drag Rapidfire to the Applications folder. Rapidfire updates itself from then on.</p>
       <p>With <a href="https://brew.sh">Homebrew</a>, the two lines at the top of this page do the same. Homebrew 7 and later install a cask from outside Homebrew's own collection only after it has been trusted; that is the first line. Older versions need only the second.</p>
       <p>The download is free and works without a license: one palette, General, complete and with no time limit.</p>
 
@@ -154,6 +154,7 @@
       <p>macOS 15 Sequoia or later, on a Mac with Apple silicon. The app is universal and includes an Intel build.</p>
 
       <h2 id="changes">Changes</h2>
+      <p><strong>1.0.6</strong>, 24 November 2026. Fixed: a trigger whose link runs the palette it is in opened that palette again and again without stopping. A trigger can now open a whole palette: give it the link rapidfire://run?palette= and the palette’s name, with no key; inside the palette it opens, it opens everything else. A palette that another app asks for more than three times within ten seconds is no longer opened, and Rapidfire says so. Holding Control no longer makes a narrow overlay grow and shrink back, which on macOS 15 could cut off its header.</p>
       <p><strong>1.0.5</strong>, 23 November 2026. If Rapidfire quits unexpectedly, it offers to send a crash report the next time it opens: by email from the mail app, with everything in the report shown first. Nothing is sent by Rapidfire itself. Help › Report a Problem opens the same window for any other problem.</p>
       <p><strong>1.0.4</strong>, 22 November 2026. Large libraries are much faster: Show All on 2,240 triggers in 320 palettes opens in about half a second instead of over a minute. Show All can show only the folders, each with how many triggers it holds. Before opening a whole palette, Rapidfire asks in the overlay, in place of the list.</p>
       <p><strong>1.0.3</strong>, 21 November 2026. A pinned overlay now follows a dynamic palette: when the palette is switched, the overlay shows the new triggers at once.</p>
