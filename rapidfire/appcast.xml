@@ -6,6 +6,17 @@
     <description>Updates of Rapidfire.</description>
     <language>en</language>
     <item>
+        <title>Rapidfire 1.0.8</title>
+        <sparkle:version>9</sparkle:version>
+        <sparkle:shortVersionString>1.0.8</sparkle:shortVersionString>
+        <sparkle:minimumSystemVersion>15.0.0</sparkle:minimumSystemVersion>
+        <pubDate>Wed, 25 Nov 2026 14:54:39 +0000</pubDate>
+        <description><![CDATA[<ul>
+    <li>Fixed Sharp Text and Sharp Colors in Show All: names inside opened folders now use the look’s crisp text color, like the rest of the list. In 1.0.7 they stayed grey. Standard is unchanged.</li>
+    </ul>]]></description>
+        <enclosure url="https://github.com/deposombe/Rapidfire-releases/releases/download/v1.0.8/Rapidfire-1.0.8.dmg" sparkle:edSignature="M0pxJERVIv/Jqr48kUwanE/9742s5ou5xNb5o6Ib3A0adh4epatvNHi8HQcK6i0hChMYHG44OhHspLexgfh9AA==" length="8029003" type="application/octet-stream" />
+    </item>
+    <item>
         <title>Rapidfire 1.0.7</title>
         <sparkle:version>8</sparkle:version>
         <sparkle:shortVersionString>1.0.7</sparkle:shortVersionString>
