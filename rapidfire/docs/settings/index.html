@@ -50,7 +50,7 @@
     <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
     <h1>Settings</h1>
     <p class="intro">Every setting, pane by pane, with what it changes. Settings opens with ⌘, from the overlay, the editor and the menu bar icon’s menu.</p>
-    <p class="updated">Last updated 23 November 2026</p>
+    <p class="updated">Last updated 25 November 2026</p>
 
     <div class="doc">
       <nav class="toc" aria-label="On this page">
@@ -98,6 +98,7 @@
             <tr><td><strong>Layout</strong></td><td>Expanded (columns) adds columns as the list grows. Collapsed (one list) is a single scrolling list that can be resized by dragging its edges.</td></tr>
             <tr><td><strong>Opens</strong></td><td>Center of the Screen, on the screen the pointer is on, or At the Pointer. A palette can have its own choice.</td></tr>
             <tr><td><strong>Maximum width, Maximum height</strong></td><td>The largest the overlay may be, as a share of the screen: Small, Medium, Large, Extra Large or Full Screen. The overlay is only as big as its contents need.</td></tr>
+            <tr><td><strong>Lines between columns</strong></td><td>A thin line between the overlay’s columns. It takes no room: the columns stay where they are.</td></tr>
           </tbody>
         </table>
       </div>
@@ -105,8 +106,11 @@
       <div class="table">
         <table>
           <tbody>
+            <tr><td><strong>Open in Show All</strong></td><td>Opens the overlay with its folders already opened, for palettes that open in the center of the screen. A palette that opens at the pointer always opens closed.</td></tr>
             <tr><td><strong>Show</strong></td><td>Everything shows every trigger and folder inside the opened folders. Folders Only shows only the folders inside them, each with how many triggers it holds at any depth, so the shape of a large library fits on one screen. The palette that is showing keeps its own triggers in both.</td></tr>
-            <tr><td><strong>Maximum size</strong></td><td>The largest the view with every folder opened may be. It is separate from the sizes above, so the everyday overlay can stay small.</td></tr>
+            <tr><td><strong>Open folders</strong></td><td>Every Level opens folders inside folders too. One Level opens only the folders of the palette that is showing, and shows the folders inside them closed.</td></tr>
+            <tr><td><strong>Bold folder names</strong></td><td>In Show All, folder names are bold. The overlay with its folders closed does not change.</td></tr>
+            <tr><td><strong>Maximum size</strong></td><td>The largest Show All’s opened view may be. It is separate from the sizes above, so the everyday overlay can stay small.</td></tr>
             <tr><td><strong>Shrink text to fit</strong></td><td>When the opened view is larger than its maximum size, makes its text smaller, down to the smallest text size, before it scrolls.</td></tr>
           </tbody>
         </table>
@@ -118,8 +122,11 @@
             <tr><td><strong>Text size</strong></td><td>The size of the names. ⌘+ and ⌘− in the overlay change the same setting; ⌘0 resets it.</td></tr>
             <tr><td><strong>Item size</strong></td><td>The space around each row: Small, Medium or Large. Larger rows are easier to click or tap.</td></tr>
             <tr><td><strong>Long names</strong></td><td>Where long names are cut: Show Full Names, Long, Medium or Short. A name is never cut before its key.</td></tr>
-            <tr><td><strong>Key style</strong></td><td>How the key letters are marked: Underline or Box. Box is used automatically when Differentiate Without Color is on.</td></tr>
+            <tr><td><strong>Key style</strong></td><td>How the key letters are marked: Underline, Box, or Color (the accent color with no underline). Box is used automatically when Differentiate Without Color is on.</td></tr>
+            <tr><td><strong>Look</strong></td><td>Standard draws the overlay as it always was. Sharp Text keeps its background and draws names in a crisp text color instead of blending them into it. Sharp Colors gives the overlay a calm solid surface, off-white or graphite, with crisp names and controls; keys and tags stay in the accent color. Both follow Light, Dark and Increase Contrast.</td></tr>
             <tr><td><strong>Show New and Changed marks</strong></td><td>Shows the New and Changed tags in the overlay. Off hides the tags there; the marks are kept, and marked triggers are still not run by links or actions.</td></tr>
+            <tr><td><strong>Mark style</strong></td><td>Tag shows the word New or Changed. Dot shows a filled dot for New and an orange ring for Changed; pointing at it says which. The words are used automatically when Differentiate Without Color is on.</td></tr>
+            <tr><td><strong>Folder counts</strong></td><td>Which folders show how many triggers they hold, at any depth: None, Closed Folders, or All Folders. Show All’s Folders Only counts every folder in either case.</td></tr>
             <tr><td><strong>Pointer styles move with Reduce Motion on</strong></td><td>Lets pointer styles that move, chosen with ⌘] and ⌘[ in the overlay, move also while Reduce Motion is on in System Settings. Off, such a style is shown as Quiet.</td></tr>
           </tbody>
         </table>

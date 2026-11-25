@@ -50,7 +50,7 @@
     <p class="crumb"><a href="/rapidfire/docs/">Rapidfire Help</a></p>
     <h1>The Overlay</h1>
     <p class="intro">The overlay is the list a hotkey shows. This page describes what is on it, every way of picking from it, and the modes that change how it behaves: Show All, watching, and opening a whole palette.</p>
-    <p class="updated">Last updated 23 November 2026</p>
+    <p class="updated">Last updated 25 November 2026</p>
 
     <div class="doc">
       <nav class="toc" aria-label="On this page">
@@ -112,7 +112,7 @@
       </div>
 
       <h2 id="show-all">Show All</h2>
-      <p>Show All opens every folder in place, including folders inside folders, so the whole library is visible at once.</p>
+      <p>Show All opens folders in place, so the whole library is visible at once. Every folder opens, including folders inside folders; with Settings &gt; Overlay &gt; Show All &gt; Open folders set to One Level, only the palette’s own folders open.</p>
       <div class="table">
         <table>
           <thead><tr><th>Keys</th><th>What they do</th></tr></thead>
@@ -131,6 +131,12 @@
         <li>While the view scrolls, “N more” at the bottom right counts the triggers and folders out of view.</li>
       </ul>
       <p>For a large library, Settings &gt; Overlay &gt; Show All &gt; Show can be set to Folders Only. The opened folders then show only the folders inside them, each with the number of triggers it holds at any depth, for example “Lights · 8”. The palette that is showing keeps its own triggers. Clicking a folder opens it in place, as usual.</p>
+      <p>Settings &gt; Overlay &gt; Show All has three more choices:</p>
+      <ul>
+        <li>Open in Show All: the overlay opens with its folders already opened. This applies to palettes that open in the center of the screen; a palette that opens at the pointer always opens closed, as a small list where the pointer is. ⌘T still switches Show All off and on.</li>
+        <li>Open folders: Every Level opens folders inside folders too. One Level opens only the folders of the palette that is showing; the folders inside them are shown closed and open in place when clicked.</li>
+        <li>Bold folder names: in Show All, the names of folders are bold, so the groups stand out. The overlay with its folders closed does not change.</li>
+      </ul>
 
       <h2 id="watching">Watching</h2>
       <p>A watched overlay stays open when another app takes the keyboard, and is drawn again whenever the library changes. It is meant for seeing changes as they arrive: an AI assistant adding triggers, an import, or an edit made on another Mac.</p>
