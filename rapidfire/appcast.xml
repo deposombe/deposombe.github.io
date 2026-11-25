@@ -6,6 +6,21 @@
     <description>Updates of Rapidfire.</description>
     <language>en</language>
     <item>
+        <title>Rapidfire 1.0.9</title>
+        <sparkle:version>10</sparkle:version>
+        <sparkle:shortVersionString>1.0.9</sparkle:shortVersionString>
+        <sparkle:minimumSystemVersion>15.0.0</sparkle:minimumSystemVersion>
+        <pubDate>Wed, 25 Nov 2026 19:58:12 +0000</pubDate>
+        <description><![CDATA[<ul>
+    <li>Changed the looks in Settings › Overlay › Look to Standard, Balanced and Studio. Balanced keeps the overlay see-through; Studio gives it a solid panel. In both, folder names are crisp and trigger names a step quieter, so the groups stand out, and every name stays readable over any window or wallpaper. Sharp Text becomes Balanced and Sharp Colors becomes Studio. Standard stays the default.</li>
+    <li>Added Font in Settings › Overlay: System or Rounded.</li>
+    <li>Changed Bold Folder Names in Settings › Overlay › Show All to a choice: None, Top Level or All Folders, with Folder Weight: Semibold or Bold.</li>
+    <li>Fixed where Show All appears when another palette is opened over an overlay that is already showing, with Open in Show All on: it is in the middle of the screen, as when it opens fresh. It sat lower, or at the edge of the screen.</li>
+    <li>Fixed key letters in the yellow, green and orange accent colors in Light: they are darker now and easier to read. The other accent colors look as before.</li>
+    </ul>]]></description>
+        <enclosure url="https://github.com/deposombe/Rapidfire-releases/releases/download/v1.0.9/Rapidfire-1.0.9.dmg" sparkle:edSignature="V8SA023N1lS2D5lwDner6B4hfOfa0XsnqjPNiEOuy+AsQ5grAA4N1klN5OQnioVrGvwZR2JOJ1LqV6z4Qg3XBg==" length="8055459" type="application/octet-stream" />
+    </item>
+    <item>
         <title>Rapidfire 1.0.8</title>
         <sparkle:version>9</sparkle:version>
         <sparkle:shortVersionString>1.0.8</sparkle:shortVersionString>
