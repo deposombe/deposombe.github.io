@@ -6,6 +6,22 @@
     <description>Updates of Rapidfire.</description>
     <language>en</language>
     <item>
+        <title>Rapidfire 1.0.7</title>
+        <sparkle:version>8</sparkle:version>
+        <sparkle:shortVersionString>1.0.7</sparkle:shortVersionString>
+        <sparkle:minimumSystemVersion>15.0.0</sparkle:minimumSystemVersion>
+        <pubDate>Wed, 25 Nov 2026 13:01:18 +0000</pubDate>
+        <description><![CDATA[<ul>
+    <li>Added a choice of look in Settings › Overlay › Look. Sharp Text draws names in a crisper text color; Sharp Colors gives the overlay a calm solid surface. Both follow Light, Dark and Increase Contrast. Standard stays the default.</li>
+    <li>Added Open in Show All, so the overlay opens with its folders already opened. It applies to palettes that open in the center of the screen.</li>
+    <li>Added One Level for Show All: a palette’s own folders open, and the folders inside them are shown closed, ready to open with a click.</li>
+    <li>Added Bold Folder Names, Folder Counts, Lines Between Columns, a Color key style and a Dot style for the New and Changed marks, all in Settings › Overlay.</li>
+    <li>Improved Shortcut triggers: they run without bringing the Shortcuts app to the front, so the app you were using keeps the keyboard. A question the Shortcut asks still appears.</li>
+    <li>Fixed the path at the top of the overlay after opening a folder from Show All: it now names every folder above it.</li>
+    </ul>]]></description>
+        <enclosure url="https://github.com/deposombe/Rapidfire-releases/releases/download/v1.0.7/Rapidfire-1.0.7.dmg" sparkle:edSignature="KnCeI1sUZ8hGmdLk+clhwPhjERirQPH5E65itS7lawu9vBejRTyrjE9hPFQ/P0Xu0dICeq4uFj8IyVPTEziJCg==" length="8028497" type="application/octet-stream" />
+    </item>
+    <item>
         <title>Rapidfire 1.0.6</title>
         <sparkle:version>7</sparkle:version>
         <sparkle:shortVersionString>1.0.6</sparkle:shortVersionString>
