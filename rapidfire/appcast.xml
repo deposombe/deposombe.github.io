@@ -6,6 +6,19 @@
     <description>Updates of Rapidfire.</description>
     <language>en</language>
     <item>
+        <title>Rapidfire 1.1.0</title>
+        <sparkle:version>11</sparkle:version>
+        <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+        <sparkle:minimumSystemVersion>15.0.0</sparkle:minimumSystemVersion>
+        <pubDate>Sat, 28 Nov 2026 08:32:43 +0000</pubDate>
+        <description><![CDATA[<ul>
+    <li>Fixed the drop zone for files dragged out of a stack in the Dock, such as Downloads: it comes up again, whether the Dock hides itself or is always shown.</li>
+    <li>Fixed the drop zone coming up when a Dock icon was only held down, not dragged.</li>
+    <li>Fixed the drop zone closing by itself when a new drag started right after the last one ended.</li>
+    </ul>]]></description>
+        <enclosure url="https://github.com/deposombe/Rapidfire-releases/releases/download/v1.1.0/Rapidfire-1.1.0.dmg" sparkle:edSignature="gV9pV84PEje0z/RstLHLTgDL9JDrz5idlSmOzrT21xJKaXaI1s7WVcqlZl8adCl4OofLAum5IQ69VksMni3gAg==" length="8050669" type="application/octet-stream" />
+    </item>
+    <item>
         <title>Rapidfire 1.0.9</title>
         <sparkle:version>10</sparkle:version>
         <sparkle:shortVersionString>1.0.9</sparkle:shortVersionString>
